@@ -1,0 +1,56 @@
+.TH "CM_Singleton< T >" 3 "Mon Jan 4 2016" "Version 1.0" "Coroutine Manager Pro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CM_Singleton< T > \- A base class for any Singleton\&. Provides global singular access to a MonoBehaviour\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBOnDestroy\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBOnApplicationQuit\fP ()"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBIsDestroyed\fP\fC [get]\fP"
+.br
+.RI "\fIGets a value indicating whether this instance is destroyed\&. \fP"
+.ti -1c
+.RI "static T \fBinstance\fP\fC [get]\fP"
+.br
+.RI "\fIGets the instance\&. The instance is created if not currently past of the scene\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A base class for any Singleton\&. Provides global singular access to a MonoBehaviour\&. 
+
+
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIMonoBehaviour\fP
+.SH "Property Documentation"
+.PP 
+.SS "T \fBCM_Singleton\fP< T >\&.instance\fC [static]\fP, \fC [get]\fP"
+
+.PP
+Gets the instance\&. The instance is created if not currently past of the scene\&. The instance\&.
+.SS "bool \fBCM_Singleton\fP< T >\&.IsDestroyed\fC [static]\fP, \fC [get]\fP"
+
+.PP
+Gets a value indicating whether this instance is destroyed\&. \fCtrue\fP if is destroyed; otherwise, \fCfalse\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Coroutine Manager Pro from the source code\&.

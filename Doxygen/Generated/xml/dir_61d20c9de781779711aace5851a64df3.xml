@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_61d20c9de781779711aace5851a64df3" kind="dir">
+    <compoundname>Examples</compoundname>
+    <innerfile refid="_example_character_damage_8cs">ExampleCharacterDamage.cs</innerfile>
+    <innerfile refid="_example_character_movement_8cs">ExampleCharacterMovement.cs</innerfile>
+    <innerfile refid="_example_continous_spawner_8cs">ExampleContinousSpawner.cs</innerfile>
+    <innerfile refid="_example_damage_applier_8cs">ExampleDamageApplier.cs</innerfile>
+    <innerfile refid="_example_g_u_i_8cs">ExampleGUI.cs</innerfile>
+    <innerfile refid="_example_timer_8cs">ExampleTimer.cs</innerfile>
+    <innerfile refid="_example_t_imer_pause_resume_8cs">ExampleTImerPauseResume.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/"/>
+  </compounddef>
+</doxygen>

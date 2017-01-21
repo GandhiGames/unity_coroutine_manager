@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="_c_m___job_manager_job_edited_event_args_8cs" kind="file" language="C#">
+    <compoundname>CM_JobManagerJobEditedEventArgs.cs</compoundname>
+    <innerclass refid="class_c_m___job_manager_job_edited_event_args" prot="public">CM_JobManagerJobEditedEventArgs</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_unity_engine" kindref="compound">UnityEngine</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Collections;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Collections.Generic;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_c_m___job_manager_job_edited_event_args" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_m___job_manager_job_edited_event_args" kindref="compound">CM_JobManagerJobEditedEventArgs</ref><sp/>:<sp/><ref refid="namespace_system" kindref="compound">System</ref>.EventArgs<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_m___job_manager_event_args" kindref="compound">CM_JobManagerEventArgs</ref><sp/><ref refid="class_c_m___job_manager_job_edited_event_args_1a5baf47bf8ecddf8a6f88b0779a504670" kindref="member">otherArgs</ref><sp/>{</highlight><highlight class="keyword">get</highlight><highlight class="normal">;</highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>set;}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_m___job" kindref="compound">CM_Job</ref><sp/><ref refid="class_c_m___job_manager_job_edited_event_args_1a7ffe2e303d15476afa5fc9d693367a8e" kindref="member">jobEdited</ref><sp/>{</highlight><highlight class="keyword">get</highlight><highlight class="normal">;</highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>set;}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_m___job_manager_job_edited_event_args_1a4affe52499a44d68c7c0cae61177583f" kindref="member">CM_JobManagerJobEditedEventArgs</ref><sp/>(Dictionary&lt;string,<sp/>CM_Job&gt;<sp/>ownedJobs,<sp/><ref refid="class_c_m___job" kindref="compound">CM_Job</ref><sp/><ref refid="class_c_m___job_manager_job_edited_event_args_1a7ffe2e303d15476afa5fc9d693367a8e" kindref="member">jobEdited</ref>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_c_m___job_manager_job_edited_event_args_1a5baf47bf8ecddf8a6f88b0779a504670" kindref="member">otherArgs</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_m___job_manager_event_args" kindref="compound">CM_JobManagerEventArgs</ref><sp/>(ownedJobs);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.jobEdited<sp/>=<sp/><ref refid="class_c_m___job_manager_job_edited_event_args_1a7ffe2e303d15476afa5fc9d693367a8e" kindref="member">jobEdited</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs"/>
+  </compounddef>
+</doxygen>

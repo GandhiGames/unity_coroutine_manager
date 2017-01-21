@@ -1,0 +1,65 @@
+.TH "CM_JobManagerJobEditedEventArgs" 3 "Mon Jan 4 2016" "Version 1.0" "Coroutine Manager Pro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CM_JobManagerJobEditedEventArgs \- Arguements used in events raised by \fBCM_JobManager\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits EventArgs\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCM_JobManagerJobEditedEventArgs\fP (Dictionary< string, \fBCM_Job\fP > ownedJobs, \fBCM_Job\fP \fBjobEdited\fP)"
+.br
+.RI "\fIInitializes a new instance of the \fBCM_JobManagerJobEditedEventArgs\fP class\&. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBCM_JobManagerEventArgs\fP \fBotherArgs\fP\fC [get]\fP"
+.br
+.RI "\fIGets the other arguments\&. \fP"
+.ti -1c
+.RI "\fBCM_Job\fP \fBjobEdited\fP\fC [get]\fP"
+.br
+.RI "\fIGets the job currently changed that caused the event to be raised\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Arguements used in events raised by \fBCM_JobManager\fP\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CM_JobManagerJobEditedEventArgs\&.CM_JobManagerJobEditedEventArgs (Dictionary< string, \fBCM_Job\fP > ownedJobs, \fBCM_Job\fP jobEdited)"
+
+.PP
+Initializes a new instance of the \fBCM_JobManagerJobEditedEventArgs\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIownedJobs\fP Owned jobs\&.
+.br
+\fIjobEdited\fP Job edited\&.
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "\fBCM_Job\fP CM_JobManagerJobEditedEventArgs\&.jobEdited\fC [get]\fP"
+
+.PP
+Gets the job currently changed that caused the event to be raised\&. The job edited\&.
+.SS "\fBCM_JobManagerEventArgs\fP CM_JobManagerJobEditedEventArgs\&.otherArgs\fC [get]\fP"
+
+.PP
+Gets the other arguments\&. The other arguments\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Coroutine Manager Pro from the source code\&.

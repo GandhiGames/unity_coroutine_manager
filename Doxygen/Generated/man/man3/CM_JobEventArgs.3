@@ -1,0 +1,73 @@
+.TH "CM_JobEventArgs" 3 "Mon Jan 4 2016" "Version 1.0" "Coroutine Manager Pro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CM_JobEventArgs \- Arguements used in events raised by \fBCM_Job\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits EventArgs\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCM_JobEventArgs\fP (\fBCM_Job\fP \fBjob\fP, \fBCM_Job\fP[] \fBchildJobs\fP)"
+.br
+.RI "\fIInitializes a new instance of the \fBCM_JobEventArgs\fP class\&. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBCM_Job\fP \fBjob\fP\fC [get]\fP"
+.br
+.RI "\fIGets the current job\&. \fP"
+.ti -1c
+.RI "\fBCM_Job\fP[] \fBchildJobs\fP\fC [get]\fP"
+.br
+.RI "\fIGets the child jobs (if any)\&. \fP"
+.ti -1c
+.RI "bool \fBhasChildJobs\fP\fC [get]\fP"
+.br
+.RI "\fIGets a value indicating whether this \fBCM_JobEventArgs\fP has child jobs\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Arguements used in events raised by \fBCM_Job\fP\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CM_JobEventArgs\&.CM_JobEventArgs (\fBCM_Job\fP job, \fBCM_Job\fP[] childJobs)"
+
+.PP
+Initializes a new instance of the \fBCM_JobEventArgs\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.br
+\fIchildJobs\fP Child jobs\&.
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "\fBCM_Job\fP [] CM_JobEventArgs\&.childJobs\fC [get]\fP"
+
+.PP
+Gets the child jobs (if any)\&. The child jobs\&.
+.SS "bool CM_JobEventArgs\&.hasChildJobs\fC [get]\fP"
+
+.PP
+Gets a value indicating whether this \fBCM_JobEventArgs\fP has child jobs\&. \fCtrue\fP if has child jobs; otherwise, \fCfalse\fP\&.
+.SS "\fBCM_Job\fP CM_JobEventArgs\&.job\fC [get]\fP"
+
+.PP
+Gets the current job\&. The job\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Coroutine Manager Pro from the source code\&.

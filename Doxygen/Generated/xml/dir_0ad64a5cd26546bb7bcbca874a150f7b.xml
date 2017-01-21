@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_0ad64a5cd26546bb7bcbca874a150f7b" kind="dir">
+    <compoundname>Assets</compoundname>
+    <innerdir refid="dir_f8bd7ad516b35b915d6e49088f8f222a">CM</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/"/>
+  </compounddef>
+</doxygen>

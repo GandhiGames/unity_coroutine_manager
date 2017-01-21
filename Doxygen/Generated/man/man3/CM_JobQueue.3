@@ -1,0 +1,575 @@
+.TH "CM_JobQueue" 3 "Mon Jan 4 2016" "Version 1.0" "Coroutine Manager Pro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CM_JobQueue \- The main job queue class\&. Encapsulates all behaviour related to queueing a job\&. Provides access to events, and status (i\&.e\&. running, repeating)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBCM_GlobalCoroutineManager< CM_JobQueue >\fP, and \fBICM_Cloneable< CM_JobQueue >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBClone\fP ()"
+.br
+.RI "\fIClone this instance\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP[] \fBClone\fP (int numOfCopies)"
+.br
+.RI "\fIClone this instance the specified numOfCopies\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBEnqueue\fP (\fBCM_JobQueue\fP other)"
+.br
+.RI "\fIEnqueues the specified other queue\&. Adds the jobs from one queue to this queue and also adds the other queues event subscriptions\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBEnqueue\fP (params \fBCM_Job\fP[] jobs)"
+.br
+.RI "\fIEnqueues the specified jobs\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBEnqueue\fP (IList< \fBCM_Job\fP > jobs)"
+.br
+.RI "\fIEnqueues the specified jobs\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBEnqueue\fP (string id, IEnumerator routine)"
+.br
+.RI "\fICreates a new job with specified id and coroutine and adds job to queue\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBEnqueue\fP (IEnumerator routine)"
+.br
+.RI "\fICreates a new job with specified id and coroutine and adds job to queue\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBEnqueue\fP (\fBCM_Job\fP job)"
+.br
+.RI "\fIEnqueues the specified job\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBStart\fP ()"
+.br
+.RI "\fIStart this instance of the queue immediately\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBStart\fP (float delayInSeconds)"
+.br
+.RI "\fIStart the specified instance after delayInSeconds\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBRepeat\fP ()"
+.br
+.RI "\fISets this instance to repeat\&. The job is repeated when it has finished processing\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBRepeat\fP (int numOfTimes)"
+.br
+.RI "\fISets this instance to repeat a number of times\&. The job is repeated when it has finished processing\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBStopRepeat\fP ()"
+.br
+.RI "\fIStops the repeat\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBStopRepeat\fP (float delayInSeconds)"
+.br
+.RI "\fIStops the repeat after a specified delay in seconds\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBPause\fP ()"
+.br
+.RI "\fIPauses this instance\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBPause\fP (float delayInSeconds)"
+.br
+.RI "\fIPause this instance after the specified delayInSeconds\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBResume\fP ()"
+.br
+.RI "\fIResume this instance immediately\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBResume\fP (float delayInSeconds)"
+.br
+.RI "\fIResume the instance after the specified delayInSeconds\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBContinousRunning\fP ()"
+.br
+.RI "\fISet the queue to run continously\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBStopContinousRunning\fP ()"
+.br
+.RI "\fIStops the continous running of this queue\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBKillAll\fP ()"
+.br
+.RI "\fIKill all currently queued jobs immediately\&. Clears queue list\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBKillAll\fP (float delayInSeconds)"
+.br
+.RI "\fIKill all currently queued jobs after the specified delayInSeconds\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBKillCurrent\fP ()"
+.br
+.RI "\fIKills the current running job immediately\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBKillCurrent\fP (float delayInSeconds)"
+.br
+.RI "\fIKills the current running job after the specified delayInSeconds\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBNotifyOnQueueStarted\fP (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the queue started event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBRemoveNotifyOnQueueStarted\fP (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the the queue started event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBNotifyOnQueueComplete\fP (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the queue completed event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBRemoveNotifyOnQueueComplete\fP (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the queue completed event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBNotifyOnJobProcessed\fP (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the the job processed event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobQueue\fP \fBRemoveNotifyOnJobProcessed\fP (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the the job processed event\&. This event is invoked every time a job in the queue has finished running\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBCM_JobQueue\fP \fBMake\fP ()"
+.br
+.RI "\fIReturns an initialised \fBCM_JobQueue\fP instance\&. Provides static access to class\&. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnQueueStarted\fP (\fBCM_QueueEventArgs\fP e)"
+.br
+.RI "\fIRaises the queue started event\&. \fP"
+.ti -1c
+.RI "void \fBOnQueueComplete\fP (\fBCM_QueueEventArgs\fP e)"
+.br
+.RI "\fIRaises the queue complete event\&. \fP"
+.ti -1c
+.RI "void \fBOnJobProcessed\fP (\fBCM_QueueEventArgs\fP e)"
+.br
+.RI "\fIRaises the job processed event\&. \fP"
+.ti -1c
+.RI "override void \fBHandlejobComplete\fP (object sender, \fBCM_JobEventArgs\fP e)"
+.br
+.RI "\fIInvoked whenever a queued job has finished processing\&. Handles maintenance of queue and raising OnJobProcessed and OnQueueComplete events\&. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "bool \fBrepeating\fP\fC [get]\fP"
+.br
+.RI "\fIGets a value indicating whether this \fBCM_JobQueue\fP is repeating\&. \fP"
+.ti -1c
+.RI "int \fBnumOfTimesExecuted\fP\fC [get]\fP"
+.br
+.RI "\fIGets the number of times this queue executed (used if repeating)\&. \fP"
+.ti -1c
+.RI "bool \fBrunning\fP\fC [get]\fP"
+.br
+.RI "\fIGets a value indicating whether this \fBCM_JobQueue\fP is running\&. \fP"
+.ti -1c
+.RI "bool \fBcontinousRunning\fP\fC [get]\fP"
+.br
+.RI "\fIGets a value indicating whether this \fBCM_JobQueue\fP is running continously i\&.e\&. will not stop running until StopContinousRunning is called\&. \fP"
+.in -1c
+.SS "Events"
+
+.in +1c
+.ti -1c
+.RI "EventHandler< \fBCM_QueueEventArgs\fP > \fBqueueStarted\fP"
+.br
+.RI "\fIRaised when queue started\&. \fP"
+.ti -1c
+.RI "EventHandler< \fBCM_QueueEventArgs\fP > \fBqueueComplete\fP"
+.br
+.RI "\fIRaised when queue complete\&. \fP"
+.ti -1c
+.RI "EventHandler< \fBCM_QueueEventArgs\fP > \fBjobProcessed\fP"
+.br
+.RI "\fIRaised when a job in the queue has finished\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The main job queue class\&. Encapsulates all behaviour related to queueing a job\&. Provides access to events, and status (i\&.e\&. running, repeating)\&. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Clone ()"
+
+.PP
+Clone this instance\&. 
+.SS "\fBCM_JobQueue\fP [] CM_JobQueue\&.Clone (int numOfCopies)"
+
+.PP
+Clone this instance the specified numOfCopies\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInumOfCopies\fP Number of copies\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.ContinousRunning ()"
+
+.PP
+Set the queue to run continously\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Enqueue (\fBCM_JobQueue\fP other)"
+
+.PP
+Enqueues the specified other queue\&. Adds the jobs from one queue to this queue and also adds the other queues event subscriptions\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIother\fP Other\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Enqueue (params \fBCM_Job\fP[] jobs)"
+
+.PP
+Enqueues the specified jobs\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjobs\fP Jobs\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Enqueue (IList< \fBCM_Job\fP > jobs)"
+
+.PP
+Enqueues the specified jobs\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjobs\fP Jobs\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Enqueue (string id, IEnumerator routine)"
+
+.PP
+Creates a new job with specified id and coroutine and adds job to queue\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP Job Identifier\&.
+.br
+\fIroutine\fP Routine\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Enqueue (IEnumerator routine)"
+
+.PP
+Creates a new job with specified id and coroutine and adds job to queue\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP Job Identifier\&.
+.br
+\fIroutine\fP Routine\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Enqueue (\fBCM_Job\fP job)"
+
+.PP
+Enqueues the specified job\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "override void CM_JobQueue\&.HandlejobComplete (object sender, \fBCM_JobEventArgs\fP e)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Invoked whenever a queued job has finished processing\&. Handles maintenance of queue and raising OnJobProcessed and OnQueueComplete events\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsender\fP Sender\&.
+.br
+\fIe\fP E\&.
+.RE
+.PP
+
+.PP
+Implements \fBCM_GlobalCoroutineManager< CM_JobQueue >\fP\&.
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.KillAll ()"
+
+.PP
+Kill all currently queued jobs immediately\&. Clears queue list\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.KillAll (float delayInSeconds)"
+
+.PP
+Kill all currently queued jobs after the specified delayInSeconds\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.KillCurrent ()"
+
+.PP
+Kills the current running job immediately\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The current\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.KillCurrent (float delayInSeconds)"
+
+.PP
+Kills the current running job after the specified delayInSeconds\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The current\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "static \fBCM_JobQueue\fP CM_JobQueue\&.Make ()\fC [static]\fP"
+
+.PP
+Returns an initialised \fBCM_JobQueue\fP instance\&. Provides static access to class\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.NotifyOnJobProcessed (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+
+.PP
+Subscribes to the the job processed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The event handler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.NotifyOnQueueComplete (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+
+.PP
+Subscribes to the queue completed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The event handler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.NotifyOnQueueStarted (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+
+.PP
+Subscribes to the queue started event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The event handler to be invoked on event\&.
+.RE
+.PP
+
+.SS "void CM_JobQueue\&.OnJobProcessed (\fBCM_QueueEventArgs\fP e)\fC [protected]\fP"
+
+.PP
+Raises the job processed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "void CM_JobQueue\&.OnQueueComplete (\fBCM_QueueEventArgs\fP e)\fC [protected]\fP"
+
+.PP
+Raises the queue complete event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "void CM_JobQueue\&.OnQueueStarted (\fBCM_QueueEventArgs\fP e)\fC [protected]\fP"
+
+.PP
+Raises the queue started event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Pause ()"
+
+.PP
+Pauses this instance\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Pause (float delayInSeconds)"
+
+.PP
+Pause this instance after the specified delayInSeconds\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.RemoveNotifyOnJobProcessed (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the the job processed event\&. This event is invoked every time a job in the queue has finished running\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The event handler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.RemoveNotifyOnQueueComplete (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the queue completed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The event handler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.RemoveNotifyOnQueueStarted (EventHandler< \fBCM_QueueEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the the queue started event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The event handler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Repeat ()"
+
+.PP
+Sets this instance to repeat\&. The job is repeated when it has finished processing\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Repeat (int numOfTimes)"
+
+.PP
+Sets this instance to repeat a number of times\&. The job is repeated when it has finished processing\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Resume ()"
+
+.PP
+Resume this instance immediately\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Resume (float delayInSeconds)"
+
+.PP
+Resume the instance after the specified delayInSeconds\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Start ()"
+
+.PP
+Start this instance of the queue immediately\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.Start (float delayInSeconds)"
+
+.PP
+Start the specified instance after delayInSeconds\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.StopContinousRunning ()"
+
+.PP
+Stops the continous running of this queue\&. 
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.StopRepeat ()"
+
+.PP
+Stops the repeat\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The repeat\&.
+.RE
+.PP
+
+.SS "\fBCM_JobQueue\fP CM_JobQueue\&.StopRepeat (float delayInSeconds)"
+
+.PP
+Stops the repeat after a specified delay in seconds\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The repeat\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "bool CM_JobQueue\&.continousRunning\fC [get]\fP"
+
+.PP
+Gets a value indicating whether this \fBCM_JobQueue\fP is running continously i\&.e\&. will not stop running until StopContinousRunning is called\&. \fCtrue\fP if continous running; otherwise, \fCfalse\fP\&.
+.SS "int CM_JobQueue\&.numOfTimesExecuted\fC [get]\fP"
+
+.PP
+Gets the number of times this queue executed (used if repeating)\&. The number of times executed\&.
+.SS "bool CM_JobQueue\&.repeating\fC [get]\fP"
+
+.PP
+Gets a value indicating whether this \fBCM_JobQueue\fP is repeating\&. \fCtrue\fP if repeating; otherwise, \fCfalse\fP\&.
+.SS "bool CM_JobQueue\&.running\fC [get]\fP"
+
+.PP
+Gets a value indicating whether this \fBCM_JobQueue\fP is running\&. \fCtrue\fP if running; otherwise, \fCfalse\fP\&.
+.SH "Event Documentation"
+.PP 
+.SS "EventHandler<\fBCM_QueueEventArgs\fP> CM_JobQueue\&.jobProcessed\fC [protected]\fP"
+
+.PP
+Raised when a job in the queue has finished\&. 
+.SS "EventHandler<\fBCM_QueueEventArgs\fP> CM_JobQueue\&.queueComplete\fC [protected]\fP"
+
+.PP
+Raised when queue complete\&. 
+.SS "EventHandler<\fBCM_QueueEventArgs\fP> CM_JobQueue\&.queueStarted\fC [protected]\fP"
+
+.PP
+Raised when queue started\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Coroutine Manager Pro from the source code\&.

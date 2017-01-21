@@ -1,0 +1,98 @@
+.TH "CM_Logger" 3 "Mon Jan 4 2016" "Version 1.0" "Coroutine Manager Pro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CM_Logger \- Simple logging class used by the Coroutine Manager\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBCM_Singleton< CM_Logger >\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBMessage\fP"
+.br
+.RI "\fIEncapsulates a message used by \fBCM_Logger\fP\&. \fP"
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBStatus\fP { \fBLog\fP, \fBWarning\fP, \fBError\fP }
+.RI "\fIThe status level of the message\&. \fP""
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBLog\fP (object message)"
+.br
+.RI "\fILog the specified message with default log status\&. \fP"
+.ti -1c
+.RI "void \fBLog\fP (object context, object message)"
+.br
+.RI "\fILog the message with the specified context\&. \fP"
+.ti -1c
+.RI "void \fBLog\fP (object message, \fBStatus\fP status)"
+.br
+.RI "\fIUses a lookup to either write a log, warning, or error based on the status\&. \fP"
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Simple logging class used by the Coroutine Manager\&. 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBCM_Logger\&.Status\fP\fC [strong]\fP"
+
+.PP
+The status level of the message\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CM_Logger\&.Log (object message)"
+
+.PP
+Log the specified message with default log status\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBMessage\fP\&.
+.RE
+.PP
+
+.SS "void CM_Logger\&.Log (object context, object message)"
+
+.PP
+Log the message with the specified context\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontext\fP Context i\&.e\&. the calling class\&.
+.br
+\fImessage\fP \fBMessage\fP\&.
+.RE
+.PP
+
+.SS "void CM_Logger\&.Log (object message, \fBStatus\fP status)"
+
+.PP
+Uses a lookup to either write a log, warning, or error based on the status\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBMessage\fP\&.
+.br
+\fIstatus\fP Status\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Coroutine Manager Pro from the source code\&.

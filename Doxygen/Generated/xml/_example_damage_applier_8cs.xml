@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="_example_damage_applier_8cs" kind="file" language="C#">
+    <compoundname>ExampleDamageApplier.cs</compoundname>
+    <innerclass refid="class_example_damage_applier" prot="public">ExampleDamageApplier</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_unity_engine" kindref="compound">UnityEngine</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Collections;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_example_damage_applier" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_example_damage_applier" kindref="compound">ExampleDamageApplier</ref><sp/>:<sp/>MonoBehaviour<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_example_character_damage" kindref="compound">ExampleCharacterDamage</ref><sp/><ref refid="class_example_damage_applier_1a1275e973ce691cf54b0f3e5c1fa90007" kindref="member">character</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_c_m___job" kindref="compound">CM_Job</ref><sp/>fireDamage,<sp/>poisonDamage,<sp/>heal;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Start<sp/>()<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fireDamage<sp/>=<sp/><ref refid="class_c_m___job" kindref="compound">CM_Job</ref>.<ref refid="class_c_m___job_1a1ffab1654cb694e80dd1af68418048bb" kindref="member">Make</ref><sp/>(character.<ref refid="class_example_character_damage_1af25a43f4182d205ca89e73d7dc0794f3" kindref="member">ApplyDamage</ref><sp/>(</highlight><highlight class="stringliteral">&quot;fire<sp/>damage&quot;</highlight><highlight class="normal">,<sp/>1f));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>poisonDamage<sp/>=<sp/><ref refid="class_c_m___job" kindref="compound">CM_Job</ref>.<ref refid="class_c_m___job_1a1ffab1654cb694e80dd1af68418048bb" kindref="member">Make</ref><sp/>(character.<ref refid="class_example_character_damage_1af25a43f4182d205ca89e73d7dc0794f3" kindref="member">ApplyDamage</ref><sp/>(</highlight><highlight class="stringliteral">&quot;poison<sp/>damage&quot;</highlight><highlight class="normal">,<sp/>1f));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>heal<sp/>=<sp/><ref refid="class_c_m___job" kindref="compound">CM_Job</ref>.<ref refid="class_c_m___job_1a1ffab1654cb694e80dd1af68418048bb" kindref="member">Make</ref><sp/>(character.<ref refid="class_example_character_damage_1aeb1574e48eac8ed8c211b5ea0d488782" kindref="member">RestoreHealth</ref><sp/>(1f));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Update<sp/>()<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Input.GetKeyUp<sp/>(KeyCode.Alpha1))<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>character.<ref refid="class_example_character_damage_1a0befb25f1d266a74f6ea9b2bb25b8d6d" kindref="member">AddActionToQueue</ref><sp/>(fireDamage.<ref refid="class_c_m___job_1a7821bb2da3f3c9b30e171595a48aba7d" kindref="member">Clone</ref><sp/>());</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Input.GetKeyUp<sp/>(KeyCode.Alpha2))<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>character.<ref refid="class_example_character_damage_1a0befb25f1d266a74f6ea9b2bb25b8d6d" kindref="member">AddActionToQueue</ref><sp/>(poisonDamage.<ref refid="class_c_m___job_1a7821bb2da3f3c9b30e171595a48aba7d" kindref="member">Clone</ref><sp/>());</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Input.GetKeyUp<sp/>(KeyCode.Alpha3))<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>character.<ref refid="class_example_character_damage_1a0befb25f1d266a74f6ea9b2bb25b8d6d" kindref="member">AddActionToQueue</ref><sp/>(heal.<ref refid="class_c_m___job_1a7821bb2da3f3c9b30e171595a48aba7d" kindref="member">Clone</ref><sp/>());</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleDamageApplier.cs"/>
+  </compounddef>
+</doxygen>

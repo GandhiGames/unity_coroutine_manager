@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="class_example_character_damage" kind="class" language="C#" prot="public">
+    <compoundname>ExampleCharacterDamage</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_example_character_damage_1a9f184018de86afde217ec6978018874d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ExampleCharacterDamage.health</definition>
+        <argsstring></argsstring>
+        <name>health</name>
+        <initializer>= 20f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="9" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_example_character_damage_1a51af26b3447eb4880af3b1002c9c6a10" prot="private" static="no" mutable="no">
+        <type><ref refid="class_c_m___job_queue" kindref="compound">CM_JobQueue</ref></type>
+        <definition>CM_JobQueue ExampleCharacterDamage._actionQueue</definition>
+        <argsstring></argsstring>
+        <name>_actionQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="11" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_example_character_damage_1ae4a2be80f0affa4d02998fc2c5b9af91" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExampleCharacterDamage.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="13" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_character_damage_1a5be40bc5175392994005809bb5be6359" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExampleCharacterDamage.OnDead</definition>
+        <argsstring>()</argsstring>
+        <name>OnDead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="83" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_character_damage_1a4de8e1a33ca856b9a5bc37a7935ef68a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExampleCharacterDamage.OnRevive</definition>
+        <argsstring>()</argsstring>
+        <name>OnRevive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="88" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_example_character_damage_1a0befb25f1d266a74f6ea9b2bb25b8d6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExampleCharacterDamage.AddActionToQueue</definition>
+        <argsstring>(CM_Job action)</argsstring>
+        <name>AddActionToQueue</name>
+        <param>
+          <type><ref refid="class_c_m___job" kindref="compound">CM_Job</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Adds the action to the current queue. An action can be any coroutine you want. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Action.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="22" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_character_damage_1af25a43f4182d205ca89e73d7dc0794f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleCharacterDamage.ApplyDamage</definition>
+        <argsstring>(string damageType, float time)</argsstring>
+        <name>ApplyDamage</name>
+        <param>
+          <type>string</type>
+          <declname>damageType</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Simulates the application of damage over time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The damage.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>damageType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Damage type.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="33" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="33" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_character_damage_1aeb1574e48eac8ed8c211b5ea0d488782" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleCharacterDamage.RestoreHealth</definition>
+        <argsstring>(float time)</argsstring>
+        <name>RestoreHealth</name>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Simulates restoring of health over time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The health.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="59" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="59" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Example character with action queue. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="47">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="46">
+        <label>ExampleCharacterDamage</label>
+        <link refid="class_example_character_damage"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="49">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="48">
+        <label>ExampleCharacterDamage</label>
+        <link refid="class_example_character_damage"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" line="8" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleCharacterDamage.cs" bodystart="7" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_example_character_damage_1a51af26b3447eb4880af3b1002c9c6a10" prot="private" virt="non-virtual"><scope>ExampleCharacterDamage</scope><name>_actionQueue</name></member>
+      <member refid="class_example_character_damage_1a0befb25f1d266a74f6ea9b2bb25b8d6d" prot="public" virt="non-virtual"><scope>ExampleCharacterDamage</scope><name>AddActionToQueue</name></member>
+      <member refid="class_example_character_damage_1af25a43f4182d205ca89e73d7dc0794f3" prot="public" virt="non-virtual"><scope>ExampleCharacterDamage</scope><name>ApplyDamage</name></member>
+      <member refid="class_example_character_damage_1a9f184018de86afde217ec6978018874d" prot="public" virt="non-virtual"><scope>ExampleCharacterDamage</scope><name>health</name></member>
+      <member refid="class_example_character_damage_1a5be40bc5175392994005809bb5be6359" prot="private" virt="non-virtual"><scope>ExampleCharacterDamage</scope><name>OnDead</name></member>
+      <member refid="class_example_character_damage_1a4de8e1a33ca856b9a5bc37a7935ef68a" prot="private" virt="non-virtual"><scope>ExampleCharacterDamage</scope><name>OnRevive</name></member>
+      <member refid="class_example_character_damage_1aeb1574e48eac8ed8c211b5ea0d488782" prot="public" virt="non-virtual"><scope>ExampleCharacterDamage</scope><name>RestoreHealth</name></member>
+      <member refid="class_example_character_damage_1ae4a2be80f0affa4d02998fc2c5b9af91" prot="private" virt="non-virtual"><scope>ExampleCharacterDamage</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

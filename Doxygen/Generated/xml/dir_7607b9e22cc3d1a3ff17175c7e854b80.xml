@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_7607b9e22cc3d1a3ff17175c7e854b80" kind="dir">
+    <compoundname>Scripts</compoundname>
+    <innerdir refid="dir_61d20c9de781779711aace5851a64df3">Examples</innerdir>
+    <innerdir refid="dir_436d5d55a71f3ca18c34eda543a05c7f">Tests</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/"/>
+  </compounddef>
+</doxygen>

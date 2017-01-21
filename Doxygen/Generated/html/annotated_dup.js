@@ -1,0 +1,25 @@
+var annotated_dup =
+[
+    [ "CM_Dispatcher", "class_c_m___dispatcher.html", "class_c_m___dispatcher" ],
+    [ "CM_GlobalCoroutineManager", "class_c_m___global_coroutine_manager.html", "class_c_m___global_coroutine_manager" ],
+    [ "CM_Job", "class_c_m___job.html", "class_c_m___job" ],
+    [ "CM_JobEventArgs", "class_c_m___job_event_args.html", "class_c_m___job_event_args" ],
+    [ "CM_JobManager", "class_c_m___job_manager.html", "class_c_m___job_manager" ],
+    [ "CM_JobManagerEventArgs", "class_c_m___job_manager_event_args.html", "class_c_m___job_manager_event_args" ],
+    [ "CM_JobManagerJobEditedEventArgs", "class_c_m___job_manager_job_edited_event_args.html", "class_c_m___job_manager_job_edited_event_args" ],
+    [ "CM_JobQueue", "class_c_m___job_queue.html", "class_c_m___job_queue" ],
+    [ "CM_Logger", "class_c_m___logger.html", "class_c_m___logger" ],
+    [ "CM_QueueEventArgs", "class_c_m___queue_event_args.html", "class_c_m___queue_event_args" ],
+    [ "CM_Singleton", "class_c_m___singleton.html", "class_c_m___singleton" ],
+    [ "ExampleCharacterDamage", "class_example_character_damage.html", "class_example_character_damage" ],
+    [ "ExampleCharacterMovement", "class_example_character_movement.html", "class_example_character_movement" ],
+    [ "ExampleContinousSpawner", "class_example_continous_spawner.html", "class_example_continous_spawner" ],
+    [ "ExampleDamageApplier", "class_example_damage_applier.html", "class_example_damage_applier" ],
+    [ "ExampleGUI", "class_example_g_u_i.html", "class_example_g_u_i" ],
+    [ "ExampleJobManagerTest", "class_example_job_manager_test.html", "class_example_job_manager_test" ],
+    [ "ExampleJobQueueTest", "class_example_job_queue_test.html", "class_example_job_queue_test" ],
+    [ "ExampleJobTest", "class_example_job_test.html", "class_example_job_test" ],
+    [ "ExampleTimer", "class_example_timer.html", null ],
+    [ "ExampleTImerPauseResume", "class_example_t_imer_pause_resume.html", null ],
+    [ "ICM_Cloneable", "interface_i_c_m___cloneable.html", "interface_i_c_m___cloneable" ]
+];

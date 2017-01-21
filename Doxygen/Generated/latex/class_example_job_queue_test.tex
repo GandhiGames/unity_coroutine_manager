@@ -1,0 +1,198 @@
+\hypertarget{class_example_job_queue_test}{}\section{Example\+Job\+Queue\+Test Class Reference}
+\label{class_example_job_queue_test}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+
+
+Includes a number of methods to test the functionality of the \hyperlink{class_c_m___job_queue}{C\+M\+\_\+\+Job\+Queue} class. Each method showcases a particular functionality of the \hyperlink{class_c_m___job_queue}{C\+M\+\_\+\+Job\+Queue} that you can implement in your own projects. Each method returns an ienumerator so that it can added to a seperate job queue to be run in sequence for test purposes.  
+
+
+Inheritance diagram for Example\+Job\+Queue\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_example_job_queue_test}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a45a4cc204d6396b39b6ff3844c4dbc2f}{Simple\+Global\+Queue\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a list of jobs, adds them to the global queue and starts global queue. The global queue can be accessed from any script. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a65d6aaf0f94ba848ce1be82a6d90e780}{Simple\+Local\+Queue\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a list of jobs, adds them to a newly created local queue and starts the queue. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_abe5f18a717e6699715d829f8fe797da5}{Local\+Queue\+Delayed\+Start\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates and starts a queue after a delay of two seconds. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a1463e2c77a6e293cb5d1a596a970d405}{Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a local queue, starts queue, pauses queue after 1 seconds, and lastly resumes queue after 3 seconds. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_ac09ae706637551c37837a36d951fbac6}{Queue\+Event\+Test} ()
+\begin{DoxyCompactList}\small\item\em Subscribes to the global queue \char`\"{}queue\+Started\char`\"{}, \char`\"{}job\+Processed\char`\"{}, and \char`\"{}queue\+Complete\char`\"{} events. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a56d063006d12236d417219ae1711706b}{Delayed\+Kill\+Current\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a local queue and sets the current job in the queue to be killed after three seconds. This kills the currently running job but the queue still executes. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a3c5d23ccdb5c3edfd54ca39c4f93a22e}{Delayed\+Kill\+All\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a local queue and sets all jobs in the queue to be killed after one second. This kills all jobs and clears the queue. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a628f7061c7818786b52a6b9371a1af6c}{Add\+Local\+Queue\+To\+Global\+Queue\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a local queue and then adds it to the glocal queue. The event subscriptions are also added to the global queue. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a1ffd555683806c216251f462bb69cb40}{Add\+Repeating\+Job\+To\+Queue\+Test} ()
+\begin{DoxyCompactList}\small\item\em Adds a repeating job to a queue. Queue will not progress if a repeating job is added until that job is manually killed or has reached its set number of times to repeat. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a037cbad8b6d50077e844cb28e9412741}{Set\+Number\+Repeating\+Queue\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a new local queue, adds a number of test jobs and sets the queue to repeat two times. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_a3b7bf466ad7ad9b4039402a8fab519cf}{Timed\+Repeating\+Queue\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a new local queue, sets it to repeat and then stop repeating after 1 seconds. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_aee4d70589eda67ae5237f27c3398f19f}{Cloned\+Repeating\+Queue\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a local queue and sets it to repeat twice. The queue is then cloned and started. The new cloned queue will contain the original queues repeat status and event subscriptions. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_queue_test_ac1f5d324d824d30fb115a012c97a7f68}{Multiple\+Cloned\+Queue\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a local queue and clones the queue twice. Both of the cloned queues are then started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Includes a number of methods to test the functionality of the \hyperlink{class_c_m___job_queue}{C\+M\+\_\+\+Job\+Queue} class. Each method showcases a particular functionality of the \hyperlink{class_c_m___job_queue}{C\+M\+\_\+\+Job\+Queue} that you can implement in your own projects. Each method returns an ienumerator so that it can added to a seperate job queue to be run in sequence for test purposes. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_example_job_queue_test_a628f7061c7818786b52a6b9371a1af6c}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Add\+Local\+Queue\+To\+Global\+Queue\+Test@{Add\+Local\+Queue\+To\+Global\+Queue\+Test}}
+\index{Add\+Local\+Queue\+To\+Global\+Queue\+Test@{Add\+Local\+Queue\+To\+Global\+Queue\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Add\+Local\+Queue\+To\+Global\+Queue\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Add\+Local\+Queue\+To\+Global\+Queue\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a628f7061c7818786b52a6b9371a1af6c}
+
+
+Creates a local queue and then adds it to the glocal queue. The event subscriptions are also added to the global queue. 
+
+\hypertarget{class_example_job_queue_test_a1ffd555683806c216251f462bb69cb40}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Add\+Repeating\+Job\+To\+Queue\+Test@{Add\+Repeating\+Job\+To\+Queue\+Test}}
+\index{Add\+Repeating\+Job\+To\+Queue\+Test@{Add\+Repeating\+Job\+To\+Queue\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Add\+Repeating\+Job\+To\+Queue\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Add\+Repeating\+Job\+To\+Queue\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a1ffd555683806c216251f462bb69cb40}
+
+
+Adds a repeating job to a queue. Queue will not progress if a repeating job is added until that job is manually killed or has reached its set number of times to repeat. 
+
+\hypertarget{class_example_job_queue_test_aee4d70589eda67ae5237f27c3398f19f}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Cloned\+Repeating\+Queue\+Test@{Cloned\+Repeating\+Queue\+Test}}
+\index{Cloned\+Repeating\+Queue\+Test@{Cloned\+Repeating\+Queue\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Cloned\+Repeating\+Queue\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Cloned\+Repeating\+Queue\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_aee4d70589eda67ae5237f27c3398f19f}
+
+
+Creates a local queue and sets it to repeat twice. The queue is then cloned and started. The new cloned queue will contain the original queues repeat status and event subscriptions. 
+
+\hypertarget{class_example_job_queue_test_a3c5d23ccdb5c3edfd54ca39c4f93a22e}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Delayed\+Kill\+All\+Test@{Delayed\+Kill\+All\+Test}}
+\index{Delayed\+Kill\+All\+Test@{Delayed\+Kill\+All\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Delayed\+Kill\+All\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Delayed\+Kill\+All\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a3c5d23ccdb5c3edfd54ca39c4f93a22e}
+
+
+Creates a local queue and sets all jobs in the queue to be killed after one second. This kills all jobs and clears the queue. 
+
+\hypertarget{class_example_job_queue_test_a56d063006d12236d417219ae1711706b}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Delayed\+Kill\+Current\+Test@{Delayed\+Kill\+Current\+Test}}
+\index{Delayed\+Kill\+Current\+Test@{Delayed\+Kill\+Current\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Delayed\+Kill\+Current\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Delayed\+Kill\+Current\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a56d063006d12236d417219ae1711706b}
+
+
+Creates a local queue and sets the current job in the queue to be killed after three seconds. This kills the currently running job but the queue still executes. 
+
+\hypertarget{class_example_job_queue_test_a1463e2c77a6e293cb5d1a596a970d405}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test@{Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test}}
+\index{Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test@{Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a1463e2c77a6e293cb5d1a596a970d405}
+
+
+Creates a local queue, starts queue, pauses queue after 1 seconds, and lastly resumes queue after 3 seconds. 
+
+\hypertarget{class_example_job_queue_test_abe5f18a717e6699715d829f8fe797da5}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Local\+Queue\+Delayed\+Start\+Test@{Local\+Queue\+Delayed\+Start\+Test}}
+\index{Local\+Queue\+Delayed\+Start\+Test@{Local\+Queue\+Delayed\+Start\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Local\+Queue\+Delayed\+Start\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Local\+Queue\+Delayed\+Start\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_abe5f18a717e6699715d829f8fe797da5}
+
+
+Creates and starts a queue after a delay of two seconds. 
+
+\hypertarget{class_example_job_queue_test_ac1f5d324d824d30fb115a012c97a7f68}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Multiple\+Cloned\+Queue\+Test@{Multiple\+Cloned\+Queue\+Test}}
+\index{Multiple\+Cloned\+Queue\+Test@{Multiple\+Cloned\+Queue\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Multiple\+Cloned\+Queue\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Multiple\+Cloned\+Queue\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_ac1f5d324d824d30fb115a012c97a7f68}
+
+
+Creates a local queue and clones the queue twice. Both of the cloned queues are then started. 
+
+\hypertarget{class_example_job_queue_test_ac09ae706637551c37837a36d951fbac6}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Queue\+Event\+Test@{Queue\+Event\+Test}}
+\index{Queue\+Event\+Test@{Queue\+Event\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Queue\+Event\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Queue\+Event\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_ac09ae706637551c37837a36d951fbac6}
+
+
+Subscribes to the global queue \char`\"{}queue\+Started\char`\"{}, \char`\"{}job\+Processed\char`\"{}, and \char`\"{}queue\+Complete\char`\"{} events. 
+
+\hypertarget{class_example_job_queue_test_a037cbad8b6d50077e844cb28e9412741}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Set\+Number\+Repeating\+Queue\+Test@{Set\+Number\+Repeating\+Queue\+Test}}
+\index{Set\+Number\+Repeating\+Queue\+Test@{Set\+Number\+Repeating\+Queue\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Set\+Number\+Repeating\+Queue\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Set\+Number\+Repeating\+Queue\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a037cbad8b6d50077e844cb28e9412741}
+
+
+Creates a new local queue, adds a number of test jobs and sets the queue to repeat two times. 
+
+\hypertarget{class_example_job_queue_test_a45a4cc204d6396b39b6ff3844c4dbc2f}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Simple\+Global\+Queue\+Test@{Simple\+Global\+Queue\+Test}}
+\index{Simple\+Global\+Queue\+Test@{Simple\+Global\+Queue\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Simple\+Global\+Queue\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Simple\+Global\+Queue\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a45a4cc204d6396b39b6ff3844c4dbc2f}
+
+
+Creates a list of jobs, adds them to the global queue and starts global queue. The global queue can be accessed from any script. 
+
+\hypertarget{class_example_job_queue_test_a65d6aaf0f94ba848ce1be82a6d90e780}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Simple\+Local\+Queue\+Test@{Simple\+Local\+Queue\+Test}}
+\index{Simple\+Local\+Queue\+Test@{Simple\+Local\+Queue\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Simple\+Local\+Queue\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Simple\+Local\+Queue\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a65d6aaf0f94ba848ce1be82a6d90e780}
+
+
+Creates a list of jobs, adds them to a newly created local queue and starts the queue. 
+
+\hypertarget{class_example_job_queue_test_a3b7bf466ad7ad9b4039402a8fab519cf}{}\index{Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}!Timed\+Repeating\+Queue\+Test@{Timed\+Repeating\+Queue\+Test}}
+\index{Timed\+Repeating\+Queue\+Test@{Timed\+Repeating\+Queue\+Test}!Example\+Job\+Queue\+Test@{Example\+Job\+Queue\+Test}}
+\subsubsection[{Timed\+Repeating\+Queue\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Queue\+Test.\+Timed\+Repeating\+Queue\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_queue_test_a3b7bf466ad7ad9b4039402a8fab519cf}
+
+
+Creates a new local queue, sets it to repeat and then stop repeating after 1 seconds. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Example\+Job\+Queue\+Test.\+cs\end{DoxyCompactItemize}

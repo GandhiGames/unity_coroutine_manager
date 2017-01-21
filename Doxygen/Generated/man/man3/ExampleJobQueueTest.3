@@ -1,0 +1,130 @@
+.TH "ExampleJobQueueTest" 3 "Mon Jan 4 2016" "Version 1.0" "Coroutine Manager Pro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExampleJobQueueTest \- Includes a number of methods to test the functionality of the \fBCM_JobQueue\fP class\&. Each method showcases a particular functionality of the \fBCM_JobQueue\fP that you can implement in your own projects\&. Each method returns an ienumerator so that it can added to a seperate job queue to be run in sequence for test purposes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "IEnumerator \fBSimpleGlobalQueueTest\fP ()"
+.br
+.RI "\fICreates a list of jobs, adds them to the global queue and starts global queue\&. The global queue can be accessed from any script\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBSimpleLocalQueueTest\fP ()"
+.br
+.RI "\fICreates a list of jobs, adds them to a newly created local queue and starts the queue\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBLocalQueueDelayedStartTest\fP ()"
+.br
+.RI "\fICreates and starts a queue after a delay of two seconds\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBLocalQueueDelayedPauseAndResumeTest\fP ()"
+.br
+.RI "\fICreates a local queue, starts queue, pauses queue after 1 seconds, and lastly resumes queue after 3 seconds\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBQueueEventTest\fP ()"
+.br
+.RI "\fISubscribes to the global queue 'queueStarted', 'jobProcessed', and 'queueComplete' events\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBDelayedKillCurrentTest\fP ()"
+.br
+.RI "\fICreates a local queue and sets the current job in the queue to be killed after three seconds\&. This kills the currently running job but the queue still executes\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBDelayedKillAllTest\fP ()"
+.br
+.RI "\fICreates a local queue and sets all jobs in the queue to be killed after one second\&. This kills all jobs and clears the queue\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBAddLocalQueueToGlobalQueueTest\fP ()"
+.br
+.RI "\fICreates a local queue and then adds it to the glocal queue\&. The event subscriptions are also added to the global queue\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBAddRepeatingJobToQueueTest\fP ()"
+.br
+.RI "\fIAdds a repeating job to a queue\&. Queue will not progress if a repeating job is added until that job is manually killed or has reached its set number of times to repeat\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBSetNumberRepeatingQueueTest\fP ()"
+.br
+.RI "\fICreates a new local queue, adds a number of test jobs and sets the queue to repeat two times\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBTimedRepeatingQueueTest\fP ()"
+.br
+.RI "\fICreates a new local queue, sets it to repeat and then stop repeating after 1 seconds\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBClonedRepeatingQueueTest\fP ()"
+.br
+.RI "\fICreates a local queue and sets it to repeat twice\&. The queue is then cloned and started\&. The new cloned queue will contain the original queues repeat status and event subscriptions\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBMultipleClonedQueueTest\fP ()"
+.br
+.RI "\fICreates a local queue and clones the queue twice\&. Both of the cloned queues are then started\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Includes a number of methods to test the functionality of the \fBCM_JobQueue\fP class\&. Each method showcases a particular functionality of the \fBCM_JobQueue\fP that you can implement in your own projects\&. Each method returns an ienumerator so that it can added to a seperate job queue to be run in sequence for test purposes\&. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "IEnumerator ExampleJobQueueTest\&.AddLocalQueueToGlobalQueueTest ()"
+
+.PP
+Creates a local queue and then adds it to the glocal queue\&. The event subscriptions are also added to the global queue\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.AddRepeatingJobToQueueTest ()"
+
+.PP
+Adds a repeating job to a queue\&. Queue will not progress if a repeating job is added until that job is manually killed or has reached its set number of times to repeat\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.ClonedRepeatingQueueTest ()"
+
+.PP
+Creates a local queue and sets it to repeat twice\&. The queue is then cloned and started\&. The new cloned queue will contain the original queues repeat status and event subscriptions\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.DelayedKillAllTest ()"
+
+.PP
+Creates a local queue and sets all jobs in the queue to be killed after one second\&. This kills all jobs and clears the queue\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.DelayedKillCurrentTest ()"
+
+.PP
+Creates a local queue and sets the current job in the queue to be killed after three seconds\&. This kills the currently running job but the queue still executes\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.LocalQueueDelayedPauseAndResumeTest ()"
+
+.PP
+Creates a local queue, starts queue, pauses queue after 1 seconds, and lastly resumes queue after 3 seconds\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.LocalQueueDelayedStartTest ()"
+
+.PP
+Creates and starts a queue after a delay of two seconds\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.MultipleClonedQueueTest ()"
+
+.PP
+Creates a local queue and clones the queue twice\&. Both of the cloned queues are then started\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.QueueEventTest ()"
+
+.PP
+Subscribes to the global queue 'queueStarted', 'jobProcessed', and 'queueComplete' events\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.SetNumberRepeatingQueueTest ()"
+
+.PP
+Creates a new local queue, adds a number of test jobs and sets the queue to repeat two times\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.SimpleGlobalQueueTest ()"
+
+.PP
+Creates a list of jobs, adds them to the global queue and starts global queue\&. The global queue can be accessed from any script\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.SimpleLocalQueueTest ()"
+
+.PP
+Creates a list of jobs, adds them to a newly created local queue and starts the queue\&. 
+.SS "IEnumerator ExampleJobQueueTest\&.TimedRepeatingQueueTest ()"
+
+.PP
+Creates a new local queue, sets it to repeat and then stop repeating after 1 seconds\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Coroutine Manager Pro from the source code\&.

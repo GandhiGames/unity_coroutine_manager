@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="class_c_m___job_event_args" kind="class" language="C#" prot="public">
+    <compoundname>CM_JobEventArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_m___job_event_args_1a602ecf7364ca2e6a2285f1622e7f1c8b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_c_m___job" kindref="compound">CM_Job</ref></type>
+        <definition>CM_Job CM_JobEventArgs.job</definition>
+        <argsstring></argsstring>
+        <name>job</name>
+        <briefdescription>
+<para>Gets the current job. </para>        </briefdescription>
+        <detaileddescription>
+<para>The job.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" line="13" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_m___job_event_args_1a6b20e99da0cb8807604b4459eebb4484" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_c_m___job" kindref="compound">CM_Job</ref>[]</type>
+        <definition>CM_Job [] CM_JobEventArgs.childJobs</definition>
+        <argsstring></argsstring>
+        <name>childJobs</name>
+        <briefdescription>
+<para>Gets the child jobs (if any). </para>        </briefdescription>
+        <detaileddescription>
+<para>The child jobs.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" line="19" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_m___job_event_args_1a67592931253f8d17df276bc17b54952b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool CM_JobEventArgs.hasChildJobs</definition>
+        <argsstring></argsstring>
+        <name>hasChildJobs</name>
+        <briefdescription>
+<para>Gets a value indicating whether this <ref refid="class_c_m___job_event_args" kindref="compound">CM_JobEventArgs</ref> has child jobs. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>true</computeroutput> if has child jobs; otherwise, <computeroutput>false</computeroutput>.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" line="25" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_m___job_event_args_1a31a12f7cf24666f25f6b0967668cff61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CM_JobEventArgs.CM_JobEventArgs</definition>
+        <argsstring>(CM_Job job, CM_Job[] childJobs)</argsstring>
+        <name>CM_JobEventArgs</name>
+        <param>
+          <type><ref refid="class_c_m___job" kindref="compound">CM_Job</ref></type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type><ref refid="class_c_m___job" kindref="compound">CM_Job</ref>[]</type>
+          <declname>childJobs</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_c_m___job_event_args" kindref="compound">CM_JobEventArgs</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Job.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>childJobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Child jobs.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" line="32" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" bodystart="32" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Arguements used in events raised by <ref refid="class_c_m___job" kindref="compound">CM_Job</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12">
+        <label>CM_JobEventArgs</label>
+        <link refid="class_c_m___job_event_args"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>System::EventArgs</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14">
+        <label>CM_JobEventArgs</label>
+        <link refid="class_c_m___job_event_args"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>System::EventArgs</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" line="8" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobEventArgs.cs" bodystart="7" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_c_m___job_event_args_1a6b20e99da0cb8807604b4459eebb4484" prot="public" virt="non-virtual"><scope>CM_JobEventArgs</scope><name>childJobs</name></member>
+      <member refid="class_c_m___job_event_args_1a31a12f7cf24666f25f6b0967668cff61" prot="public" virt="non-virtual"><scope>CM_JobEventArgs</scope><name>CM_JobEventArgs</name></member>
+      <member refid="class_c_m___job_event_args_1a67592931253f8d17df276bc17b54952b" prot="public" virt="non-virtual"><scope>CM_JobEventArgs</scope><name>hasChildJobs</name></member>
+      <member refid="class_c_m___job_event_args_1a602ecf7364ca2e6a2285f1622e7f1c8b" prot="public" virt="non-virtual"><scope>CM_JobEventArgs</scope><name>job</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

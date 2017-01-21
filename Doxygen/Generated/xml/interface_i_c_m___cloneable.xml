@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="interface_i_c_m___cloneable" kind="interface" language="C#" prot="public">
+    <compoundname>ICM_Cloneable</compoundname>
+    <templateparamlist>
+      <param>
+        <type>T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_i_c_m___cloneable_1ae8b9fb9338e27c094a82d75a0c6c25ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T ICM_Cloneable&lt; T &gt;.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <briefdescription>
+<para>Clone this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/ICM_Cloneable.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_c_m___cloneable_1a2b520d18d778c682836ecc870155a5d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T[]</type>
+        <definition>T [] ICM_Cloneable&lt; T &gt;.Clone</definition>
+        <argsstring>(int numOfCopies)</argsstring>
+        <name>Clone</name>
+        <param>
+          <type>int</type>
+          <declname>numOfCopies</declname>
+        </param>
+        <briefdescription>
+<para>Clone the specified numOfCopies. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numOfCopies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of copies.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/ICM_Cloneable.cs" line="18" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An interface for all classes used by the coroutine manager that can be cloned. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/ICM_Cloneable.cs" line="8" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/ICM_Cloneable.cs" bodystart="7" bodyend="19"/>
+    <listofallmembers>
+      <member refid="interface_i_c_m___cloneable_1ae8b9fb9338e27c094a82d75a0c6c25ac" prot="public" virt="non-virtual"><scope>ICM_Cloneable</scope><name>Clone</name></member>
+      <member refid="interface_i_c_m___cloneable_1a2b520d18d778c682836ecc870155a5d8" prot="public" virt="non-virtual"><scope>ICM_Cloneable</scope><name>Clone</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

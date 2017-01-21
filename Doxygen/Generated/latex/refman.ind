@@ -1,0 +1,603 @@
+\begin{theindex}
+
+  \item {Add\+Action\+To\+Queue}
+    \subitem {Example\+Character\+Damage}, \hyperpage{48}
+  \item {Add\+Child}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{9}
+  \item {Add\+Job}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{20, 21}
+  \item {Add\+Local\+Queue\+To\+Global\+Queue\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {Add\+Repeating\+Job\+To\+Queue\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {Add\+To\+Execute\+Queue}
+    \subitem {C\+M\+\_\+\+Dispatcher}, \hyperpage{5}
+  \item {all\+Jobs\+Cleared}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{31}
+  \item {all\+Jobs\+Killed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{31}
+  \item {all\+Jobs\+Paused}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{31}
+  \item {all\+Jobs\+Resumed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{31}
+  \item {Apply\+Damage}
+    \subitem {Example\+Character\+Damage}, \hyperpage{48}
+
+  \indexspace
+
+  \item {Builder}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{9}
+
+  \indexspace
+
+  \item {C\+M\+\_\+\+Dispatcher}, \hyperpage{5}
+    \subitem {Add\+To\+Execute\+Queue}, \hyperpage{5}
+  \item {C\+M\+\_\+\+Global\+Coroutine\+Manager}
+    \subitem {Global}, \hyperpage{6}
+  \item {C\+M\+\_\+\+Global\+Coroutine\+Manager$<$ T $>$}, 
+		\hyperpage{6}
+  \item {C\+M\+\_\+\+Job}, \hyperpage{6}
+    \subitem {Add\+Child}, \hyperpage{9}
+    \subitem {Builder}, \hyperpage{9}
+    \subitem {Clone}, \hyperpage{9}
+    \subitem {coroutine}, \hyperpage{16}
+    \subitem {id}, \hyperpage{16}
+    \subitem {job\+Killed}, \hyperpage{16}
+    \subitem {Kill}, \hyperpage{9}
+    \subitem {Make}, \hyperpage{11}
+    \subitem {Notify\+On\+Child\+Job\+Complete}, \hyperpage{11}
+    \subitem {Notify\+On\+Child\+Job\+Started}, \hyperpage{11}
+    \subitem {Notify\+On\+Job\+Complete}, \hyperpage{11}
+    \subitem {Notify\+On\+Job\+Finished\+Running}, \hyperpage{11}
+    \subitem {Notify\+On\+Job\+Paused}, \hyperpage{12}
+    \subitem {Notify\+On\+Job\+Resumed}, \hyperpage{12}
+    \subitem {Notify\+On\+Job\+Started}, \hyperpage{12}
+    \subitem {num\+Of\+Times\+Executed}, \hyperpage{16}
+    \subitem {On\+Child\+Jobs\+Complete}, \hyperpage{12}
+    \subitem {On\+Child\+Jobs\+Started}, \hyperpage{12}
+    \subitem {On\+Job\+Complete}, \hyperpage{12}
+    \subitem {On\+Job\+Finished\+Running}, \hyperpage{13}
+    \subitem {On\+Job\+Paused}, \hyperpage{13}
+    \subitem {On\+Job\+Resumed}, \hyperpage{13}
+    \subitem {On\+Job\+Started}, \hyperpage{13}
+    \subitem {Pause}, \hyperpage{13}
+    \subitem {paused}, \hyperpage{16}
+    \subitem {Remove\+Child\+Job}, \hyperpage{13}
+    \subitem {Remove\+Notify\+On\+Child\+Job\+Complete}, \hyperpage{14}
+    \subitem {Remove\+Notify\+On\+Child\+Job\+Started}, \hyperpage{14}
+    \subitem {Remove\+Notify\+On\+Job\+Complete}, \hyperpage{14}
+    \subitem {Remove\+Notify\+On\+Job\+Finished\+Running}, 
+		\hyperpage{14}
+    \subitem {Remove\+Notify\+On\+Job\+Paused}, \hyperpage{14}
+    \subitem {Remove\+Notify\+On\+Job\+Resumed}, \hyperpage{14}
+    \subitem {Remove\+Notify\+On\+Job\+Started}, \hyperpage{15}
+    \subitem {Repeat}, \hyperpage{15}
+    \subitem {repeating}, \hyperpage{16}
+    \subitem {Resume}, \hyperpage{15}
+    \subitem {running}, \hyperpage{16}
+    \subitem {Start}, \hyperpage{15}
+    \subitem {Stop\+Repeat}, \hyperpage{15}
+  \item {C\+M\+\_\+\+Job\+Event\+Args}, \hyperpage{16}
+    \subitem {C\+M\+\_\+\+Job\+Event\+Args}, \hyperpage{17}
+    \subitem {child\+Jobs}, \hyperpage{17}
+    \subitem {has\+Child\+Jobs}, \hyperpage{17}
+    \subitem {job}, \hyperpage{17}
+  \item {C\+M\+\_\+\+Job\+Manager}, \hyperpage{18}
+    \subitem {Add\+Job}, \hyperpage{20, 21}
+    \subitem {all\+Jobs\+Cleared}, \hyperpage{31}
+    \subitem {all\+Jobs\+Killed}, \hyperpage{31}
+    \subitem {all\+Jobs\+Paused}, \hyperpage{31}
+    \subitem {all\+Jobs\+Resumed}, \hyperpage{31}
+    \subitem {Clear\+Job\+List}, \hyperpage{21}
+    \subitem {Has\+Job}, \hyperpage{21}
+    \subitem {Is\+Running}, \hyperpage{22}
+    \subitem {job\+Added}, \hyperpage{31}
+    \subitem {job\+Removed}, \hyperpage{31}
+    \subitem {Kill\+All}, \hyperpage{22}
+    \subitem {Make}, \hyperpage{23}
+    \subitem {Notify\+On\+All\+Jobs\+Cleared}, \hyperpage{23}
+    \subitem {Notify\+On\+All\+Jobs\+Killed}, \hyperpage{23}
+    \subitem {Notify\+On\+All\+Jobs\+Paused}, \hyperpage{23}
+    \subitem {Notify\+On\+All\+Jobs\+Resumed}, \hyperpage{23}
+    \subitem {Notify\+On\+Job\+Added}, \hyperpage{23}
+    \subitem {Notify\+On\+Job\+Removed}, \hyperpage{23}
+    \subitem {On\+All\+Jobs\+Cleared}, \hyperpage{25}
+    \subitem {On\+All\+Jobs\+Killed}, \hyperpage{25}
+    \subitem {On\+All\+Jobs\+Paused}, \hyperpage{25}
+    \subitem {On\+All\+Jobs\+Resumed}, \hyperpage{25}
+    \subitem {On\+Job\+Added}, \hyperpage{25}
+    \subitem {On\+Job\+Removed}, \hyperpage{25}
+    \subitem {Pause\+All}, \hyperpage{25, 26}
+    \subitem {Pause\+Coroutine}, \hyperpage{26}
+    \subitem {Remove\+Job}, \hyperpage{26, 27}
+    \subitem {Remove\+Notify\+On\+All\+Jobs\+Cleared}, \hyperpage{27}
+    \subitem {Remove\+Notify\+On\+All\+Jobs\+Killed}, \hyperpage{27}
+    \subitem {Remove\+Notify\+On\+All\+Jobs\+Paused}, \hyperpage{27}
+    \subitem {Remove\+Notify\+On\+All\+Jobs\+Resumed}, \hyperpage{27}
+    \subitem {Remove\+Notify\+On\+Job\+Added}, \hyperpage{27}
+    \subitem {Remove\+Notify\+On\+Job\+Removed}, \hyperpage{29}
+    \subitem {Resume\+All}, \hyperpage{29}
+    \subitem {Resume\+Coroutine}, \hyperpage{29}
+    \subitem {Start\+All}, \hyperpage{30}
+    \subitem {Start\+Coroutine}, \hyperpage{30}
+    \subitem {Stop\+Coroutine}, \hyperpage{30, 31}
+  \item {C\+M\+\_\+\+Job\+Manager\+Event\+Args}, \hyperpage{31}
+    \subitem {C\+M\+\_\+\+Job\+Manager\+Event\+Args}, \hyperpage{32}
+    \subitem {owned\+Jobs}, \hyperpage{32}
+    \subitem {paused\+Jobs}, \hyperpage{32}
+    \subitem {running\+Jobs}, \hyperpage{32}
+  \item {C\+M\+\_\+\+Job\+Manager\+Job\+Edited\+Event\+Args}, 
+		\hyperpage{33}
+    \subitem {C\+M\+\_\+\+Job\+Manager\+Job\+Edited\+Event\+Args}, 
+		\hyperpage{33}
+    \subitem {job\+Edited}, \hyperpage{34}
+    \subitem {other\+Args}, \hyperpage{34}
+  \item {C\+M\+\_\+\+Job\+Queue}, \hyperpage{34}
+    \subitem {Clone}, \hyperpage{36}
+    \subitem {Continous\+Running}, \hyperpage{37}
+    \subitem {continous\+Running}, \hyperpage{43}
+    \subitem {Enqueue}, \hyperpage{37}
+    \subitem {Handlejob\+Complete}, \hyperpage{38}
+    \subitem {job\+Processed}, \hyperpage{44}
+    \subitem {Kill\+All}, \hyperpage{38}
+    \subitem {Kill\+Current}, \hyperpage{38}
+    \subitem {Make}, \hyperpage{38}
+    \subitem {Notify\+On\+Job\+Processed}, \hyperpage{38}
+    \subitem {Notify\+On\+Queue\+Complete}, \hyperpage{40}
+    \subitem {Notify\+On\+Queue\+Started}, \hyperpage{40}
+    \subitem {num\+Of\+Times\+Executed}, \hyperpage{43}
+    \subitem {On\+Job\+Processed}, \hyperpage{40}
+    \subitem {On\+Queue\+Complete}, \hyperpage{40}
+    \subitem {On\+Queue\+Started}, \hyperpage{40}
+    \subitem {Pause}, \hyperpage{40}
+    \subitem {queue\+Complete}, \hyperpage{44}
+    \subitem {queue\+Started}, \hyperpage{44}
+    \subitem {Remove\+Notify\+On\+Job\+Processed}, \hyperpage{41}
+    \subitem {Remove\+Notify\+On\+Queue\+Complete}, \hyperpage{41}
+    \subitem {Remove\+Notify\+On\+Queue\+Started}, \hyperpage{41}
+    \subitem {Repeat}, \hyperpage{41}
+    \subitem {repeating}, \hyperpage{43}
+    \subitem {Resume}, \hyperpage{41}
+    \subitem {running}, \hyperpage{43}
+    \subitem {Start}, \hyperpage{41}
+    \subitem {Stop\+Continous\+Running}, \hyperpage{43}
+    \subitem {Stop\+Repeat}, \hyperpage{43}
+  \item {C\+M\+\_\+\+Logger}, \hyperpage{44}
+    \subitem {Log}, \hyperpage{45}
+    \subitem {Status}, \hyperpage{45}
+  \item {C\+M\+\_\+\+Logger.\+Message}, \hyperpage{61}
+  \item {C\+M\+\_\+\+Logger\+::\+Message}
+    \subitem {content}, \hyperpage{62}
+    \subitem {invoker}, \hyperpage{62}
+    \subitem {Message}, \hyperpage{61}
+    \subitem {To\+String}, \hyperpage{61}
+  \item {C\+M\+\_\+\+Queue\+Event\+Args}, \hyperpage{45}
+    \subitem {C\+M\+\_\+\+Queue\+Event\+Args}, \hyperpage{46}
+    \subitem {completed\+Jobs}, \hyperpage{46}
+    \subitem {has\+Completed\+Jobs}, \hyperpage{46}
+    \subitem {has\+Jobs\+In\+Queue}, \hyperpage{46}
+    \subitem {queued\+Jobs}, \hyperpage{47}
+  \item {C\+M\+\_\+\+Singleton}
+    \subitem {instance}, \hyperpage{47}
+    \subitem {Is\+Destroyed}, \hyperpage{47}
+  \item {C\+M\+\_\+\+Singleton$<$ T $>$}, \hyperpage{47}
+  \item {character}
+    \subitem {Example\+Damage\+Applier}, \hyperpage{51}
+  \item {Child\+Job\+Test}
+    \subitem {Example\+Job\+Test}, \hyperpage{57}
+  \item {child\+Jobs}
+    \subitem {C\+M\+\_\+\+Job\+Event\+Args}, \hyperpage{17}
+  \item {Clear\+Job\+List}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{21}
+  \item {Clone}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{9}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{36}
+    \subitem {I\+C\+M\+\_\+\+Cloneable}, \hyperpage{59}
+  \item {Cloned\+Repeating\+Queue\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {completed\+Jobs}
+    \subitem {C\+M\+\_\+\+Queue\+Event\+Args}, \hyperpage{46}
+  \item {content}
+    \subitem {C\+M\+\_\+\+Logger\+::\+Message}, \hyperpage{62}
+  \item {Continous\+Running}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{37}
+  \item {continous\+Running}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{43}
+  \item {coroutine}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Delayed\+Kill\+All\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {Delayed\+Kill\+Current\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {Delayed\+Pause\+All\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+  \item {Delayed\+Resume\+All\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+
+  \indexspace
+
+  \item {Enqueue}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{37}
+  \item {Example\+Character\+Damage}, \hyperpage{48}
+    \subitem {Add\+Action\+To\+Queue}, \hyperpage{48}
+    \subitem {Apply\+Damage}, \hyperpage{48}
+    \subitem {Restore\+Health}, \hyperpage{49}
+  \item {Example\+Character\+Movement}, \hyperpage{49}
+    \subitem {move\+Speed}, \hyperpage{49}
+  \item {Example\+Continous\+Spawner}, \hyperpage{50}
+    \subitem {num\+To\+Spawn}, \hyperpage{50}
+    \subitem {prefab}, \hyperpage{50}
+    \subitem {time\+Between\+Spawns}, \hyperpage{50}
+  \item {Example\+Damage\+Applier}, \hyperpage{50}
+    \subitem {character}, \hyperpage{51}
+  \item {Example\+G\+U\+I}, \hyperpage{51}
+    \subitem {title\+Text}, \hyperpage{51}
+  \item {Example\+Job\+Manager\+Test}, \hyperpage{52}
+    \subitem {Delayed\+Kill\+All\+Test}, \hyperpage{53}
+    \subitem {Delayed\+Pause\+All\+Test}, \hyperpage{53}
+    \subitem {Delayed\+Resume\+All\+Test}, \hyperpage{53}
+    \subitem {Global\+Job\+Manager\+Event\+Test}, \hyperpage{53}
+    \subitem {Global\+Job\+Pause\+Test}, \hyperpage{53}
+    \subitem {Global\+Job\+Resume\+Test}, \hyperpage{53}
+    \subitem {Global\+Job\+Start\+Test}, \hyperpage{53}
+    \subitem {Global\+Job\+Stop\+Test}, \hyperpage{53}
+    \subitem {Global\+Start\+All\+Test}, \hyperpage{53}
+    \subitem {Local\+Job\+Manager\+Test}, \hyperpage{53}
+  \item {Example\+Job\+Queue\+Test}, \hyperpage{54}
+    \subitem {Add\+Local\+Queue\+To\+Global\+Queue\+Test}, 
+		\hyperpage{55}
+    \subitem {Add\+Repeating\+Job\+To\+Queue\+Test}, \hyperpage{55}
+    \subitem {Cloned\+Repeating\+Queue\+Test}, \hyperpage{55}
+    \subitem {Delayed\+Kill\+All\+Test}, \hyperpage{55}
+    \subitem {Delayed\+Kill\+Current\+Test}, \hyperpage{55}
+    \subitem {Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test}, 
+		\hyperpage{55}
+    \subitem {Local\+Queue\+Delayed\+Start\+Test}, \hyperpage{55}
+    \subitem {Multiple\+Cloned\+Queue\+Test}, \hyperpage{55}
+    \subitem {Queue\+Event\+Test}, \hyperpage{55}
+    \subitem {Set\+Number\+Repeating\+Queue\+Test}, \hyperpage{56}
+    \subitem {Simple\+Global\+Queue\+Test}, \hyperpage{56}
+    \subitem {Simple\+Local\+Queue\+Test}, \hyperpage{56}
+    \subitem {Timed\+Repeating\+Queue\+Test}, \hyperpage{56}
+  \item {Example\+Job\+Test}, \hyperpage{56}
+    \subitem {Child\+Job\+Test}, \hyperpage{57}
+    \subitem {Infinitely\+Repeatable\+Job\+Test}, \hyperpage{57}
+    \subitem {Job\+Test\+With\+Delayed\+Kill}, \hyperpage{57}
+    \subitem {Job\+Test\+With\+Delayed\+Pause}, \hyperpage{57}
+    \subitem {Job\+Test\+With\+Delayed\+Resume}, \hyperpage{57}
+    \subitem {Job\+Test\+With\+Delayed\+Start}, \hyperpage{57}
+    \subitem {Job\+Test\+With\+Start\+And\+End\+Events}, \hyperpage{58}
+    \subitem {Multiple\+Clone\+Job\+Test}, \hyperpage{58}
+    \subitem {Multiple\+Repeatable\+Job\+Test}, \hyperpage{58}
+    \subitem {Mutltiple\+Repeatable\+Job\+Test\+With\+Child}, 
+		\hyperpage{58}
+    \subitem {Simple\+Job\+Test}, \hyperpage{58}
+    \subitem {Single\+Clone\+Job\+Test}, \hyperpage{58}
+  \item {Example\+T\+Imer\+Pause\+Resume}, \hyperpage{59}
+  \item {Example\+Timer}, \hyperpage{58}
+
+  \indexspace
+
+  \item {Global}
+    \subitem {C\+M\+\_\+\+Global\+Coroutine\+Manager}, \hyperpage{6}
+  \item {Global\+Job\+Manager\+Event\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+  \item {Global\+Job\+Pause\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+  \item {Global\+Job\+Resume\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+  \item {Global\+Job\+Start\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+  \item {Global\+Job\+Stop\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+  \item {Global\+Start\+All\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+
+  \indexspace
+
+  \item {Handlejob\+Complete}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{38}
+  \item {has\+Child\+Jobs}
+    \subitem {C\+M\+\_\+\+Job\+Event\+Args}, \hyperpage{17}
+  \item {has\+Completed\+Jobs}
+    \subitem {C\+M\+\_\+\+Queue\+Event\+Args}, \hyperpage{46}
+  \item {Has\+Job}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{21}
+  \item {has\+Jobs\+In\+Queue}
+    \subitem {C\+M\+\_\+\+Queue\+Event\+Args}, \hyperpage{46}
+
+  \indexspace
+
+  \item {I\+C\+M\+\_\+\+Cloneable}
+    \subitem {Clone}, \hyperpage{59}
+  \item {I\+C\+M\+\_\+\+Cloneable$<$ T $>$}, \hyperpage{59}
+  \item {id}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{16}
+  \item {Infinitely\+Repeatable\+Job\+Test}
+    \subitem {Example\+Job\+Test}, \hyperpage{57}
+  \item {instance}
+    \subitem {C\+M\+\_\+\+Singleton}, \hyperpage{47}
+  \item {invoker}
+    \subitem {C\+M\+\_\+\+Logger\+::\+Message}, \hyperpage{62}
+  \item {Is\+Destroyed}
+    \subitem {C\+M\+\_\+\+Singleton}, \hyperpage{47}
+  \item {Is\+Running}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{22}
+
+  \indexspace
+
+  \item {job}
+    \subitem {C\+M\+\_\+\+Job\+Event\+Args}, \hyperpage{17}
+  \item {job\+Added}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{31}
+  \item {job\+Edited}
+    \subitem {C\+M\+\_\+\+Job\+Manager\+Job\+Edited\+Event\+Args}, 
+		\hyperpage{34}
+  \item {job\+Killed}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{16}
+  \item {job\+Processed}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{44}
+  \item {job\+Removed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{31}
+  \item {Job\+Test\+With\+Delayed\+Kill}
+    \subitem {Example\+Job\+Test}, \hyperpage{57}
+  \item {Job\+Test\+With\+Delayed\+Pause}
+    \subitem {Example\+Job\+Test}, \hyperpage{57}
+  \item {Job\+Test\+With\+Delayed\+Resume}
+    \subitem {Example\+Job\+Test}, \hyperpage{57}
+  \item {Job\+Test\+With\+Delayed\+Start}
+    \subitem {Example\+Job\+Test}, \hyperpage{57}
+  \item {Job\+Test\+With\+Start\+And\+End\+Events}
+    \subitem {Example\+Job\+Test}, \hyperpage{58}
+
+  \indexspace
+
+  \item {Kill}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{9}
+  \item {Kill\+All}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{22}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{38}
+  \item {Kill\+Current}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{38}
+
+  \indexspace
+
+  \item {Local\+Job\+Manager\+Test}
+    \subitem {Example\+Job\+Manager\+Test}, \hyperpage{53}
+  \item {Local\+Queue\+Delayed\+Pause\+And\+Resume\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {Local\+Queue\+Delayed\+Start\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {Log}
+    \subitem {C\+M\+\_\+\+Logger}, \hyperpage{45}
+
+  \indexspace
+
+  \item {Make}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{11}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{23}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{38}
+  \item {Message}
+    \subitem {C\+M\+\_\+\+Logger\+::\+Message}, \hyperpage{61}
+  \item {move\+Speed}
+    \subitem {Example\+Character\+Movement}, \hyperpage{49}
+  \item {Multiple\+Clone\+Job\+Test}
+    \subitem {Example\+Job\+Test}, \hyperpage{58}
+  \item {Multiple\+Cloned\+Queue\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {Multiple\+Repeatable\+Job\+Test}
+    \subitem {Example\+Job\+Test}, \hyperpage{58}
+  \item {Mutltiple\+Repeatable\+Job\+Test\+With\+Child}
+    \subitem {Example\+Job\+Test}, \hyperpage{58}
+
+  \indexspace
+
+  \item {Notify\+On\+All\+Jobs\+Cleared}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{23}
+  \item {Notify\+On\+All\+Jobs\+Killed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{23}
+  \item {Notify\+On\+All\+Jobs\+Paused}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{23}
+  \item {Notify\+On\+All\+Jobs\+Resumed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{23}
+  \item {Notify\+On\+Child\+Job\+Complete}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{11}
+  \item {Notify\+On\+Child\+Job\+Started}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{11}
+  \item {Notify\+On\+Job\+Added}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{23}
+  \item {Notify\+On\+Job\+Complete}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{11}
+  \item {Notify\+On\+Job\+Finished\+Running}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{11}
+  \item {Notify\+On\+Job\+Paused}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{12}
+  \item {Notify\+On\+Job\+Processed}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{38}
+  \item {Notify\+On\+Job\+Removed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{23}
+  \item {Notify\+On\+Job\+Resumed}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{12}
+  \item {Notify\+On\+Job\+Started}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{12}
+  \item {Notify\+On\+Queue\+Complete}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{40}
+  \item {Notify\+On\+Queue\+Started}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{40}
+  \item {num\+Of\+Times\+Executed}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{16}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{43}
+  \item {num\+To\+Spawn}
+    \subitem {Example\+Continous\+Spawner}, \hyperpage{50}
+
+  \indexspace
+
+  \item {On\+All\+Jobs\+Cleared}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{25}
+  \item {On\+All\+Jobs\+Killed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{25}
+  \item {On\+All\+Jobs\+Paused}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{25}
+  \item {On\+All\+Jobs\+Resumed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{25}
+  \item {On\+Child\+Jobs\+Complete}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{12}
+  \item {On\+Child\+Jobs\+Started}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{12}
+  \item {On\+Job\+Added}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{25}
+  \item {On\+Job\+Complete}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{12}
+  \item {On\+Job\+Finished\+Running}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{13}
+  \item {On\+Job\+Paused}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{13}
+  \item {On\+Job\+Processed}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{40}
+  \item {On\+Job\+Removed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{25}
+  \item {On\+Job\+Resumed}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{13}
+  \item {On\+Job\+Started}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{13}
+  \item {On\+Queue\+Complete}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{40}
+  \item {On\+Queue\+Started}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{40}
+  \item {other\+Args}
+    \subitem {C\+M\+\_\+\+Job\+Manager\+Job\+Edited\+Event\+Args}, 
+		\hyperpage{34}
+  \item {owned\+Jobs}
+    \subitem {C\+M\+\_\+\+Job\+Manager\+Event\+Args}, \hyperpage{32}
+
+  \indexspace
+
+  \item {Pause}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{13}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{40}
+  \item {Pause\+All}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{25, 26}
+  \item {Pause\+Coroutine}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{26}
+  \item {paused}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{16}
+  \item {paused\+Jobs}
+    \subitem {C\+M\+\_\+\+Job\+Manager\+Event\+Args}, \hyperpage{32}
+  \item {prefab}
+    \subitem {Example\+Continous\+Spawner}, \hyperpage{50}
+
+  \indexspace
+
+  \item {queue\+Complete}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{44}
+  \item {Queue\+Event\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{55}
+  \item {queue\+Started}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{44}
+  \item {queued\+Jobs}
+    \subitem {C\+M\+\_\+\+Queue\+Event\+Args}, \hyperpage{47}
+
+  \indexspace
+
+  \item {Remove\+Child\+Job}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{13}
+  \item {Remove\+Job}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{26, 27}
+  \item {Remove\+Notify\+On\+All\+Jobs\+Cleared}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{27}
+  \item {Remove\+Notify\+On\+All\+Jobs\+Killed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{27}
+  \item {Remove\+Notify\+On\+All\+Jobs\+Paused}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{27}
+  \item {Remove\+Notify\+On\+All\+Jobs\+Resumed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{27}
+  \item {Remove\+Notify\+On\+Child\+Job\+Complete}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{14}
+  \item {Remove\+Notify\+On\+Child\+Job\+Started}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{14}
+  \item {Remove\+Notify\+On\+Job\+Added}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{27}
+  \item {Remove\+Notify\+On\+Job\+Complete}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{14}
+  \item {Remove\+Notify\+On\+Job\+Finished\+Running}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{14}
+  \item {Remove\+Notify\+On\+Job\+Paused}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{14}
+  \item {Remove\+Notify\+On\+Job\+Processed}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{41}
+  \item {Remove\+Notify\+On\+Job\+Removed}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{29}
+  \item {Remove\+Notify\+On\+Job\+Resumed}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{14}
+  \item {Remove\+Notify\+On\+Job\+Started}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{15}
+  \item {Remove\+Notify\+On\+Queue\+Complete}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{41}
+  \item {Remove\+Notify\+On\+Queue\+Started}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{41}
+  \item {Repeat}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{15}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{41}
+  \item {repeating}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{16}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{43}
+  \item {Restore\+Health}
+    \subitem {Example\+Character\+Damage}, \hyperpage{49}
+  \item {Resume}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{15}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{41}
+  \item {Resume\+All}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{29}
+  \item {Resume\+Coroutine}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{29}
+  \item {running}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{16}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{43}
+  \item {running\+Jobs}
+    \subitem {C\+M\+\_\+\+Job\+Manager\+Event\+Args}, \hyperpage{32}
+
+  \indexspace
+
+  \item {Set\+Number\+Repeating\+Queue\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{56}
+  \item {Simple\+Global\+Queue\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{56}
+  \item {Simple\+Job\+Test}
+    \subitem {Example\+Job\+Test}, \hyperpage{58}
+  \item {Simple\+Local\+Queue\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{56}
+  \item {Single\+Clone\+Job\+Test}
+    \subitem {Example\+Job\+Test}, \hyperpage{58}
+  \item {Start}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{15}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{41}
+  \item {Start\+All}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{30}
+  \item {Start\+Coroutine}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{30}
+  \item {Status}
+    \subitem {C\+M\+\_\+\+Logger}, \hyperpage{45}
+  \item {Stop\+Continous\+Running}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{43}
+  \item {Stop\+Coroutine}
+    \subitem {C\+M\+\_\+\+Job\+Manager}, \hyperpage{30, 31}
+  \item {Stop\+Repeat}
+    \subitem {C\+M\+\_\+\+Job}, \hyperpage{15}
+    \subitem {C\+M\+\_\+\+Job\+Queue}, \hyperpage{43}
+
+  \indexspace
+
+  \item {time\+Between\+Spawns}
+    \subitem {Example\+Continous\+Spawner}, \hyperpage{50}
+  \item {Timed\+Repeating\+Queue\+Test}
+    \subitem {Example\+Job\+Queue\+Test}, \hyperpage{56}
+  \item {title\+Text}
+    \subitem {Example\+G\+U\+I}, \hyperpage{51}
+  \item {To\+String}
+    \subitem {C\+M\+\_\+\+Logger\+::\+Message}, \hyperpage{61}
+
+\end{theindex}

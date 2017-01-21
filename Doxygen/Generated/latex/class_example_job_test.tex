@@ -1,0 +1,185 @@
+\hypertarget{class_example_job_test}{}\section{Example\+Job\+Test Class Reference}
+\label{class_example_job_test}\index{Example\+Job\+Test@{Example\+Job\+Test}}
+
+
+Includes a number of methods to test the functionality of the \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} class. Each method showcases a particular functionality of the \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} class that you can implement in your own projects. Each method returns an ienumerator so that it can added to a job queue to be run in sequence for test purposes.  
+
+
+Inheritance diagram for Example\+Job\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_example_job_test}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerator \hyperlink{class_example_job_test_ab235738389e731b6e1c1a0936bfb6585}{Simple\+Job\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates and starts a job. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a1bf38c8133ef7854e4b3ef89103888df}{Job\+Test\+With\+Delayed\+Start} ()
+\begin{DoxyCompactList}\small\item\em Creates and starts a job after a delay. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_ac390bb8191f6ba7b6df2deb646c7c7de}{Job\+Test\+With\+Delayed\+Pause} ()
+\begin{DoxyCompactList}\small\item\em Creates coroutine job, starts job immediately and then pauses coroutine after 4 seconds. This paused job is then stored and can be resumed/killed from any class that has a reference to that job. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_af80fb4b62309ca6833878c49b82df703}{Job\+Test\+With\+Delayed\+Resume} ()
+\begin{DoxyCompactList}\small\item\em Creates new job, pauses after 1 second, and resumes after 3 seconds. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a95678534abfb975339db76044a92b28d}{Job\+Test\+With\+Delayed\+Kill} ()
+\begin{DoxyCompactList}\small\item\em Creates coroutine job, starts job immediately and then sets the job to be killed after 4 seconds. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a5c211a493fa17b33b35ba64214d1bb09}{Job\+Test\+With\+Start\+And\+End\+Events} ()
+\begin{DoxyCompactList}\small\item\em Creates new job, subscribes to the job start and end events and then starts job to be run immediately. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a95dc6aea129056f6565484c7efd6ab03}{Child\+Job\+Test} ()
+\begin{DoxyCompactList}\small\item\em Child job test. Creates new job, adds two children (parent will not complete until children have finished processing) and starts the job. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a7a5819f751f3ba68941dd5530bf7a365}{Single\+Clone\+Job\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a new job, clones job, and then runs clone. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a707273ae104f9aac979fa8d697e306b5}{Multiple\+Clone\+Job\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates a new job, clones five copies of the original job, and then starts a random clone. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a8941dbc9a2ba2c401785414a669b6331}{Infinitely\+Repeatable\+Job\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates and starts a job that will repeat for 3 seconds. The job complete event is subscribed to, this is used to display how many times the job will be repeated. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a11f7ec3104852950a7f35208b75671e5}{Multiple\+Repeatable\+Job\+Test} ()
+\begin{DoxyCompactList}\small\item\em Creates and starts a job that will repeat three times. The job complete event is subscribed to, this is used to display how many times the job will be repeated. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_example_job_test_a4d476fb823d8c82dfe1fe17f37d4fdf7}{Mutltiple\+Repeatable\+Job\+Test\+With\+Child} ()
+\begin{DoxyCompactList}\small\item\em Creates and starts a job that will repeat three times. Adds a child job that will also repeat three times. The job complete event and child job complete events are subscribed to, this is used to display how many times the job will be repeated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Includes a number of methods to test the functionality of the \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} class. Each method showcases a particular functionality of the \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} class that you can implement in your own projects. Each method returns an ienumerator so that it can added to a job queue to be run in sequence for test purposes. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_example_job_test_a95dc6aea129056f6565484c7efd6ab03}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Child\+Job\+Test@{Child\+Job\+Test}}
+\index{Child\+Job\+Test@{Child\+Job\+Test}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Child\+Job\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Child\+Job\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a95dc6aea129056f6565484c7efd6ab03}
+
+
+Child job test. Creates new job, adds two children (parent will not complete until children have finished processing) and starts the job. 
+
+\hypertarget{class_example_job_test_a8941dbc9a2ba2c401785414a669b6331}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Infinitely\+Repeatable\+Job\+Test@{Infinitely\+Repeatable\+Job\+Test}}
+\index{Infinitely\+Repeatable\+Job\+Test@{Infinitely\+Repeatable\+Job\+Test}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Infinitely\+Repeatable\+Job\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Infinitely\+Repeatable\+Job\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a8941dbc9a2ba2c401785414a669b6331}
+
+
+Creates and starts a job that will repeat for 3 seconds. The job complete event is subscribed to, this is used to display how many times the job will be repeated. 
+
+\hypertarget{class_example_job_test_a95678534abfb975339db76044a92b28d}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Job\+Test\+With\+Delayed\+Kill@{Job\+Test\+With\+Delayed\+Kill}}
+\index{Job\+Test\+With\+Delayed\+Kill@{Job\+Test\+With\+Delayed\+Kill}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Job\+Test\+With\+Delayed\+Kill()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Job\+Test\+With\+Delayed\+Kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a95678534abfb975339db76044a92b28d}
+
+
+Creates coroutine job, starts job immediately and then sets the job to be killed after 4 seconds. 
+
+\hypertarget{class_example_job_test_ac390bb8191f6ba7b6df2deb646c7c7de}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Job\+Test\+With\+Delayed\+Pause@{Job\+Test\+With\+Delayed\+Pause}}
+\index{Job\+Test\+With\+Delayed\+Pause@{Job\+Test\+With\+Delayed\+Pause}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Job\+Test\+With\+Delayed\+Pause()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Job\+Test\+With\+Delayed\+Pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_ac390bb8191f6ba7b6df2deb646c7c7de}
+
+
+Creates coroutine job, starts job immediately and then pauses coroutine after 4 seconds. This paused job is then stored and can be resumed/killed from any class that has a reference to that job. 
+
+\hypertarget{class_example_job_test_af80fb4b62309ca6833878c49b82df703}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Job\+Test\+With\+Delayed\+Resume@{Job\+Test\+With\+Delayed\+Resume}}
+\index{Job\+Test\+With\+Delayed\+Resume@{Job\+Test\+With\+Delayed\+Resume}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Job\+Test\+With\+Delayed\+Resume()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Job\+Test\+With\+Delayed\+Resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_af80fb4b62309ca6833878c49b82df703}
+
+
+Creates new job, pauses after 1 second, and resumes after 3 seconds. 
+
+\hypertarget{class_example_job_test_a1bf38c8133ef7854e4b3ef89103888df}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Job\+Test\+With\+Delayed\+Start@{Job\+Test\+With\+Delayed\+Start}}
+\index{Job\+Test\+With\+Delayed\+Start@{Job\+Test\+With\+Delayed\+Start}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Job\+Test\+With\+Delayed\+Start()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Job\+Test\+With\+Delayed\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a1bf38c8133ef7854e4b3ef89103888df}
+
+
+Creates and starts a job after a delay. 
+
+\hypertarget{class_example_job_test_a5c211a493fa17b33b35ba64214d1bb09}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Job\+Test\+With\+Start\+And\+End\+Events@{Job\+Test\+With\+Start\+And\+End\+Events}}
+\index{Job\+Test\+With\+Start\+And\+End\+Events@{Job\+Test\+With\+Start\+And\+End\+Events}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Job\+Test\+With\+Start\+And\+End\+Events()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Job\+Test\+With\+Start\+And\+End\+Events (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a5c211a493fa17b33b35ba64214d1bb09}
+
+
+Creates new job, subscribes to the job start and end events and then starts job to be run immediately. 
+
+\hypertarget{class_example_job_test_a707273ae104f9aac979fa8d697e306b5}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Multiple\+Clone\+Job\+Test@{Multiple\+Clone\+Job\+Test}}
+\index{Multiple\+Clone\+Job\+Test@{Multiple\+Clone\+Job\+Test}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Multiple\+Clone\+Job\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Multiple\+Clone\+Job\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a707273ae104f9aac979fa8d697e306b5}
+
+
+Creates a new job, clones five copies of the original job, and then starts a random clone. 
+
+\hypertarget{class_example_job_test_a11f7ec3104852950a7f35208b75671e5}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Multiple\+Repeatable\+Job\+Test@{Multiple\+Repeatable\+Job\+Test}}
+\index{Multiple\+Repeatable\+Job\+Test@{Multiple\+Repeatable\+Job\+Test}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Multiple\+Repeatable\+Job\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Multiple\+Repeatable\+Job\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a11f7ec3104852950a7f35208b75671e5}
+
+
+Creates and starts a job that will repeat three times. The job complete event is subscribed to, this is used to display how many times the job will be repeated. 
+
+\hypertarget{class_example_job_test_a4d476fb823d8c82dfe1fe17f37d4fdf7}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Mutltiple\+Repeatable\+Job\+Test\+With\+Child@{Mutltiple\+Repeatable\+Job\+Test\+With\+Child}}
+\index{Mutltiple\+Repeatable\+Job\+Test\+With\+Child@{Mutltiple\+Repeatable\+Job\+Test\+With\+Child}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Mutltiple\+Repeatable\+Job\+Test\+With\+Child()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Mutltiple\+Repeatable\+Job\+Test\+With\+Child (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a4d476fb823d8c82dfe1fe17f37d4fdf7}
+
+
+Creates and starts a job that will repeat three times. Adds a child job that will also repeat three times. The job complete event and child job complete events are subscribed to, this is used to display how many times the job will be repeated. 
+
+\hypertarget{class_example_job_test_ab235738389e731b6e1c1a0936bfb6585}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Simple\+Job\+Test@{Simple\+Job\+Test}}
+\index{Simple\+Job\+Test@{Simple\+Job\+Test}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Simple\+Job\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Simple\+Job\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_ab235738389e731b6e1c1a0936bfb6585}
+
+
+Creates and starts a job. 
+
+\hypertarget{class_example_job_test_a7a5819f751f3ba68941dd5530bf7a365}{}\index{Example\+Job\+Test@{Example\+Job\+Test}!Single\+Clone\+Job\+Test@{Single\+Clone\+Job\+Test}}
+\index{Single\+Clone\+Job\+Test@{Single\+Clone\+Job\+Test}!Example\+Job\+Test@{Example\+Job\+Test}}
+\subsubsection[{Single\+Clone\+Job\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Example\+Job\+Test.\+Single\+Clone\+Job\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_example_job_test_a7a5819f751f3ba68941dd5530bf7a365}
+
+
+Creates a new job, clones job, and then runs clone. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Example\+Job\+Test.\+cs\end{DoxyCompactItemize}

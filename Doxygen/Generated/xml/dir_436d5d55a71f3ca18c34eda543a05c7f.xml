@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_436d5d55a71f3ca18c34eda543a05c7f" kind="dir">
+    <compoundname>Tests</compoundname>
+    <innerfile refid="_example_job_manager_test_8cs">ExampleJobManagerTest.cs</innerfile>
+    <innerfile refid="_example_job_queue_test_8cs">ExampleJobQueueTest.cs</innerfile>
+    <innerfile refid="_example_job_test_8cs">ExampleJobTest.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/"/>
+  </compounddef>
+</doxygen>

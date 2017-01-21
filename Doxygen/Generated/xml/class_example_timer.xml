@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="class_example_timer" kind="class" language="C#" prot="public">
+    <compoundname>ExampleTimer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_example_timer_1a5ff05b797bdc6308b9e28615805f6aec" prot="private" static="no" mutable="no">
+        <type>Text</type>
+        <definition>Text ExampleTimer._text</definition>
+        <argsstring></argsstring>
+        <name>_text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleTimer.cs" line="12" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleTimer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_example_timer_1aa4bd5b5b04171d4d16e2aa58ef92d9da" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExampleTimer.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleTimer.cs" line="14" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleTimer.cs" bodystart="14" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_timer_1abbec2414cb0dd04fb7cfdaef4f5e1120" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleTimer.UpdateTime</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleTimer.cs" line="27" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleTimer.cs" bodystart="27" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Creates new coroutine job to update a text object with time since startup. Adds job to global job manager so that it can be paused and resumed as required. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="80">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="79">
+        <label>ExampleTimer</label>
+        <link refid="class_example_timer"/>
+        <childnode refid="80" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="82">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="81">
+        <label>ExampleTimer</label>
+        <link refid="class_example_timer"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleTimer.cs" line="11" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleTimer.cs" bodystart="10" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_example_timer_1a5ff05b797bdc6308b9e28615805f6aec" prot="private" virt="non-virtual"><scope>ExampleTimer</scope><name>_text</name></member>
+      <member refid="class_example_timer_1aa4bd5b5b04171d4d16e2aa58ef92d9da" prot="private" virt="non-virtual"><scope>ExampleTimer</scope><name>Start</name></member>
+      <member refid="class_example_timer_1abbec2414cb0dd04fb7cfdaef4f5e1120" prot="private" virt="non-virtual"><scope>ExampleTimer</scope><name>UpdateTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

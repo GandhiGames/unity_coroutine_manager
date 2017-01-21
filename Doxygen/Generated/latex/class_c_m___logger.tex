@@ -1,0 +1,113 @@
+\hypertarget{class_c_m___logger}{}\section{C\+M\+\_\+\+Logger Class Reference}
+\label{class_c_m___logger}\index{C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}}
+
+
+Simple logging class used by the Coroutine Manager.  
+
+
+Inheritance diagram for C\+M\+\_\+\+Logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_m___logger}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_c_m___logger_1_1_message}{Message}
+\begin{DoxyCompactList}\small\item\em Encapsulates a message used by \hyperlink{class_c_m___logger}{C\+M\+\_\+\+Logger}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_c_m___logger_ac2e71ba1ec4f24a09693eeae7b77611c}{Status} \{ {\bfseries Log}, 
+{\bfseries Warning}, 
+{\bfseries Error}
+ \}\begin{DoxyCompactList}\small\item\em The status level of the message. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_m___logger_a0fc384c005b14bcb9364fee0b82cfd96}{Log} (object message)
+\begin{DoxyCompactList}\small\item\em Log the specified message with default log status. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___logger_a9000aa99a894afb7002eff79cf788483}{Log} (object context, object message)
+\begin{DoxyCompactList}\small\item\em Log the message with the specified context. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___logger_ad08aaafdb501fce63a5fac80e2077e44}{Log} (object message, \hyperlink{class_c_m___logger_ac2e71ba1ec4f24a09693eeae7b77611c}{Status} status)
+\begin{DoxyCompactList}\small\item\em Uses a lookup to either write a log, warning, or error based on the status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Simple logging class used by the Coroutine Manager. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_c_m___logger_ac2e71ba1ec4f24a09693eeae7b77611c}{}\index{C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}!Status@{Status}}
+\index{Status@{Status}!C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}}
+\subsubsection[{Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf C\+M\+\_\+\+Logger.\+Status}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_c_m___logger_ac2e71ba1ec4f24a09693eeae7b77611c}
+
+
+The status level of the message. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_m___logger_a0fc384c005b14bcb9364fee0b82cfd96}{}\index{C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}!Log@{Log}}
+\index{Log@{Log}!C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}}
+\subsubsection[{Log(object message)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Logger.\+Log (
+\begin{DoxyParamCaption}
+\item[{object}]{message}
+\end{DoxyParamCaption}
+)}\label{class_c_m___logger_a0fc384c005b14bcb9364fee0b82cfd96}
+
+
+Log the specified message with default log status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \hyperlink{class_c_m___logger_1_1_message}{Message}.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___logger_a9000aa99a894afb7002eff79cf788483}{}\index{C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}!Log@{Log}}
+\index{Log@{Log}!C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}}
+\subsubsection[{Log(object context, object message)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Logger.\+Log (
+\begin{DoxyParamCaption}
+\item[{object}]{context, }
+\item[{object}]{message}
+\end{DoxyParamCaption}
+)}\label{class_c_m___logger_a9000aa99a894afb7002eff79cf788483}
+
+
+Log the message with the specified context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context i.\+e. the calling class.\\
+\hline
+{\em message} & \hyperlink{class_c_m___logger_1_1_message}{Message}.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___logger_ad08aaafdb501fce63a5fac80e2077e44}{}\index{C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}!Log@{Log}}
+\index{Log@{Log}!C\+M\+\_\+\+Logger@{C\+M\+\_\+\+Logger}}
+\subsubsection[{Log(object message, Status status)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Logger.\+Log (
+\begin{DoxyParamCaption}
+\item[{object}]{message, }
+\item[{{\bf Status}}]{status}
+\end{DoxyParamCaption}
+)}\label{class_c_m___logger_ad08aaafdb501fce63a5fac80e2077e44}
+
+
+Uses a lookup to either write a log, warning, or error based on the status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \hyperlink{class_c_m___logger_1_1_message}{Message}.\\
+\hline
+{\em status} & Status.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+M\+\_\+\+Logger.\+cs\end{DoxyCompactItemize}

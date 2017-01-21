@@ -1,0 +1,90 @@
+.TH "ExampleCharacterDamage" 3 "Mon Jan 4 2016" "Version 1.0" "Coroutine Manager Pro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExampleCharacterDamage \- Example character with action queue\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAddActionToQueue\fP (\fBCM_Job\fP action)"
+.br
+.RI "\fIAdds the action to the current queue\&. An action can be any coroutine you want\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBApplyDamage\fP (string damageType, float time)"
+.br
+.RI "\fISimulates the application of damage over time\&. \fP"
+.ti -1c
+.RI "IEnumerator \fBRestoreHealth\fP (float time)"
+.br
+.RI "\fISimulates restoring of health over time\&. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBhealth\fP = 20f"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Example character with action queue\&. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ExampleCharacterDamage\&.AddActionToQueue (\fBCM_Job\fP action)"
+
+.PP
+Adds the action to the current queue\&. An action can be any coroutine you want\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaction\fP Action\&.
+.RE
+.PP
+
+.SS "IEnumerator ExampleCharacterDamage\&.ApplyDamage (string damageType, float time)"
+
+.PP
+Simulates the application of damage over time\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The damage\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdamageType\fP Damage type\&.
+.br
+\fItime\fP Time\&.
+.RE
+.PP
+
+.SS "IEnumerator ExampleCharacterDamage\&.RestoreHealth (float time)"
+
+.PP
+Simulates restoring of health over time\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The health\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fItime\fP Time\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Coroutine Manager Pro from the source code\&.

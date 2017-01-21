@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="class_c_m___job_manager_job_edited_event_args" kind="class" language="C#" prot="public">
+    <compoundname>CM_JobManagerJobEditedEventArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_m___job_manager_job_edited_event_args_1a5baf47bf8ecddf8a6f88b0779a504670" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_c_m___job_manager_event_args" kindref="compound">CM_JobManagerEventArgs</ref></type>
+        <definition>CM_JobManagerEventArgs CM_JobManagerJobEditedEventArgs.otherArgs</definition>
+        <argsstring></argsstring>
+        <name>otherArgs</name>
+        <briefdescription>
+<para>Gets the other arguments. </para>        </briefdescription>
+        <detaileddescription>
+<para>The other arguments.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs" line="14" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_m___job_manager_job_edited_event_args_1a7ffe2e303d15476afa5fc9d693367a8e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_c_m___job" kindref="compound">CM_Job</ref></type>
+        <definition>CM_Job CM_JobManagerJobEditedEventArgs.jobEdited</definition>
+        <argsstring></argsstring>
+        <name>jobEdited</name>
+        <briefdescription>
+<para>Gets the job currently changed that caused the event to be raised. </para>        </briefdescription>
+        <detaileddescription>
+<para>The job edited.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs" line="20" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_m___job_manager_job_edited_event_args_1a4affe52499a44d68c7c0cae61177583f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CM_JobManagerJobEditedEventArgs.CM_JobManagerJobEditedEventArgs</definition>
+        <argsstring>(Dictionary&lt; string, CM_Job &gt; ownedJobs, CM_Job jobEdited)</argsstring>
+        <name>CM_JobManagerJobEditedEventArgs</name>
+        <param>
+          <type>Dictionary&lt; string, <ref refid="class_c_m___job" kindref="compound">CM_Job</ref> &gt;</type>
+          <declname>ownedJobs</declname>
+        </param>
+        <param>
+          <type><ref refid="class_c_m___job" kindref="compound">CM_Job</ref></type>
+          <declname>jobEdited</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_c_m___job_manager_job_edited_event_args" kindref="compound">CM_JobManagerJobEditedEventArgs</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ownedJobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Owned jobs.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jobEdited</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Job edited.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs" line="27" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Arguements used in events raised by <ref refid="class_c_m___job_manager" kindref="compound">CM_JobManager</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="25">
+        <label>System::EventArgs</label>
+      </node>
+      <node id="24">
+        <label>CM_JobManagerJobEditedEventArgs</label>
+        <link refid="class_c_m___job_manager_job_edited_event_args"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="27">
+        <label>System::EventArgs</label>
+      </node>
+      <node id="26">
+        <label>CM_JobManagerJobEditedEventArgs</label>
+        <link refid="class_c_m___job_manager_job_edited_event_args"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs" line="9" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Scripts/EventArgs/CM_JobManagerJobEditedEventArgs.cs" bodystart="8" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_c_m___job_manager_job_edited_event_args_1a4affe52499a44d68c7c0cae61177583f" prot="public" virt="non-virtual"><scope>CM_JobManagerJobEditedEventArgs</scope><name>CM_JobManagerJobEditedEventArgs</name></member>
+      <member refid="class_c_m___job_manager_job_edited_event_args_1a7ffe2e303d15476afa5fc9d693367a8e" prot="public" virt="non-virtual"><scope>CM_JobManagerJobEditedEventArgs</scope><name>jobEdited</name></member>
+      <member refid="class_c_m___job_manager_job_edited_event_args_1a5baf47bf8ecddf8a6f88b0779a504670" prot="public" virt="non-virtual"><scope>CM_JobManagerJobEditedEventArgs</scope><name>otherArgs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

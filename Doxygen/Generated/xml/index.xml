@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.10">
+  <compound refid="class_c_m___dispatcher" kind="class"><name>CM_Dispatcher</name>
+    <member refid="class_c_m___dispatcher_1a439df01f043e2499110af1de312637ea" kind="variable"><name>_queue</name></member>
+    <member refid="class_c_m___dispatcher_1a1cdbca41b92b6d2d9bdca7c989c96b2a" kind="function"><name>AddToExecuteQueue</name></member>
+    <member refid="class_c_m___dispatcher_1a2feaba74438dbde93cad9ae1f717fe9f" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_c_m___extensions" kind="class"><name>CM_Extensions</name>
+    <member refid="class_c_m___extensions_1ab7cfa3b460a0055d6e402f1132ac8094" kind="function"><name>IsNullOrEmpty</name></member>
+    <member refid="class_c_m___extensions_1af81b7a1a0ec3bc24a18316d1c910402d" kind="function"><name>Clone</name></member>
+  </compound>
+  <compound refid="class_c_m___global_coroutine_manager" kind="class"><name>CM_GlobalCoroutineManager</name>
+    <member refid="class_c_m___global_coroutine_manager_1a29cafc94c7ed3da7064b9862e0cca721" kind="variable"><name>id</name></member>
+    <member refid="class_c_m___global_coroutine_manager_1acf7214f57fc79e99204166e4d4a0432a" kind="variable"><name>_global</name></member>
+    <member refid="class_c_m___global_coroutine_manager_1a6b8d8eadbcd1c55a67203e88c711de79" kind="property"><name>idIncrement</name></member>
+    <member refid="class_c_m___global_coroutine_manager_1aee2916e71870c87da4fb0d405255c952" kind="property"><name>uniqueGeneratedID</name></member>
+    <member refid="class_c_m___global_coroutine_manager_1ad6d1dbbb92d1de12b8e1018cf62d3a31" kind="property"><name>Global</name></member>
+    <member refid="class_c_m___global_coroutine_manager_1a72523bcc2452962a1b1b5f8c4e6c6c12" kind="function"><name>MakeJob</name></member>
+    <member refid="class_c_m___global_coroutine_manager_1a2d14d4bf53d589e977a23b35443cbc77" kind="function"><name>MakeJob</name></member>
+    <member refid="class_c_m___global_coroutine_manager_1af0738a3e1dd19c1e8469ced62cc4d7aa" kind="function"><name>AutoGenerateJobId</name></member>
+    <member refid="class_c_m___global_coroutine_manager_1a40fc4c4c48edf30f1c22d261f636463e" kind="function"><name>HandlejobComplete</name></member>
+  </compound>
+  <compound refid="class_c_m___job" kind="class"><name>CM_Job</name>
+    <member refid="class_c_m___job_1a19b93ec8fb1f643db06e79ad0710732b" kind="property"><name>id</name></member>
+    <member refid="class_c_m___job_1a2226fbaee0c831d28fde43ffe0a58f70" kind="property"><name>running</name></member>
+    <member refid="class_c_m___job_1a4d7d6001f3d1153d50f83490fe426925" kind="property"><name>paused</name></member>
+    <member refid="class_c_m___job_1aa15b9e9cead89bfbd449e0194dc30751" kind="property"><name>jobKilled</name></member>
+    <member refid="class_c_m___job_1ab18400e9cdb983c298d92c6e28acc599" kind="property"><name>repeating</name></member>
+    <member refid="class_c_m___job_1a042add3b81a210d7a98505bd53765ab5" kind="property"><name>numOfTimesExecuted</name></member>
+    <member refid="class_c_m___job_1a872a3e122dfc58a365f659918ba0fb82" kind="property"><name>coroutine</name></member>
+    <member refid="class_c_m___job_1a59ec3c34a5f02760d630196d36cb213c" kind="property"><name>childJobs</name></member>
+    <member refid="class_c_m___job_1a258e90c3b2c355263d48f40af884c4b7" kind="event"><name>jobStarted</name></member>
+    <member refid="class_c_m___job_1ab2bea96e987cf13dd243664dbb273ba9" kind="event"><name>jobPaused</name></member>
+    <member refid="class_c_m___job_1ab472a9526d6ed4b99f8de30a61962411" kind="event"><name>jobResumed</name></member>
+    <member refid="class_c_m___job_1a18ec4eda6ded27b8126da18fb096e2ea" kind="event"><name>jobComplete</name></member>
+    <member refid="class_c_m___job_1a8f54f8cc86afa59f150b4df888171eef" kind="event"><name>childJobsStarted</name></member>
+    <member refid="class_c_m___job_1ac484bc6af7442264feb431087c510f3e" kind="event"><name>childJobsComplete</name></member>
+    <member refid="class_c_m___job_1a1f8be44820f3108e8e026bcec33847c3" kind="event"><name>jobFinishedRunning</name></member>
+    <member refid="class_c_m___job_1a502f860b7610399390381adc99968043" kind="variable"><name>_childJobs</name></member>
+    <member refid="class_c_m___job_1aacbc13b9047896dc72587b6bd866ecde" kind="variable"><name>_childJobRoutineClones</name></member>
+    <member refid="class_c_m___job_1accda23c07d1cb20abfa3ea5cbcbb3593" kind="variable"><name>_routineClone</name></member>
+    <member refid="class_c_m___job_1acbe6f429996d8d7d363bdfa3c39f4a14" kind="variable"><name>_numOfTimesToRepeat</name></member>
+    <member refid="class_c_m___job_1a9ae6cae9f25bd079a2a50eaa1dbd595f" kind="function"><name>CM_Job</name></member>
+    <member refid="class_c_m___job_1a7b1b60e75b3778f26d61af7956903643" kind="function"><name>CM_Job</name></member>
+    <member refid="class_c_m___job_1a17dc1e9e92234581bdbf619ef2dfc4fe" kind="function"><name>StartAsCoroutine</name></member>
+    <member refid="class_c_m___job_1addf183b3dc4306d6b55370cdb749434b" kind="function"><name>RunJob</name></member>
+    <member refid="class_c_m___job_1a83f5e8dd1767838e6b3abd71280f558a" kind="function"><name>ResetJob</name></member>
+    <member refid="class_c_m___job_1a39f26b88717179c51f5268c7098cecd8" kind="function"><name>RunChildJobs</name></member>
+    <member refid="class_c_m___job_1a1ffab1654cb694e80dd1af68418048bb" kind="function"><name>Make</name></member>
+    <member refid="class_c_m___job_1ac2d0aa32b0e614d9a3133675c35a9866" kind="function"><name>Make</name></member>
+    <member refid="class_c_m___job_1a50cbb0f136c48addf0badefc62cecc6d" kind="function"><name>Builder</name></member>
+    <member refid="class_c_m___job_1a7821bb2da3f3c9b30e171595a48aba7d" kind="function"><name>Clone</name></member>
+    <member refid="class_c_m___job_1a1b1cd4972a357665fb21d20f58018b1e" kind="function"><name>Clone</name></member>
+    <member refid="class_c_m___job_1a54fd4dbd315708b9acd2a09f7096a554" kind="function"><name>Start</name></member>
+    <member refid="class_c_m___job_1a8c43918a2c837fe98cef1884da11836f" kind="function"><name>Start</name></member>
+    <member refid="class_c_m___job_1a5b083485bb5892b17e180ff646a68a78" kind="function"><name>Repeat</name></member>
+    <member refid="class_c_m___job_1a25e1a04eb72396ed2bf2b142d074d311" kind="function"><name>Repeat</name></member>
+    <member refid="class_c_m___job_1a3a7cfe0528790ce973e44c003a724459" kind="function"><name>StopRepeat</name></member>
+    <member refid="class_c_m___job_1a5ff8d362cc752f68ceed306837e36b8e" kind="function"><name>StopRepeat</name></member>
+    <member refid="class_c_m___job_1aedbae0620e8da4cfc201f0dd3fc70c0e" kind="function"><name>Pause</name></member>
+    <member refid="class_c_m___job_1a3cad9a52d6b2cbd773310f2d16943180" kind="function"><name>Pause</name></member>
+    <member refid="class_c_m___job_1a17e7b235cb28ed51729f9235de1b576b" kind="function"><name>Resume</name></member>
+    <member refid="class_c_m___job_1a5c68291f23790ca6be0941d4500ba3eb" kind="function"><name>Resume</name></member>
+    <member refid="class_c_m___job_1a436839505339e2eb42c84de560a0874a" kind="function"><name>Kill</name></member>
+    <member refid="class_c_m___job_1ac6413a58435cac4840e1dad8b53bd306" kind="function"><name>Kill</name></member>
+    <member refid="class_c_m___job_1aa71a7f4fa664df6b7dd8f33f431f9935" kind="function"><name>AddChild</name></member>
+    <member refid="class_c_m___job_1a9852216469080219798b397645d85767" kind="function"><name>AddChild</name></member>
+    <member refid="class_c_m___job_1aaa110693cfb8ab6b8e35b7dafece2d32" kind="function"><name>RemoveChildJob</name></member>
+    <member refid="class_c_m___job_1a7b169aa2419e1b14bc5af2ef47bfbbe6" kind="function"><name>NotifyOnJobFinishedRunning</name></member>
+    <member refid="class_c_m___job_1a0180557e1cfa03cf4a580f11711bb783" kind="function"><name>RemoveNotifyOnJobFinishedRunning</name></member>
+    <member refid="class_c_m___job_1a144f7f4f50fc9e78cb3cc89948b43781" kind="function"><name>NotifyOnJobStarted</name></member>
+    <member refid="class_c_m___job_1a136e32ada03eaab4c526b553d973f36f" kind="function"><name>RemoveNotifyOnJobStarted</name></member>
+    <member refid="class_c_m___job_1a656895b36f0619ae50563993c25cd8c0" kind="function"><name>NotifyOnJobPaused</name></member>
+    <member refid="class_c_m___job_1a1d12a9e9f851bb722e00c5982ff1fd08" kind="function"><name>RemoveNotifyOnJobPaused</name></member>
+    <member refid="class_c_m___job_1a75f17a64e339db10f3b8fb75fb240a0b" kind="function"><name>NotifyOnJobResumed</name></member>
+    <member refid="class_c_m___job_1ab6821efdd6ee49603d1148b80483ef23" kind="function"><name>RemoveNotifyOnJobResumed</name></member>
+    <member refid="class_c_m___job_1aad8e48e0d2fa17fde30ba76516dbf7bd" kind="function"><name>NotifyOnJobComplete</name></member>
+    <member refid="class_c_m___job_1a66b44002e5fcff452842af8750826453" kind="function"><name>RemoveNotifyOnJobComplete</name></member>
+    <member refid="class_c_m___job_1aadeb872e3ab5b90139e0d728f869be6c" kind="function"><name>NotifyOnChildJobStarted</name></member>
+    <member refid="class_c_m___job_1aa1841d0fe84126d85c11a31c7b87c1ab" kind="function"><name>RemoveNotifyOnChildJobStarted</name></member>
+    <member refid="class_c_m___job_1aebb453c205c9817d621bea62f1716ae0" kind="function"><name>NotifyOnChildJobComplete</name></member>
+    <member refid="class_c_m___job_1ac84b366bd233ee5970fd9f5841195d8b" kind="function"><name>RemoveNotifyOnChildJobComplete</name></member>
+    <member refid="class_c_m___job_1af33a79ea5b8e707fb79e594e580d4e17" kind="function"><name>OnJobFinishedRunning</name></member>
+    <member refid="class_c_m___job_1a5b3aa9f1598fcf753be6fffad0f9a69a" kind="function"><name>OnJobStarted</name></member>
+    <member refid="class_c_m___job_1a6386d33b5ef65196a144598cb34fc12f" kind="function"><name>OnJobComplete</name></member>
+    <member refid="class_c_m___job_1a61f918b9776bf4437f3a0efa9cde64a2" kind="function"><name>OnJobPaused</name></member>
+    <member refid="class_c_m___job_1a6b6887d0dd433362ea571cdc4a419be1" kind="function"><name>OnJobResumed</name></member>
+    <member refid="class_c_m___job_1a39e81165ee12eb69e01e2052dd4add3e" kind="function"><name>OnChildJobsStarted</name></member>
+    <member refid="class_c_m___job_1a64f5a20ea7643b75584a1b63b8098011" kind="function"><name>OnChildJobsComplete</name></member>
+  </compound>
+  <compound refid="class_c_m___job_event_args" kind="class"><name>CM_JobEventArgs</name>
+    <member refid="class_c_m___job_event_args_1a602ecf7364ca2e6a2285f1622e7f1c8b" kind="property"><name>job</name></member>
+    <member refid="class_c_m___job_event_args_1a6b20e99da0cb8807604b4459eebb4484" kind="property"><name>childJobs</name></member>
+    <member refid="class_c_m___job_event_args_1a67592931253f8d17df276bc17b54952b" kind="property"><name>hasChildJobs</name></member>
+    <member refid="class_c_m___job_event_args_1a31a12f7cf24666f25f6b0967668cff61" kind="function"><name>CM_JobEventArgs</name></member>
+  </compound>
+  <compound refid="class_c_m___job_manager" kind="class"><name>CM_JobManager</name>
+    <member refid="class_c_m___job_manager_1a0f3c4dff8b782e1b64abcbb7dc19cd8a" kind="event"><name>jobAdded</name></member>
+    <member refid="class_c_m___job_manager_1a3a24d267ce0e6a09a2cf8f13429f2b73" kind="event"><name>jobRemoved</name></member>
+    <member refid="class_c_m___job_manager_1ac17ba0c89adf4dfa61d6b099f8029fa6" kind="event"><name>allJobsKilled</name></member>
+    <member refid="class_c_m___job_manager_1a485232e2c1fe7cef56a53c20f74b638f" kind="event"><name>allJobsResumed</name></member>
+    <member refid="class_c_m___job_manager_1a0dd6f2e0e4c7ead23dd25df03e23ddcb" kind="event"><name>allJobsPaused</name></member>
+    <member refid="class_c_m___job_manager_1a292061e968b70d3271715d7a1c702db1" kind="event"><name>allJobsCleared</name></member>
+    <member refid="class_c_m___job_manager_1a508047f2f7693f9ee1d8a981976e592e" kind="variable"><name>_ownedJobs</name></member>
+    <member refid="class_c_m___job_manager_1a404b217320793549dca8cd2c5914c608" kind="function"><name>Make</name></member>
+    <member refid="class_c_m___job_manager_1a3e8f2abdcaffd8f61f8a27be1b288c66" kind="function"><name>AddJob</name></member>
+    <member refid="class_c_m___job_manager_1a03642325160354e27b9603b8e9b71996" kind="function"><name>AddJob</name></member>
+    <member refid="class_c_m___job_manager_1a3c8aef4596141686e60e5a3166c7264a" kind="function"><name>AddJob</name></member>
+    <member refid="class_c_m___job_manager_1a295f3f6cd5f10cc3646f6f85203097f6" kind="function"><name>AddJob</name></member>
+    <member refid="class_c_m___job_manager_1a70e6b6c8c3252c52549123df98349db4" kind="function"><name>RemoveJob</name></member>
+    <member refid="class_c_m___job_manager_1afc719b10d34b02fa82c26bbfbadc7356" kind="function"><name>RemoveJob</name></member>
+    <member refid="class_c_m___job_manager_1a81deb518cf6f4359330e6f0d405080ef" kind="function"><name>StartCoroutine</name></member>
+    <member refid="class_c_m___job_manager_1af2bb3415fd6f85c1e04f99b2cc6efd4e" kind="function"><name>StartCoroutine</name></member>
+    <member refid="class_c_m___job_manager_1aeee478b4e96e09cb9f4a7e3610c7dd49" kind="function"><name>StartAll</name></member>
+    <member refid="class_c_m___job_manager_1acf6ad4a995461c0bc6f519150e57306c" kind="function"><name>StartAll</name></member>
+    <member refid="class_c_m___job_manager_1adf2ecaac62cbb5f946c6644dc03bc69c" kind="function"><name>StopCoroutine</name></member>
+    <member refid="class_c_m___job_manager_1ae5f0aba4e929269d10659a7b19579b7d" kind="function"><name>StopCoroutine</name></member>
+    <member refid="class_c_m___job_manager_1a4d5891acec719e1003dc762df52a931a" kind="function"><name>PauseCoroutine</name></member>
+    <member refid="class_c_m___job_manager_1ae04090c1ecd34beb61a00f44d239b5f7" kind="function"><name>PauseCoroutine</name></member>
+    <member refid="class_c_m___job_manager_1a18f956a6db3fe89f4597c317838ab073" kind="function"><name>ResumeCoroutine</name></member>
+    <member refid="class_c_m___job_manager_1a4038c3f395f2a64c3b4e18680d0a50ef" kind="function"><name>ResumeCoroutine</name></member>
+    <member refid="class_c_m___job_manager_1ab1e48755bb929871595acfca595ae01b" kind="function"><name>PauseAll</name></member>
+    <member refid="class_c_m___job_manager_1a32a5f874cae07a572b5f5115c48fc528" kind="function"><name>PauseAll</name></member>
+    <member refid="class_c_m___job_manager_1a838152b138f04a0c4c254f3b56bd31fe" kind="function"><name>ResumeAll</name></member>
+    <member refid="class_c_m___job_manager_1ac87588d5764ca7a71208ff96f3fd67f7" kind="function"><name>ResumeAll</name></member>
+    <member refid="class_c_m___job_manager_1ab5a27b84b4fd3893e1dc271570930e62" kind="function"><name>KillAll</name></member>
+    <member refid="class_c_m___job_manager_1a6c81a2ea2ade217311fef98c4571e9e5" kind="function"><name>KillAll</name></member>
+    <member refid="class_c_m___job_manager_1a7684d8a980b6dd3004feb35e978e2163" kind="function"><name>ClearJobList</name></member>
+    <member refid="class_c_m___job_manager_1a5b18579964f7e16836eb66465c4f6d09" kind="function"><name>HasJob</name></member>
+    <member refid="class_c_m___job_manager_1a12642c18c8755585be14a1566a000113" kind="function"><name>IsRunning</name></member>
+    <member refid="class_c_m___job_manager_1a5a3b38ca378a94e24e39a111734d9791" kind="function"><name>IsRunning</name></member>
+    <member refid="class_c_m___job_manager_1a00224b541cd09c65942f7b23ee0b39c0" kind="function"><name>NotifyOnJobAdded</name></member>
+    <member refid="class_c_m___job_manager_1acd3196581bb9e192e05274fca2e27cdc" kind="function"><name>RemoveNotifyOnJobAdded</name></member>
+    <member refid="class_c_m___job_manager_1afcf02b75d90366cecc51bc9d3dba518d" kind="function"><name>NotifyOnJobRemoved</name></member>
+    <member refid="class_c_m___job_manager_1abbe42e2c33064edd8d43148ef8ce6df6" kind="function"><name>RemoveNotifyOnJobRemoved</name></member>
+    <member refid="class_c_m___job_manager_1a5818cc96746d71cd81bcf711047ca360" kind="function"><name>NotifyOnAllJobsPaused</name></member>
+    <member refid="class_c_m___job_manager_1a6399741e966f8f613b0dc97438263d8c" kind="function"><name>RemoveNotifyOnAllJobsPaused</name></member>
+    <member refid="class_c_m___job_manager_1a940976b91755f7849232bad8b6fdd472" kind="function"><name>NotifyOnAllJobsResumed</name></member>
+    <member refid="class_c_m___job_manager_1aac35272ab72db1d666bca8e9825af345" kind="function"><name>RemoveNotifyOnAllJobsResumed</name></member>
+    <member refid="class_c_m___job_manager_1a047fad74154dfb0dfd95b2e68c241c53" kind="function"><name>NotifyOnAllJobsKilled</name></member>
+    <member refid="class_c_m___job_manager_1a86d91437f2588d7f218ced31689bfbcd" kind="function"><name>RemoveNotifyOnAllJobsKilled</name></member>
+    <member refid="class_c_m___job_manager_1a61b1d9a2f93539f35a65bc52f35a2a7d" kind="function"><name>NotifyOnAllJobsCleared</name></member>
+    <member refid="class_c_m___job_manager_1addf2ff8338d0cef43d47c8f0c95ec7c1" kind="function"><name>RemoveNotifyOnAllJobsCleared</name></member>
+    <member refid="class_c_m___job_manager_1a26be7a4d45e34639bde44ec8c7a7dac4" kind="function"><name>OnJobRemoved</name></member>
+    <member refid="class_c_m___job_manager_1ae6f76e1db2269e63506ad70d063e6fd0" kind="function"><name>OnAllJobsResumed</name></member>
+    <member refid="class_c_m___job_manager_1ae666d35da523c26313933b7b9c9ca244" kind="function"><name>OnAllJobsPaused</name></member>
+    <member refid="class_c_m___job_manager_1a8aafc682e991a7b2c8cf056292243db8" kind="function"><name>OnAllJobsKilled</name></member>
+    <member refid="class_c_m___job_manager_1ab7c334ef31635981f63460e5f8b270bf" kind="function"><name>OnAllJobsCleared</name></member>
+    <member refid="class_c_m___job_manager_1ae64a14d83bc4c6e0634b6469edbbef03" kind="function"><name>OnJobAdded</name></member>
+    <member refid="class_c_m___job_manager_1a0c5d0104abdf10bda6af89301376792b" kind="function"><name>HandlejobComplete</name></member>
+  </compound>
+  <compound refid="class_c_m___job_manager_event_args" kind="class"><name>CM_JobManagerEventArgs</name>
+    <member refid="class_c_m___job_manager_event_args_1ab3f9e101be895139ac984b0a5abe5c55" kind="property"><name>ownedJobs</name></member>
+    <member refid="class_c_m___job_manager_event_args_1a354cda77d3151fa14c5a862de00c6fda" kind="property"><name>runningJobs</name></member>
+    <member refid="class_c_m___job_manager_event_args_1a655cd7e19559fa5cad8a10c8a4c40992" kind="property"><name>pausedJobs</name></member>
+    <member refid="class_c_m___job_manager_event_args_1a3bf019737d565f11c527b36e39dff77d" kind="function"><name>CM_JobManagerEventArgs</name></member>
+  </compound>
+  <compound refid="class_c_m___job_manager_job_edited_event_args" kind="class"><name>CM_JobManagerJobEditedEventArgs</name>
+    <member refid="class_c_m___job_manager_job_edited_event_args_1a5baf47bf8ecddf8a6f88b0779a504670" kind="property"><name>otherArgs</name></member>
+    <member refid="class_c_m___job_manager_job_edited_event_args_1a7ffe2e303d15476afa5fc9d693367a8e" kind="property"><name>jobEdited</name></member>
+    <member refid="class_c_m___job_manager_job_edited_event_args_1a4affe52499a44d68c7c0cae61177583f" kind="function"><name>CM_JobManagerJobEditedEventArgs</name></member>
+  </compound>
+  <compound refid="class_c_m___job_queue" kind="class"><name>CM_JobQueue</name>
+    <member refid="class_c_m___job_queue_1a652f13e97ccd6cd66fe899e0d4612842" kind="property"><name>repeating</name></member>
+    <member refid="class_c_m___job_queue_1a09c449c39674203848e7d939e3742460" kind="property"><name>numOfTimesExecuted</name></member>
+    <member refid="class_c_m___job_queue_1aa7e3982beb8c64bf115c0adc30134d84" kind="property"><name>running</name></member>
+    <member refid="class_c_m___job_queue_1a93ffe57018263669329b70e523ac8fa1" kind="property"><name>continousRunning</name></member>
+    <member refid="class_c_m___job_queue_1a21ff7aa9d8eb6f8b9c201f6940a20cdb" kind="property"><name>errorStarting</name></member>
+    <member refid="class_c_m___job_queue_1a758ae5902e82e8690264d2f7a61f9ae0" kind="event"><name>queueStarted</name></member>
+    <member refid="class_c_m___job_queue_1a66eb2a7f16850398ae06ddf02372f64e" kind="event"><name>queueComplete</name></member>
+    <member refid="class_c_m___job_queue_1a331d3a29f310ac03de1e631e6af67404" kind="event"><name>jobProcessed</name></member>
+    <member refid="class_c_m___job_queue_1a20cc0795845a74829a595e0c8b6b5db9" kind="variable"><name>_numOfTimesToRepeat</name></member>
+    <member refid="class_c_m___job_queue_1ada1564486a73be503a957d2bdc2215bf" kind="variable"><name>_jobQueue</name></member>
+    <member refid="class_c_m___job_queue_1af704ce0bd0c9b13c848a6c61b411b66a" kind="variable"><name>_jobQueueRunning</name></member>
+    <member refid="class_c_m___job_queue_1a542613e7d11935618aaa9d79d3b99642" kind="variable"><name>_continousRunning</name></member>
+    <member refid="class_c_m___job_queue_1a6d3f09b101ea0d31e22c93553859289b" kind="variable"><name>_completedJobs</name></member>
+    <member refid="class_c_m___job_queue_1ab9832aba052e19ef3c726a05ca4849fa" kind="function"><name>Make</name></member>
+    <member refid="class_c_m___job_queue_1a32411811468c3df358fa1b1dd20da0e9" kind="function"><name>Clone</name></member>
+    <member refid="class_c_m___job_queue_1ab9d4d607c63d9099694bbefcf46b0651" kind="function"><name>Clone</name></member>
+    <member refid="class_c_m___job_queue_1a5eb3ac10485cd8620f53d38eb413a53d" kind="function"><name>Enqueue</name></member>
+    <member refid="class_c_m___job_queue_1a8d85bdcd2a9db1085837622ca6f39fb2" kind="function"><name>Enqueue</name></member>
+    <member refid="class_c_m___job_queue_1a03261e561d34769b869c8f054e7c90d4" kind="function"><name>Enqueue</name></member>
+    <member refid="class_c_m___job_queue_1a8c3f4534e75a50c47a64d3324ca75f67" kind="function"><name>Enqueue</name></member>
+    <member refid="class_c_m___job_queue_1a36897e683ccf438e4f1e032645423cd5" kind="function"><name>Enqueue</name></member>
+    <member refid="class_c_m___job_queue_1a5a0c5479c91848563c3dbc0e4c218f14" kind="function"><name>Enqueue</name></member>
+    <member refid="class_c_m___job_queue_1a0b741b6ee48616f0bc2f1e14360f0575" kind="function"><name>Start</name></member>
+    <member refid="class_c_m___job_queue_1afacbda3a733d0a18f0791923ffcbb4fa" kind="function"><name>Start</name></member>
+    <member refid="class_c_m___job_queue_1acf86ac86cf4899aa34e1951f657ff66a" kind="function"><name>Repeat</name></member>
+    <member refid="class_c_m___job_queue_1a26edb6cc573aed7c1804b7a6dae1d450" kind="function"><name>Repeat</name></member>
+    <member refid="class_c_m___job_queue_1a4b9474030edaa4b85e120774858b2050" kind="function"><name>StopRepeat</name></member>
+    <member refid="class_c_m___job_queue_1a863d01fa168f36f665787bb2b1a8be1c" kind="function"><name>StopRepeat</name></member>
+    <member refid="class_c_m___job_queue_1a40d741107627777352ebd2e0478f3955" kind="function"><name>Pause</name></member>
+    <member refid="class_c_m___job_queue_1a705adde1f43487cf5b78599e09c85180" kind="function"><name>Pause</name></member>
+    <member refid="class_c_m___job_queue_1a6d3357eaff31b561a0db4de7e14e937b" kind="function"><name>Resume</name></member>
+    <member refid="class_c_m___job_queue_1a4d7818132595a2a97b9350f810405c1c" kind="function"><name>Resume</name></member>
+    <member refid="class_c_m___job_queue_1a8b0a472fcdce0ddba4576bfe39feb7ff" kind="function"><name>ContinousRunning</name></member>
+    <member refid="class_c_m___job_queue_1a636825476d970cc13724f73ae9e288ee" kind="function"><name>StopContinousRunning</name></member>
+    <member refid="class_c_m___job_queue_1a194f2954b520d2984ff313d3c675dce2" kind="function"><name>KillAll</name></member>
+    <member refid="class_c_m___job_queue_1adce8edbf35e9f320611f789262d215c6" kind="function"><name>KillAll</name></member>
+    <member refid="class_c_m___job_queue_1aeb73327ca071773270823880e4ce9f31" kind="function"><name>KillCurrent</name></member>
+    <member refid="class_c_m___job_queue_1ac3cb68f5d7fb1f63d95cf8ac8eff0172" kind="function"><name>KillCurrent</name></member>
+    <member refid="class_c_m___job_queue_1a2918eb628f865860a22032eafa3618b5" kind="function"><name>NotifyOnQueueStarted</name></member>
+    <member refid="class_c_m___job_queue_1a772043be6d95571dffe266eefb99a99f" kind="function"><name>RemoveNotifyOnQueueStarted</name></member>
+    <member refid="class_c_m___job_queue_1af9aec1172b9818353bae58cb013b445d" kind="function"><name>NotifyOnQueueComplete</name></member>
+    <member refid="class_c_m___job_queue_1a77456f4bd081c75ba385f96e1d72077a" kind="function"><name>RemoveNotifyOnQueueComplete</name></member>
+    <member refid="class_c_m___job_queue_1a6e17336d22c1588d5836d1053749467e" kind="function"><name>NotifyOnJobProcessed</name></member>
+    <member refid="class_c_m___job_queue_1aa947d55c737bee485b24a621a3780046" kind="function"><name>RemoveNotifyOnJobProcessed</name></member>
+    <member refid="class_c_m___job_queue_1a3f9c1e210a1fb9d64459d50620548656" kind="function"><name>OnQueueStarted</name></member>
+    <member refid="class_c_m___job_queue_1adc533901dffcd84b9e507e2dc848a414" kind="function"><name>OnQueueComplete</name></member>
+    <member refid="class_c_m___job_queue_1a50f9608ca896727a3e993b2015a790a6" kind="function"><name>OnJobProcessed</name></member>
+    <member refid="class_c_m___job_queue_1afa8b77f601ce5094b44ad694d23e54f4" kind="function"><name>HandlejobComplete</name></member>
+    <member refid="class_c_m___job_queue_1a68d233a59aec2d4191376d404014840a" kind="function"><name>RequeueAll</name></member>
+    <member refid="class_c_m___job_queue_1a65e01897a96bd908d69a219695b0e32d" kind="function"><name>AddJobToQueue</name></member>
+    <member refid="class_c_m___job_queue_1a62726d7191395025dc339ca76e5aae65" kind="function"><name>RemoveJobFromQueue</name></member>
+  </compound>
+  <compound refid="class_c_m___logger" kind="class"><name>CM_Logger</name>
+    <member refid="class_c_m___logger_1ac2e71ba1ec4f24a09693eeae7b77611c" kind="enum"><name>Status</name></member>
+    <member refid="class_c_m___logger_1ac2e71ba1ec4f24a09693eeae7b77611cace0be71e33226e4c1db2bcea5959f16b" kind="enumvalue"><name>Log</name></member>
+    <member refid="class_c_m___logger_1ac2e71ba1ec4f24a09693eeae7b77611ca0eaadb4fcb48a0a0ed7bc9868be9fbaa" kind="enumvalue"><name>Warning</name></member>
+    <member refid="class_c_m___logger_1ac2e71ba1ec4f24a09693eeae7b77611ca902b0d55fddef6f8d651fe1035b7d4bd" kind="enumvalue"><name>Error</name></member>
+    <member refid="class_c_m___logger_1aa144c98eecc4311a59c93e37b829d59c" kind="variable"><name>_statuslookup</name></member>
+    <member refid="class_c_m___logger_1a5fb63b59b96c072d05993eba44e08c8b" kind="variable"><name>PRE_TEXT</name></member>
+    <member refid="class_c_m___logger_1a1127a31b71be547e108dfcadfee96c6a" kind="function"><name>Awake</name></member>
+    <member refid="class_c_m___logger_1a0fc384c005b14bcb9364fee0b82cfd96" kind="function"><name>Log</name></member>
+    <member refid="class_c_m___logger_1a9000aa99a894afb7002eff79cf788483" kind="function"><name>Log</name></member>
+    <member refid="class_c_m___logger_1ad08aaafdb501fce63a5fac80e2077e44" kind="function"><name>Log</name></member>
+  </compound>
+  <compound refid="class_c_m___queue_event_args" kind="class"><name>CM_QueueEventArgs</name>
+    <member refid="class_c_m___queue_event_args_1abc07a71f168a798661e040ad0f824591" kind="property"><name>hasJobsInQueue</name></member>
+    <member refid="class_c_m___queue_event_args_1a9a7016a83b4d77bfede3932565c13704" kind="property"><name>queuedJobs</name></member>
+    <member refid="class_c_m___queue_event_args_1afa1760a1c067cea569209cf7458d1e5b" kind="property"><name>hasCompletedJobs</name></member>
+    <member refid="class_c_m___queue_event_args_1a89e1c990b52231168f5534204edfa25a" kind="property"><name>completedJobs</name></member>
+    <member refid="class_c_m___queue_event_args_1a4712e29b49def5bf891e70cb05182dbe" kind="property"><name>jobQueue</name></member>
+    <member refid="class_c_m___queue_event_args_1a4345d4c604133866fab4bfd40143f70b" kind="function"><name>CM_QueueEventArgs</name></member>
+  </compound>
+  <compound refid="class_c_m___singleton" kind="class"><name>CM_Singleton</name>
+    <member refid="class_c_m___singleton_1a2d488ea5c08e0b2a2bd78e3e8658f0d4" kind="property"><name>IsDestroyed</name></member>
+    <member refid="class_c_m___singleton_1af2377c7977dd169962d9b76dc0fb2f45" kind="property"><name>instance</name></member>
+    <member refid="class_c_m___singleton_1a2a9c5a0e3863056e702e621fc5b25ebc" kind="variable"><name>_applicationIsQuitting</name></member>
+    <member refid="class_c_m___singleton_1a6fbf92d731b07d5f89ad769424082dcf" kind="variable"><name>LAZY_INIT</name></member>
+    <member refid="class_c_m___singleton_1a2850f9db48ce93b4d721ff3053f5e95e" kind="variable"><name>_instance</name></member>
+    <member refid="class_c_m___singleton_1a834653afba27fc829223d0e5159c371f" kind="function"><name>Awake</name></member>
+    <member refid="class_c_m___singleton_1af232ba062023581cc42e779598abe148" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_c_m___singleton_1a902c7afbd9bfce107ff99c137dbf8d5f" kind="function"><name>OnApplicationQuit</name></member>
+  </compound>
+  <compound refid="class_example_character_damage" kind="class"><name>ExampleCharacterDamage</name>
+    <member refid="class_example_character_damage_1a9f184018de86afde217ec6978018874d" kind="variable"><name>health</name></member>
+    <member refid="class_example_character_damage_1a51af26b3447eb4880af3b1002c9c6a10" kind="variable"><name>_actionQueue</name></member>
+    <member refid="class_example_character_damage_1ae4a2be80f0affa4d02998fc2c5b9af91" kind="function"><name>Start</name></member>
+    <member refid="class_example_character_damage_1a5be40bc5175392994005809bb5be6359" kind="function"><name>OnDead</name></member>
+    <member refid="class_example_character_damage_1a4de8e1a33ca856b9a5bc37a7935ef68a" kind="function"><name>OnRevive</name></member>
+    <member refid="class_example_character_damage_1a0befb25f1d266a74f6ea9b2bb25b8d6d" kind="function"><name>AddActionToQueue</name></member>
+    <member refid="class_example_character_damage_1af25a43f4182d205ca89e73d7dc0794f3" kind="function"><name>ApplyDamage</name></member>
+    <member refid="class_example_character_damage_1aeb1574e48eac8ed8c211b5ea0d488782" kind="function"><name>RestoreHealth</name></member>
+  </compound>
+  <compound refid="class_example_character_movement" kind="class"><name>ExampleCharacterMovement</name>
+    <member refid="class_example_character_movement_1a2b35a1171dcecd39d3a8f60c5d5b037a" kind="variable"><name>moveSpeed</name></member>
+    <member refid="class_example_character_movement_1a81db9527c5f490313b129bc57fd557a3" kind="function"><name>Start</name></member>
+    <member refid="class_example_character_movement_1a3984e9dc8147db0b359f0e6d348a3f58" kind="function"><name>MoveTo</name></member>
+  </compound>
+  <compound refid="class_example_continous_spawner" kind="class"><name>ExampleContinousSpawner</name>
+    <member refid="class_example_continous_spawner_1ad4617f03c5d944453742b8ce30b25396" kind="variable"><name>prefab</name></member>
+    <member refid="class_example_continous_spawner_1af4226a3d4c13b1e447003b3a45e5638f" kind="variable"><name>numToSpawn</name></member>
+    <member refid="class_example_continous_spawner_1a99d962ed337668df7b9ce0a99042eec1" kind="variable"><name>timeBetweenSpawns</name></member>
+    <member refid="class_example_continous_spawner_1a7abd7185a21c51728229a74cadf56741" kind="function"><name>Start</name></member>
+    <member refid="class_example_continous_spawner_1afc45581f664c0d5c3dd716912a8eddd8" kind="function"><name>SpawnPrefab</name></member>
+  </compound>
+  <compound refid="class_example_damage_applier" kind="class"><name>ExampleDamageApplier</name>
+    <member refid="class_example_damage_applier_1a1275e973ce691cf54b0f3e5c1fa90007" kind="variable"><name>character</name></member>
+    <member refid="class_example_damage_applier_1a92acb11c89a0e4387b6c5c9b22932557" kind="variable"><name>fireDamage</name></member>
+    <member refid="class_example_damage_applier_1a1bc64d95a9b4781ec933454703dd90b6" kind="variable"><name>poisonDamage</name></member>
+    <member refid="class_example_damage_applier_1ae45ca6d04fd911b8f7f2b07f8d452e54" kind="variable"><name>heal</name></member>
+    <member refid="class_example_damage_applier_1aff122cbc9aefb9ac79eafe5a90c12693" kind="function"><name>Start</name></member>
+    <member refid="class_example_damage_applier_1ad51549e555f1b5e2ed48a148befc3db3" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_example_g_u_i" kind="class"><name>ExampleGUI</name>
+    <member refid="class_example_g_u_i_1a2eaf69cbe810531fcc820e264c288698" kind="variable"><name>titleText</name></member>
+    <member refid="class_example_g_u_i_1ad2479b73b862b0524a9ad09c059de9b2" kind="variable"><name>subtitleText</name></member>
+    <member refid="class_example_g_u_i_1a7910ba5b142b61242c904289a40f2131" kind="variable"><name>instructionsText</name></member>
+    <member refid="class_example_g_u_i_1a0d5f5df778a9f072aa6660b3cc9e0ad1" kind="function"><name>Start</name></member>
+    <member refid="class_example_g_u_i_1a76ef2c0aec8f48cca1d23356bf1a0f96" kind="function"><name>FadeInText</name></member>
+    <member refid="class_example_g_u_i_1a02a91405d169c19bf7cdff6bab8adea5" kind="function"><name>MoveText</name></member>
+  </compound>
+  <compound refid="class_example_job_manager_test" kind="class"><name>ExampleJobManagerTest</name>
+    <member refid="class_example_job_manager_test_1a4ad5e698ab19c120e3553a4b0529b614" kind="function"><name>Start</name></member>
+    <member refid="class_example_job_manager_test_1a1cdebd222b66c4a5e2831e9745862eec" kind="function"><name>SetupGlobalJob</name></member>
+    <member refid="class_example_job_manager_test_1aadda17b6a2831200ee926806628306e7" kind="function"><name>SetupGroupJobs</name></member>
+    <member refid="class_example_job_manager_test_1afef4a35e84340a24ccbb3e8ccb0b0c9e" kind="function"><name>GetSimpleInfiniteTestJob</name></member>
+    <member refid="class_example_job_manager_test_1a8bbba9a3c1e9a19d32c23f26b9aea326" kind="function"><name>PrintStringAfterDelay</name></member>
+    <member refid="class_example_job_manager_test_1ae328a8038e366a726a99bb119a086152" kind="function"><name>InfiniteTest</name></member>
+    <member refid="class_example_job_manager_test_1a2e12fad77a94ff2cbcc3b7da2cb16362" kind="function"><name>GlobalJobManagerEventTest</name></member>
+    <member refid="class_example_job_manager_test_1ae4b00ba638975a806c58d4fea116406b" kind="function"><name>GlobalJobStartTest</name></member>
+    <member refid="class_example_job_manager_test_1ab38e4ec613dc3f50c4204ac3e1963dac" kind="function"><name>GlobalJobPauseTest</name></member>
+    <member refid="class_example_job_manager_test_1a2ba384ab22381d74acbf229ad81f5e6e" kind="function"><name>GlobalJobResumeTest</name></member>
+    <member refid="class_example_job_manager_test_1ae9165213486f9d72a0fd0bfc59ab0ab4" kind="function"><name>GlobalJobStopTest</name></member>
+    <member refid="class_example_job_manager_test_1a031ebb468ce25cdda0d946eda3a8108c" kind="function"><name>GlobalStartAllTest</name></member>
+    <member refid="class_example_job_manager_test_1a90dd8a5a25c6ad18e507fca1967aca21" kind="function"><name>DelayedPauseAllTest</name></member>
+    <member refid="class_example_job_manager_test_1aa47f66fa961dbf64f689a7e1306ffafc" kind="function"><name>DelayedResumeAllTest</name></member>
+    <member refid="class_example_job_manager_test_1a6fb632a5a0a84a997e093b3cd04b1a1b" kind="function"><name>DelayedKillAllTest</name></member>
+    <member refid="class_example_job_manager_test_1ae02ae80e68427cd8604e527982ee8b54" kind="function"><name>LocalJobManagerTest</name></member>
+  </compound>
+  <compound refid="class_example_job_queue_test" kind="class"><name>ExampleJobQueueTest</name>
+    <member refid="class_example_job_queue_test_1a777841971281550c9f496630a510eacd" kind="function"><name>Start</name></member>
+    <member refid="class_example_job_queue_test_1aa371605e12baf1815cc39eb15b7eb303" kind="function"><name>PrintStringAfterDelay</name></member>
+    <member refid="class_example_job_queue_test_1adcaf1989879d7dc1274228ac4882ba6f" kind="function"><name>InfiniteTest</name></member>
+    <member refid="class_example_job_queue_test_1a45a4cc204d6396b39b6ff3844c4dbc2f" kind="function"><name>SimpleGlobalQueueTest</name></member>
+    <member refid="class_example_job_queue_test_1a65d6aaf0f94ba848ce1be82a6d90e780" kind="function"><name>SimpleLocalQueueTest</name></member>
+    <member refid="class_example_job_queue_test_1abe5f18a717e6699715d829f8fe797da5" kind="function"><name>LocalQueueDelayedStartTest</name></member>
+    <member refid="class_example_job_queue_test_1a1463e2c77a6e293cb5d1a596a970d405" kind="function"><name>LocalQueueDelayedPauseAndResumeTest</name></member>
+    <member refid="class_example_job_queue_test_1ac09ae706637551c37837a36d951fbac6" kind="function"><name>QueueEventTest</name></member>
+    <member refid="class_example_job_queue_test_1a56d063006d12236d417219ae1711706b" kind="function"><name>DelayedKillCurrentTest</name></member>
+    <member refid="class_example_job_queue_test_1a3c5d23ccdb5c3edfd54ca39c4f93a22e" kind="function"><name>DelayedKillAllTest</name></member>
+    <member refid="class_example_job_queue_test_1a628f7061c7818786b52a6b9371a1af6c" kind="function"><name>AddLocalQueueToGlobalQueueTest</name></member>
+    <member refid="class_example_job_queue_test_1a1ffd555683806c216251f462bb69cb40" kind="function"><name>AddRepeatingJobToQueueTest</name></member>
+    <member refid="class_example_job_queue_test_1a037cbad8b6d50077e844cb28e9412741" kind="function"><name>SetNumberRepeatingQueueTest</name></member>
+    <member refid="class_example_job_queue_test_1a3b7bf466ad7ad9b4039402a8fab519cf" kind="function"><name>TimedRepeatingQueueTest</name></member>
+    <member refid="class_example_job_queue_test_1aee4d70589eda67ae5237f27c3398f19f" kind="function"><name>ClonedRepeatingQueueTest</name></member>
+    <member refid="class_example_job_queue_test_1ac1f5d324d824d30fb115a012c97a7f68" kind="function"><name>MultipleClonedQueueTest</name></member>
+  </compound>
+  <compound refid="class_example_job_test" kind="class"><name>ExampleJobTest</name>
+    <member refid="class_example_job_test_1af228729a565512160593124d7e13f407" kind="function"><name>Start</name></member>
+    <member refid="class_example_job_test_1abf7f2d50b1cd19e069f72e33ce5e3f04" kind="function"><name>PrintStringAfterDelay</name></member>
+    <member refid="class_example_job_test_1a27cde0f8512ac532a82a5c63b043db58" kind="function"><name>InfiniteTest</name></member>
+    <member refid="class_example_job_test_1ac9c85264ce794b747af50e44c467ed07" kind="function"><name>GetJobToClone</name></member>
+    <member refid="class_example_job_test_1ab235738389e731b6e1c1a0936bfb6585" kind="function"><name>SimpleJobTest</name></member>
+    <member refid="class_example_job_test_1a1bf38c8133ef7854e4b3ef89103888df" kind="function"><name>JobTestWithDelayedStart</name></member>
+    <member refid="class_example_job_test_1ac390bb8191f6ba7b6df2deb646c7c7de" kind="function"><name>JobTestWithDelayedPause</name></member>
+    <member refid="class_example_job_test_1af80fb4b62309ca6833878c49b82df703" kind="function"><name>JobTestWithDelayedResume</name></member>
+    <member refid="class_example_job_test_1a95678534abfb975339db76044a92b28d" kind="function"><name>JobTestWithDelayedKill</name></member>
+    <member refid="class_example_job_test_1a5c211a493fa17b33b35ba64214d1bb09" kind="function"><name>JobTestWithStartAndEndEvents</name></member>
+    <member refid="class_example_job_test_1a95dc6aea129056f6565484c7efd6ab03" kind="function"><name>ChildJobTest</name></member>
+    <member refid="class_example_job_test_1a7a5819f751f3ba68941dd5530bf7a365" kind="function"><name>SingleCloneJobTest</name></member>
+    <member refid="class_example_job_test_1a707273ae104f9aac979fa8d697e306b5" kind="function"><name>MultipleCloneJobTest</name></member>
+    <member refid="class_example_job_test_1a8941dbc9a2ba2c401785414a669b6331" kind="function"><name>InfinitelyRepeatableJobTest</name></member>
+    <member refid="class_example_job_test_1a11f7ec3104852950a7f35208b75671e5" kind="function"><name>MultipleRepeatableJobTest</name></member>
+    <member refid="class_example_job_test_1a4d476fb823d8c82dfe1fe17f37d4fdf7" kind="function"><name>MutltipleRepeatableJobTestWithChild</name></member>
+  </compound>
+  <compound refid="class_example_timer" kind="class"><name>ExampleTimer</name>
+    <member refid="class_example_timer_1a5ff05b797bdc6308b9e28615805f6aec" kind="variable"><name>_text</name></member>
+    <member refid="class_example_timer_1aa4bd5b5b04171d4d16e2aa58ef92d9da" kind="function"><name>Start</name></member>
+    <member refid="class_example_timer_1abbec2414cb0dd04fb7cfdaef4f5e1120" kind="function"><name>UpdateTime</name></member>
+  </compound>
+  <compound refid="class_example_t_imer_pause_resume" kind="class"><name>ExampleTImerPauseResume</name>
+    <member refid="class_example_t_imer_pause_resume_1a41584cc115bb0f105ac6fced293b9816" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="interface_i_c_m___cloneable" kind="interface"><name>ICM_Cloneable</name>
+    <member refid="interface_i_c_m___cloneable_1ae8b9fb9338e27c094a82d75a0c6c25ac" kind="function"><name>Clone</name></member>
+    <member refid="interface_i_c_m___cloneable_1a2b520d18d778c682836ecc870155a5d8" kind="function"><name>Clone</name></member>
+  </compound>
+  <compound refid="class_c_m___logger_1_1_message" kind="class"><name>CM_Logger::Message</name>
+    <member refid="class_c_m___logger_1_1_message_1ac403c59f0f7f9452ad2cc3d7abf22844" kind="property"><name>content</name></member>
+    <member refid="class_c_m___logger_1_1_message_1ad9921bbcd73048b60d9ba2c3b77286ae" kind="property"><name>invoker</name></member>
+    <member refid="class_c_m___logger_1_1_message_1af8da84fc7f2102870ce62695f3e2a38a" kind="function"><name>Message</name></member>
+    <member refid="class_c_m___logger_1_1_message_1a011dbf54bd844f4400f30d9acacee254" kind="function"><name>ToString</name></member>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i" kind="namespace"><name>UnityEngine::UI</name>
+  </compound>
+  <compound refid="_c_m___dispatcher_8cs" kind="file"><name>CM_Dispatcher.cs</name>
+  </compound>
+  <compound refid="_c_m___extensions_8cs" kind="file"><name>CM_Extensions.cs</name>
+  </compound>
+  <compound refid="_c_m___global_coroutine_manager_8cs" kind="file"><name>CM_GlobalCoroutineManager.cs</name>
+  </compound>
+  <compound refid="_c_m___job_8cs" kind="file"><name>CM_Job.cs</name>
+  </compound>
+  <compound refid="_c_m___job_event_args_8cs" kind="file"><name>CM_JobEventArgs.cs</name>
+  </compound>
+  <compound refid="_c_m___job_manager_8cs" kind="file"><name>CM_JobManager.cs</name>
+  </compound>
+  <compound refid="_c_m___job_manager_event_args_8cs" kind="file"><name>CM_JobManagerEventArgs.cs</name>
+  </compound>
+  <compound refid="_c_m___job_manager_job_edited_event_args_8cs" kind="file"><name>CM_JobManagerJobEditedEventArgs.cs</name>
+  </compound>
+  <compound refid="_c_m___job_queue_8cs" kind="file"><name>CM_JobQueue.cs</name>
+  </compound>
+  <compound refid="_c_m___logger_8cs" kind="file"><name>CM_Logger.cs</name>
+  </compound>
+  <compound refid="_c_m___queue_event_args_8cs" kind="file"><name>CM_QueueEventArgs.cs</name>
+  </compound>
+  <compound refid="_c_m___singleton_8cs" kind="file"><name>CM_Singleton.cs</name>
+  </compound>
+  <compound refid="_example_character_damage_8cs" kind="file"><name>ExampleCharacterDamage.cs</name>
+  </compound>
+  <compound refid="_example_character_movement_8cs" kind="file"><name>ExampleCharacterMovement.cs</name>
+  </compound>
+  <compound refid="_example_continous_spawner_8cs" kind="file"><name>ExampleContinousSpawner.cs</name>
+  </compound>
+  <compound refid="_example_damage_applier_8cs" kind="file"><name>ExampleDamageApplier.cs</name>
+  </compound>
+  <compound refid="_example_g_u_i_8cs" kind="file"><name>ExampleGUI.cs</name>
+  </compound>
+  <compound refid="_example_job_manager_test_8cs" kind="file"><name>ExampleJobManagerTest.cs</name>
+  </compound>
+  <compound refid="_example_job_queue_test_8cs" kind="file"><name>ExampleJobQueueTest.cs</name>
+  </compound>
+  <compound refid="_example_job_test_8cs" kind="file"><name>ExampleJobTest.cs</name>
+  </compound>
+  <compound refid="_example_timer_8cs" kind="file"><name>ExampleTimer.cs</name>
+  </compound>
+  <compound refid="_example_t_imer_pause_resume_8cs" kind="file"><name>ExampleTImerPauseResume.cs</name>
+  </compound>
+  <compound refid="_i_c_m___cloneable_8cs" kind="file"><name>ICM_Cloneable.cs</name>
+  </compound>
+  <compound refid="dir_0ad64a5cd26546bb7bcbca874a150f7b" kind="dir"><name>Assets</name>
+  </compound>
+  <compound refid="dir_f8bd7ad516b35b915d6e49088f8f222a" kind="dir"><name>CM</name>
+  </compound>
+  <compound refid="dir_8dcc4667264b7422db835020ec251a5f" kind="dir"><name>CM Main</name>
+  </compound>
+  <compound refid="dir_6a378e7645d6616331089ce1caee2424" kind="dir"><name>coroutine_manager</name>
+  </compound>
+  <compound refid="dir_2e1bc8a9c194fcec2017045c170fbff1" kind="dir"><name>EventArgs</name>
+  </compound>
+  <compound refid="dir_61d20c9de781779711aace5851a64df3" kind="dir"><name>Examples</name>
+  </compound>
+  <compound refid="dir_6212eb11f4aa529faf7e5257b46f00c9" kind="dir"><name>Examples</name>
+  </compound>
+  <compound refid="dir_532922734ffcc55c9b54effd18adba61" kind="dir"><name>Helpers</name>
+  </compound>
+  <compound refid="dir_7607b9e22cc3d1a3ff17175c7e854b80" kind="dir"><name>Scripts</name>
+  </compound>
+  <compound refid="dir_20e1e3a6768e4068c2c9e720336b6e60" kind="dir"><name>Scripts</name>
+  </compound>
+  <compound refid="dir_436d5d55a71f3ca18c34eda543a05c7f" kind="dir"><name>Tests</name>
+  </compound>
+</doxygenindex>

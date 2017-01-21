@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="class_example_job_queue_test" kind="class" language="C#" prot="public">
+    <compoundname>ExampleJobQueueTest</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_example_job_queue_test_1a777841971281550c9f496630a510eacd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExampleJobQueueTest.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Adds each method to a queue to be run in sequene. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="17" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="17" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1aa371605e12baf1815cc39eb15b7eb303" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.PrintStringAfterDelay</definition>
+        <argsstring>(string a, float delay=0f)</argsstring>
+        <name>PrintStringAfterDelay</name>
+        <param>
+          <type>string</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>delay</declname>
+          <defval>0f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="312" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="312" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1adcaf1989879d7dc1274228ac4882ba6f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.InfiniteTest</definition>
+        <argsstring>(string a)</argsstring>
+        <name>InfiniteTest</name>
+        <param>
+          <type>string</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="318" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="318" bodyend="327"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_example_job_queue_test_1a45a4cc204d6396b39b6ff3844c4dbc2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.SimpleGlobalQueueTest</definition>
+        <argsstring>()</argsstring>
+        <name>SimpleGlobalQueueTest</name>
+        <briefdescription>
+<para>Creates a list of jobs, adds them to the global queue and starts global queue. The global queue can be accessed from any script. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="43" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="43" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1a65d6aaf0f94ba848ce1be82a6d90e780" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.SimpleLocalQueueTest</definition>
+        <argsstring>()</argsstring>
+        <name>SimpleLocalQueueTest</name>
+        <briefdescription>
+<para>Creates a list of jobs, adds them to a newly created local queue and starts the queue. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="58" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="58" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1abe5f18a717e6699715d829f8fe797da5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.LocalQueueDelayedStartTest</definition>
+        <argsstring>()</argsstring>
+        <name>LocalQueueDelayedStartTest</name>
+        <briefdescription>
+<para>Creates and starts a queue after a delay of two seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="73" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1a1463e2c77a6e293cb5d1a596a970d405" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.LocalQueueDelayedPauseAndResumeTest</definition>
+        <argsstring>()</argsstring>
+        <name>LocalQueueDelayedPauseAndResumeTest</name>
+        <briefdescription>
+<para>Creates a local queue, starts queue, pauses queue after 1 seconds, and lastly resumes queue after 3 seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="86" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="86" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1ac09ae706637551c37837a36d951fbac6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.QueueEventTest</definition>
+        <argsstring>()</argsstring>
+        <name>QueueEventTest</name>
+        <briefdescription>
+<para>Subscribes to the global queue &quot;queueStarted&quot;, &quot;jobProcessed&quot;, and &quot;queueComplete&quot; events. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="103" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="103" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1a56d063006d12236d417219ae1711706b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.DelayedKillCurrentTest</definition>
+        <argsstring>()</argsstring>
+        <name>DelayedKillCurrentTest</name>
+        <briefdescription>
+<para>Creates a local queue and sets the current job in the queue to be killed after three seconds. This kills the currently running job but the queue still executes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="134" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="134" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1a3c5d23ccdb5c3edfd54ca39c4f93a22e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.DelayedKillAllTest</definition>
+        <argsstring>()</argsstring>
+        <name>DelayedKillAllTest</name>
+        <briefdescription>
+<para>Creates a local queue and sets all jobs in the queue to be killed after one second. This kills all jobs and clears the queue. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="160" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="160" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1a628f7061c7818786b52a6b9371a1af6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.AddLocalQueueToGlobalQueueTest</definition>
+        <argsstring>()</argsstring>
+        <name>AddLocalQueueToGlobalQueueTest</name>
+        <briefdescription>
+<para>Creates a local queue and then adds it to the glocal queue. The event subscriptions are also added to the global queue. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="189" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="189" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1a1ffd555683806c216251f462bb69cb40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.AddRepeatingJobToQueueTest</definition>
+        <argsstring>()</argsstring>
+        <name>AddRepeatingJobToQueueTest</name>
+        <briefdescription>
+<para>Adds a repeating job to a queue. Queue will not progress if a repeating job is added until that job is manually killed or has reached its set number of times to repeat. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="211" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="211" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1a037cbad8b6d50077e844cb28e9412741" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.SetNumberRepeatingQueueTest</definition>
+        <argsstring>()</argsstring>
+        <name>SetNumberRepeatingQueueTest</name>
+        <briefdescription>
+<para>Creates a new local queue, adds a number of test jobs and sets the queue to repeat two times. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="227" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="227" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1a3b7bf466ad7ad9b4039402a8fab519cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.TimedRepeatingQueueTest</definition>
+        <argsstring>()</argsstring>
+        <name>TimedRepeatingQueueTest</name>
+        <briefdescription>
+<para>Creates a new local queue, sets it to repeat and then stop repeating after 1 seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="246" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="246" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1aee4d70589eda67ae5237f27c3398f19f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.ClonedRepeatingQueueTest</definition>
+        <argsstring>()</argsstring>
+        <name>ClonedRepeatingQueueTest</name>
+        <briefdescription>
+<para>Creates a local queue and sets it to repeat twice. The queue is then cloned and started. The new cloned queue will contain the original queues repeat status and event subscriptions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="267" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="267" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_job_queue_test_1ac1f5d324d824d30fb115a012c97a7f68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleJobQueueTest.MultipleClonedQueueTest</definition>
+        <argsstring>()</argsstring>
+        <name>MultipleClonedQueueTest</name>
+        <briefdescription>
+<para>Creates a local queue and clones the queue twice. Both of the cloned queues are then started. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="289" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="289" bodyend="308"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Includes a number of methods to test the functionality of the <ref refid="class_c_m___job_queue" kindref="compound">CM_JobQueue</ref> class. Each method showcases a particular functionality of the <ref refid="class_c_m___job_queue" kindref="compound">CM_JobQueue</ref> that you can implement in your own projects. Each method returns an ienumerator so that it can added to a seperate job queue to be run in sequence for test purposes. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="71">
+        <label>ExampleJobQueueTest</label>
+        <link refid="class_example_job_queue_test"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="73">
+        <label>ExampleJobQueueTest</label>
+        <link refid="class_example_job_queue_test"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" line="12" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Tests/ExampleJobQueueTest.cs" bodystart="11" bodyend="329"/>
+    <listofallmembers>
+      <member refid="class_example_job_queue_test_1a628f7061c7818786b52a6b9371a1af6c" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>AddLocalQueueToGlobalQueueTest</name></member>
+      <member refid="class_example_job_queue_test_1a1ffd555683806c216251f462bb69cb40" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>AddRepeatingJobToQueueTest</name></member>
+      <member refid="class_example_job_queue_test_1aee4d70589eda67ae5237f27c3398f19f" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>ClonedRepeatingQueueTest</name></member>
+      <member refid="class_example_job_queue_test_1a3c5d23ccdb5c3edfd54ca39c4f93a22e" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>DelayedKillAllTest</name></member>
+      <member refid="class_example_job_queue_test_1a56d063006d12236d417219ae1711706b" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>DelayedKillCurrentTest</name></member>
+      <member refid="class_example_job_queue_test_1adcaf1989879d7dc1274228ac4882ba6f" prot="private" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>InfiniteTest</name></member>
+      <member refid="class_example_job_queue_test_1a1463e2c77a6e293cb5d1a596a970d405" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>LocalQueueDelayedPauseAndResumeTest</name></member>
+      <member refid="class_example_job_queue_test_1abe5f18a717e6699715d829f8fe797da5" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>LocalQueueDelayedStartTest</name></member>
+      <member refid="class_example_job_queue_test_1ac1f5d324d824d30fb115a012c97a7f68" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>MultipleClonedQueueTest</name></member>
+      <member refid="class_example_job_queue_test_1aa371605e12baf1815cc39eb15b7eb303" prot="private" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>PrintStringAfterDelay</name></member>
+      <member refid="class_example_job_queue_test_1ac09ae706637551c37837a36d951fbac6" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>QueueEventTest</name></member>
+      <member refid="class_example_job_queue_test_1a037cbad8b6d50077e844cb28e9412741" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>SetNumberRepeatingQueueTest</name></member>
+      <member refid="class_example_job_queue_test_1a45a4cc204d6396b39b6ff3844c4dbc2f" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>SimpleGlobalQueueTest</name></member>
+      <member refid="class_example_job_queue_test_1a65d6aaf0f94ba848ce1be82a6d90e780" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>SimpleLocalQueueTest</name></member>
+      <member refid="class_example_job_queue_test_1a777841971281550c9f496630a510eacd" prot="private" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>Start</name></member>
+      <member refid="class_example_job_queue_test_1a3b7bf466ad7ad9b4039402a8fab519cf" prot="public" virt="non-virtual"><scope>ExampleJobQueueTest</scope><name>TimedRepeatingQueueTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,867 @@
+.TH "CM_JobManager" 3 "Mon Jan 4 2016" "Version 1.0" "Coroutine Manager Pro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CM_JobManager \- The main job manager class\&. Encapsulates the behaviour for global and local job managers\&. Provides access to events and public access to stored jobs\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBCM_GlobalCoroutineManager< CM_JobManager >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBAddJob\fP (\fBCM_Job\fP job)"
+.br
+.RI "\fIAdds a job to the job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBAddJob\fP (string id, IEnumerator routine)"
+.br
+.RI "\fICreates a job with the specified id and routine and adds to job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBAddJob\fP (IList< \fBCM_Job\fP > jobs)"
+.br
+.RI "\fIAdds the provided jobs to the job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBAddJob\fP (params \fBCM_Job\fP[] jobs)"
+.br
+.RI "\fIAdds the provided jobs to the job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBRemoveJob\fP (\fBCM_Job\fP job)"
+.br
+.RI "\fIRemoves the job if owned by this instance of job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBRemoveJob\fP (string id)"
+.br
+.RI "\fIRemoves the job if owned by this instance of job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBStartCoroutine\fP (\fBCM_Job\fP job)"
+.br
+.RI "\fIStarts the specified coroutine if owned by this instance of job manager\&. Job is searched using job id\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBStartCoroutine\fP (string id)"
+.br
+.RI "\fIStarts the specified coroutine if owned by this instance of job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBStartAll\fP ()"
+.br
+.RI "\fIStarts all jobs owned by this instance\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBStartAll\fP (float delayInSeconds)"
+.br
+.RI "\fIStarts all jobs owned by this instance after delay in seconds\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBStopCoroutine\fP (\fBCM_Job\fP job)"
+.br
+.RI "\fIStops the specified coroutine if owned by this instance of job manager\&. Job is searched using job id\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBStopCoroutine\fP (string id)"
+.br
+.RI "\fIStops the specified coroutine if owned by this instance of job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBPauseCoroutine\fP (\fBCM_Job\fP job)"
+.br
+.RI "\fIPauses the specified coroutine if owned by this instance of job manager\&. Job is searched using job id\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBPauseCoroutine\fP (string id)"
+.br
+.RI "\fIStops the specified coroutine if owned by this instance of job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBResumeCoroutine\fP (\fBCM_Job\fP job)"
+.br
+.RI "\fIResumes the specified coroutine if owned by this instance of job manager\&. Job is searched using job id\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBResumeCoroutine\fP (string id)"
+.br
+.RI "\fIStops the specified coroutine if owned by this instance of job manager\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBPauseAll\fP ()"
+.br
+.RI "\fIPauses all jobs owned by this instance\&. Raises allJobsPaused event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBPauseAll\fP (float delayInSeconds)"
+.br
+.RI "\fIPauses all jobs owned by this instance after delay in seconds\&. Raises allJobsPaused event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBResumeAll\fP ()"
+.br
+.RI "\fIResumes all jobs owned by this instance\&. Raises allJobsResumedEvent\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBResumeAll\fP (float delayInSeconds)"
+.br
+.RI "\fIResumes all jobs owned by this instance after delay in seconds\&. Raises allJobsResumedEvent\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBKillAll\fP ()"
+.br
+.RI "\fIKills all jobs owned by this instance\&. Raises allJobsKilled event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBKillAll\fP (float delayInSeconds)"
+.br
+.RI "\fIKills all jobs owned by this instance after delay in seconds\&. Raises allJobsKilled event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBClearJobList\fP ()"
+.br
+.RI "\fIClears the job list owned by this instance\&. It does not kill the jobs so they will continue to run\&. Raises allJobsCleared event\&. \fP"
+.ti -1c
+.RI "bool \fBHasJob\fP (string id)"
+.br
+.RI "\fIDetermines whether this instance has the job with the specified id\&. \fP"
+.ti -1c
+.RI "bool \fBIsRunning\fP (\fBCM_Job\fP job)"
+.br
+.RI "\fIDetermines whether the specified job is executing\&. \fP"
+.ti -1c
+.RI "bool \fBIsRunning\fP (string id)"
+.br
+.RI "\fIDetermines whether the specified job is executing\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBNotifyOnJobAdded\fP (EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the the jobAdded event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBRemoveNotifyOnJobAdded\fP (EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the the jobAdded event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBNotifyOnJobRemoved\fP (EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the the jobRemoved event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBRemoveNotifyOnJobRemoved\fP (EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the the jobRemoved event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBNotifyOnAllJobsPaused\fP (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the the jobPaused event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBRemoveNotifyOnAllJobsPaused\fP (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the the jobPaused event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBNotifyOnAllJobsResumed\fP (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the the jobResumed event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBRemoveNotifyOnAllJobsResumed\fP (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the the jobResumed event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBNotifyOnAllJobsKilled\fP (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the the allJobsKilled event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBRemoveNotifyOnAllJobsKilled\fP (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the the allJobsKilled event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBNotifyOnAllJobsCleared\fP (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+.br
+.RI "\fISubscribes to the the allJobsCleared event\&. \fP"
+.ti -1c
+.RI "\fBCM_JobManager\fP \fBRemoveNotifyOnAllJobsCleared\fP (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+.br
+.RI "\fIUnsubscribes to the the allJobsCleared event\&. \fP"
+.ti -1c
+.RI "void \fBOnJobRemoved\fP (\fBCM_JobManagerJobEditedEventArgs\fP e)"
+.br
+.RI "\fIRaises the job removed event\&. \fP"
+.ti -1c
+.RI "void \fBOnAllJobsResumed\fP (\fBCM_JobManagerEventArgs\fP e)"
+.br
+.RI "\fIRaises the all jobs resumed event\&. \fP"
+.ti -1c
+.RI "void \fBOnAllJobsPaused\fP (\fBCM_JobManagerEventArgs\fP e)"
+.br
+.RI "\fIRaises the all jobs paused event\&. \fP"
+.ti -1c
+.RI "void \fBOnAllJobsKilled\fP (\fBCM_JobManagerEventArgs\fP e)"
+.br
+.RI "\fIRaises the all jobs killed event\&. \fP"
+.ti -1c
+.RI "void \fBOnAllJobsCleared\fP (\fBCM_JobManagerEventArgs\fP e)"
+.br
+.RI "\fIRaises the all jobs cleared event\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBCM_JobManager\fP \fBMake\fP ()"
+.br
+.RI "\fIReturns an initialised \fBCM_JobManager\fP instance\&. Provides static access to class\&. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnJobAdded\fP (\fBCM_JobManagerJobEditedEventArgs\fP e)"
+.br
+.RI "\fIRaises the job added event\&. \fP"
+.ti -1c
+.RI "override void \fBHandlejobComplete\fP (object sender, \fBCM_JobEventArgs\fP e)"
+.br
+.in -1c
+.SS "Events"
+
+.in +1c
+.ti -1c
+.RI "EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > \fBjobAdded\fP"
+.br
+.RI "\fIRaised when job added\&. \fP"
+.ti -1c
+.RI "EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > \fBjobRemoved\fP"
+.br
+.RI "\fIRaised when job removed\&. \fP"
+.ti -1c
+.RI "EventHandler< \fBCM_JobManagerEventArgs\fP > \fBallJobsKilled\fP"
+.br
+.RI "\fIRaised when all jobs killed\&. \fP"
+.ti -1c
+.RI "EventHandler< \fBCM_JobManagerEventArgs\fP > \fBallJobsResumed\fP"
+.br
+.RI "\fIRaised when all jobs resumed\&. \fP"
+.ti -1c
+.RI "EventHandler< \fBCM_JobManagerEventArgs\fP > \fBallJobsPaused\fP"
+.br
+.RI "\fIRaised when all jobs paused\&. \fP"
+.ti -1c
+.RI "EventHandler< \fBCM_JobManagerEventArgs\fP > \fBallJobsCleared\fP"
+.br
+.RI "\fIRaised when all jobs cleared\&. \fP"
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The main job manager class\&. Encapsulates the behaviour for global and local job managers\&. Provides access to events and public access to stored jobs\&. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCM_JobManager\fP CM_JobManager\&.AddJob (\fBCM_Job\fP job)"
+
+.PP
+Adds a job to the job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.AddJob (string id, IEnumerator routine)"
+
+.PP
+Creates a job with the specified id and routine and adds to job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP Identifier of job\&.
+.br
+\fIroutine\fP Routine\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.AddJob (IList< \fBCM_Job\fP > jobs)"
+
+.PP
+Adds the provided jobs to the job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjobs\fP Jobs to add to this instance\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.AddJob (params \fBCM_Job\fP[] jobs)"
+
+.PP
+Adds the provided jobs to the job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjobs\fP Jobs to add to this instance\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.ClearJobList ()"
+
+.PP
+Clears the job list owned by this instance\&. It does not kill the jobs so they will continue to run\&. Raises allJobsCleared event\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job list\&.
+.RE
+.PP
+
+.SS "bool CM_JobManager\&.HasJob (string id)"
+
+.PP
+Determines whether this instance has the job with the specified id\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\fCtrue\fP if this instance has a job with the specified id; otherwise, \fCfalse\fP\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP Identifier\&.
+.RE
+.PP
+
+.SS "bool CM_JobManager\&.IsRunning (\fBCM_Job\fP job)"
+
+.PP
+Determines whether the specified job is executing\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\fCtrue\fP if the job is currently running; otherwise, \fCfalse\fP\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "bool CM_JobManager\&.IsRunning (string id)"
+
+.PP
+Determines whether the specified job is executing\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\fCtrue\fP if the job is currently running; otherwise, \fCfalse\fP\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job ID\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.KillAll ()"
+
+.PP
+Kills all jobs owned by this instance\&. Raises allJobsKilled event\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The all\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.KillAll (float delayInSeconds)"
+
+.PP
+Kills all jobs owned by this instance after delay in seconds\&. Raises allJobsKilled event\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The all\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "static \fBCM_JobManager\fP CM_JobManager\&.Make ()\fC [static]\fP"
+
+.PP
+Returns an initialised \fBCM_JobManager\fP instance\&. Provides static access to class\&. 
+.SS "\fBCM_JobManager\fP CM_JobManager\&.NotifyOnAllJobsCleared (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+
+.PP
+Subscribes to the the allJobsCleared event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.NotifyOnAllJobsKilled (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+
+.PP
+Subscribes to the the allJobsKilled event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.NotifyOnAllJobsPaused (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+
+.PP
+Subscribes to the the jobPaused event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.NotifyOnAllJobsResumed (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+
+.PP
+Subscribes to the the jobResumed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.NotifyOnJobAdded (EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > e)"
+
+.PP
+Subscribes to the the jobAdded event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.NotifyOnJobRemoved (EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > e)"
+
+.PP
+Subscribes to the the jobRemoved event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "void CM_JobManager\&.OnAllJobsCleared (\fBCM_JobManagerEventArgs\fP e)"
+
+.PP
+Raises the all jobs cleared event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "void CM_JobManager\&.OnAllJobsKilled (\fBCM_JobManagerEventArgs\fP e)"
+
+.PP
+Raises the all jobs killed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "void CM_JobManager\&.OnAllJobsPaused (\fBCM_JobManagerEventArgs\fP e)"
+
+.PP
+Raises the all jobs paused event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "void CM_JobManager\&.OnAllJobsResumed (\fBCM_JobManagerEventArgs\fP e)"
+
+.PP
+Raises the all jobs resumed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "void CM_JobManager\&.OnJobAdded (\fBCM_JobManagerJobEditedEventArgs\fP e)\fC [protected]\fP"
+
+.PP
+Raises the job added event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "void CM_JobManager\&.OnJobRemoved (\fBCM_JobManagerJobEditedEventArgs\fP e)"
+
+.PP
+Raises the job removed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP E\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.PauseAll ()"
+
+.PP
+Pauses all jobs owned by this instance\&. Raises allJobsPaused event\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The all\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.PauseAll (float delayInSeconds)"
+
+.PP
+Pauses all jobs owned by this instance after delay in seconds\&. Raises allJobsPaused event\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The all\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.PauseCoroutine (\fBCM_Job\fP job)"
+
+.PP
+Pauses the specified coroutine if owned by this instance of job manager\&. Job is searched using job id\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.PauseCoroutine (string id)"
+
+.PP
+Stops the specified coroutine if owned by this instance of job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.RemoveJob (\fBCM_Job\fP job)"
+
+.PP
+Removes the job if owned by this instance of job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.RemoveJob (string id)"
+
+.PP
+Removes the job if owned by this instance of job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.RemoveNotifyOnAllJobsCleared (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the the allJobsCleared event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.RemoveNotifyOnAllJobsKilled (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the the allJobsKilled event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.RemoveNotifyOnAllJobsPaused (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the the jobPaused event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.RemoveNotifyOnAllJobsResumed (EventHandler< \fBCM_JobManagerEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the the jobResumed event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.RemoveNotifyOnJobAdded (EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the the jobAdded event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.RemoveNotifyOnJobRemoved (EventHandler< \fBCM_JobManagerJobEditedEventArgs\fP > e)"
+
+.PP
+Unsubscribes to the the jobRemoved event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The eventhandler to be invoked on event\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.ResumeAll ()"
+
+.PP
+Resumes all jobs owned by this instance\&. Raises allJobsResumedEvent\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The all\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.ResumeAll (float delayInSeconds)"
+
+.PP
+Resumes all jobs owned by this instance after delay in seconds\&. Raises allJobsResumedEvent\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The all\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.ResumeCoroutine (\fBCM_Job\fP job)"
+
+.PP
+Resumes the specified coroutine if owned by this instance of job manager\&. Job is searched using job id\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.ResumeCoroutine (string id)"
+
+.PP
+Stops the specified coroutine if owned by this instance of job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.StartAll ()"
+
+.PP
+Starts all jobs owned by this instance\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The all\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.StartAll (float delayInSeconds)"
+
+.PP
+Starts all jobs owned by this instance after delay in seconds\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The all\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelayInSeconds\fP Delay in seconds\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.StartCoroutine (\fBCM_Job\fP job)"
+
+.PP
+Starts the specified coroutine if owned by this instance of job manager\&. Job is searched using job id\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.StartCoroutine (string id)"
+
+.PP
+Starts the specified coroutine if owned by this instance of job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.StopCoroutine (\fBCM_Job\fP job)"
+
+.PP
+Stops the specified coroutine if owned by this instance of job manager\&. Job is searched using job id\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SS "\fBCM_JobManager\fP CM_JobManager\&.StopCoroutine (string id)"
+
+.PP
+Stops the specified coroutine if owned by this instance of job manager\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The job manager\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjob\fP Job\&.
+.RE
+.PP
+
+.SH "Event Documentation"
+.PP 
+.SS "EventHandler<\fBCM_JobManagerEventArgs\fP> CM_JobManager\&.allJobsCleared\fC [protected]\fP"
+
+.PP
+Raised when all jobs cleared\&. 
+.SS "EventHandler<\fBCM_JobManagerEventArgs\fP> CM_JobManager\&.allJobsKilled\fC [protected]\fP"
+
+.PP
+Raised when all jobs killed\&. 
+.SS "EventHandler<\fBCM_JobManagerEventArgs\fP> CM_JobManager\&.allJobsPaused\fC [protected]\fP"
+
+.PP
+Raised when all jobs paused\&. 
+.SS "EventHandler<\fBCM_JobManagerEventArgs\fP> CM_JobManager\&.allJobsResumed\fC [protected]\fP"
+
+.PP
+Raised when all jobs resumed\&. 
+.SS "EventHandler<\fBCM_JobManagerJobEditedEventArgs\fP> CM_JobManager\&.jobAdded\fC [protected]\fP"
+
+.PP
+Raised when job added\&. 
+.SS "EventHandler<\fBCM_JobManagerJobEditedEventArgs\fP> CM_JobManager\&.jobRemoved\fC [protected]\fP"
+
+.PP
+Raised when job removed\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Coroutine Manager Pro from the source code\&.

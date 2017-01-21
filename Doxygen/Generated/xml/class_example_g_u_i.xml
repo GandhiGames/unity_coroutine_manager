@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="class_example_g_u_i" kind="class" language="C#" prot="public">
+    <compoundname>ExampleGUI</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_example_g_u_i_1a2eaf69cbe810531fcc820e264c288698" prot="public" static="no" mutable="no">
+        <type>Text</type>
+        <definition>Text ExampleGUI.titleText</definition>
+        <argsstring></argsstring>
+        <name>titleText</name>
+        <briefdescription>
+<para>THe GUI text </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" line="13" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_example_g_u_i_1ad2479b73b862b0524a9ad09c059de9b2" prot="private" static="no" mutable="no">
+        <type>Text</type>
+        <definition>Text ExampleGUI.subtitleText</definition>
+        <argsstring></argsstring>
+        <name>subtitleText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" line="13" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_example_g_u_i_1a7910ba5b142b61242c904289a40f2131" prot="private" static="no" mutable="no">
+        <type>Text</type>
+        <definition>Text ExampleGUI.instructionsText</definition>
+        <argsstring></argsstring>
+        <name>instructionsText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" line="13" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_example_g_u_i_1a0d5f5df778a9f072aa6660b3cc9e0ad1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExampleGUI.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Enqueues jobs to fade in the title, subtitle, and move the instruction text into place. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" line="18" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" bodystart="18" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_g_u_i_1a76ef2c0aec8f48cca1d23356bf1a0f96" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleGUI.FadeInText</definition>
+        <argsstring>(Text text)</argsstring>
+        <name>FadeInText</name>
+        <param>
+          <type>Text</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" line="27" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_example_g_u_i_1a02a91405d169c19bf7cdff6bab8adea5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator ExampleGUI.MoveText</definition>
+        <argsstring>(Text text)</argsstring>
+        <name>MoveText</name>
+        <param>
+          <type>Text</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" line="40" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" bodystart="40" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple GUI controller. Uses a <ref refid="class_c_m___job_queue" kindref="compound">CM_JobQueue</ref> to enqueue a number of gui actions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="63">
+        <label>ExampleGUI</label>
+        <link refid="class_example_g_u_i"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="65">
+        <label>ExampleGUI</label>
+        <link refid="class_example_g_u_i"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" line="9" column="1" bodyfile="/Users/robert/Dropbox/Work/Unity/coroutine_manager/Assets/CM/Examples/Scripts/Examples/ExampleGUI.cs" bodystart="8" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_example_g_u_i_1a76ef2c0aec8f48cca1d23356bf1a0f96" prot="private" virt="non-virtual"><scope>ExampleGUI</scope><name>FadeInText</name></member>
+      <member refid="class_example_g_u_i_1a7910ba5b142b61242c904289a40f2131" prot="private" virt="non-virtual"><scope>ExampleGUI</scope><name>instructionsText</name></member>
+      <member refid="class_example_g_u_i_1a02a91405d169c19bf7cdff6bab8adea5" prot="private" virt="non-virtual"><scope>ExampleGUI</scope><name>MoveText</name></member>
+      <member refid="class_example_g_u_i_1a0d5f5df778a9f072aa6660b3cc9e0ad1" prot="private" virt="non-virtual"><scope>ExampleGUI</scope><name>Start</name></member>
+      <member refid="class_example_g_u_i_1ad2479b73b862b0524a9ad09c059de9b2" prot="private" virt="non-virtual"><scope>ExampleGUI</scope><name>subtitleText</name></member>
+      <member refid="class_example_g_u_i_1a2eaf69cbe810531fcc820e264c288698" prot="public" virt="non-virtual"><scope>ExampleGUI</scope><name>titleText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

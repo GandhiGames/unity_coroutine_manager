@@ -1,0 +1,813 @@
+\hypertarget{class_c_m___job}{}\section{C\+M\+\_\+\+Job Class Reference}
+\label{class_c_m___job}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+
+
+The main coroutine job class. Encapsulates the behaviour for a single coroutine job. Provides access to status (i.\+e. running, paused, killed etc),  
+
+
+Inheritance diagram for C\+M\+\_\+\+Job\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_m___job}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a7821bb2da3f3c9b30e171595a48aba7d}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Clone this instance. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job}\mbox{[}$\,$\mbox{]} \hyperlink{class_c_m___job_a1b1cd4972a357665fb21d20f58018b1e}{Clone} (int num\+Of\+Copies)
+\begin{DoxyCompactList}\small\item\em Clone this instance. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a54fd4dbd315708b9acd2a09f7096a554}{Start} ()
+\begin{DoxyCompactList}\small\item\em Start this instance. Runs the coroutine immediately. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a8c43918a2c837fe98cef1884da11836f}{Start} (float delay\+In\+Seconds)
+\begin{DoxyCompactList}\small\item\em Start the specified instance after delay\+In\+Seconds. The coroutine is added to \hyperlink{class_c_m___dispatcher}{C\+M\+\_\+\+Dispatcher} job queue to be executed in the next timestep as a coroutine cannot be started in a seperate thread. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a5b083485bb5892b17e180ff646a68a78}{Repeat} ()
+\begin{DoxyCompactList}\small\item\em Sets this instance to repeat. The job is repeated when it has finished processing. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a25e1a04eb72396ed2bf2b142d074d311}{Repeat} (int num\+Of\+Times)
+\begin{DoxyCompactList}\small\item\em Sets this instance to repeat. The job is repeated a set number of times. \end{DoxyCompactList}\item 
+\hypertarget{class_c_m___job_a3a7cfe0528790ce973e44c003a724459}{}\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} {\bfseries Stop\+Repeat} ()\label{class_c_m___job_a3a7cfe0528790ce973e44c003a724459}
+
+\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a5ff8d362cc752f68ceed306837e36b8e}{Stop\+Repeat} (float delay\+In\+Seconds)
+\begin{DoxyCompactList}\small\item\em Stops the repeat after a specified delay in seconds. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_aedbae0620e8da4cfc201f0dd3fc70c0e}{Pause} ()
+\begin{DoxyCompactList}\small\item\em Pause this instance. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a3cad9a52d6b2cbd773310f2d16943180}{Pause} (float delay\+In\+Seconds)
+\begin{DoxyCompactList}\small\item\em Pause the specified instance after delay\+In\+Seconds. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a17e7b235cb28ed51729f9235de1b576b}{Resume} ()
+\begin{DoxyCompactList}\small\item\em Resume this instance. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a5c68291f23790ca6be0941d4500ba3eb}{Resume} (float delay\+In\+Seconds)
+\begin{DoxyCompactList}\small\item\em Resume the specified instance after delay\+In\+Seconds. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___job_a436839505339e2eb42c84de560a0874a}{Kill} ()
+\begin{DoxyCompactList}\small\item\em Kill this instance. Stops the running coroutine. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___job_ac6413a58435cac4840e1dad8b53bd306}{Kill} (float delay\+In\+Seconds)
+\begin{DoxyCompactList}\small\item\em Kill this instance. Stops the running coroutine after delay\+In\+Seconds. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_aa71a7f4fa664df6b7dd8f33f431f9935}{Add\+Child} (\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} child\+Job)
+\begin{DoxyCompactList}\small\item\em Adds a child job. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a9852216469080219798b397645d85767}{Add\+Child} (I\+Enumerator child\+Job)
+\begin{DoxyCompactList}\small\item\em Create a new job using the provided Enumerator and adds as a child job. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_aaa110693cfb8ab6b8e35b7dafece2d32}{Remove\+Child\+Job} (\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} child\+Job)
+\begin{DoxyCompactList}\small\item\em Removes a child job if present. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a7b169aa2419e1b14bc5af2ef47bfbbe6}{Notify\+On\+Job\+Finished\+Running} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Subscribes to the job\+Finished\+Running event \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a0180557e1cfa03cf4a580f11711bb783}{Remove\+Notify\+On\+Job\+Finished\+Running} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Unsubscribes to the job\+Finished\+Running event \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a144f7f4f50fc9e78cb3cc89948b43781}{Notify\+On\+Job\+Started} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Subscribes to the job\+Started event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a136e32ada03eaab4c526b553d973f36f}{Remove\+Notify\+On\+Job\+Started} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Unsubscribes to the job\+Started event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a656895b36f0619ae50563993c25cd8c0}{Notify\+On\+Job\+Paused} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Subscribes to the job paused event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a1d12a9e9f851bb722e00c5982ff1fd08}{Remove\+Notify\+On\+Job\+Paused} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Unsubscribes to the job paused event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a75f17a64e339db10f3b8fb75fb240a0b}{Notify\+On\+Job\+Resumed} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Subscribes to the job resumed event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_ab6821efdd6ee49603d1148b80483ef23}{Remove\+Notify\+On\+Job\+Resumed} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Unsubscribes to the job resumed event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_aad8e48e0d2fa17fde30ba76516dbf7bd}{Notify\+On\+Job\+Complete} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Subscribes to the the job\+Complete event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a66b44002e5fcff452842af8750826453}{Remove\+Notify\+On\+Job\+Complete} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Unsubscribes to the the job\+Complete event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_aadeb872e3ab5b90139e0d728f869be6c}{Notify\+On\+Child\+Job\+Started} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Subscribes to the the child\+Jobs\+Started event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_aa1841d0fe84126d85c11a31c7b87c1ab}{Remove\+Notify\+On\+Child\+Job\+Started} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Unsubscribes to the the child\+Jobs\+Started event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_aebb453c205c9817d621bea62f1716ae0}{Notify\+On\+Child\+Job\+Complete} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Subscribes to the the child\+Jobs\+Complete event. \end{DoxyCompactList}\item 
+\hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_ac84b366bd233ee5970fd9f5841195d8b}{Remove\+Notify\+On\+Child\+Job\+Complete} (Event\+Handler$<$ \hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} $>$ e)
+\begin{DoxyCompactList}\small\item\em Unsubscribes to the the child\+Jobs\+Complete event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_a1ffab1654cb694e80dd1af68418048bb}{Make} (I\+Enumerator \hyperlink{class_c_m___job_a872a3e122dfc58a365f659918ba0fb82}{coroutine})
+\begin{DoxyCompactList}\small\item\em Returns an initialised \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} instance. Provides static access to class. \end{DoxyCompactList}\item 
+static \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} \hyperlink{class_c_m___job_ac2d0aa32b0e614d9a3133675c35a9866}{Make} (I\+Enumerator \hyperlink{class_c_m___job_a872a3e122dfc58a365f659918ba0fb82}{coroutine}, string \hyperlink{class_c_m___job_a19b93ec8fb1f643db06e79ad0710732b}{id})
+\begin{DoxyCompactList}\small\item\em Returns an initialised \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} instance with the specified id. Provides static access to class. \end{DoxyCompactList}\item 
+static \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job}\mbox{[}$\,$\mbox{]} \hyperlink{class_c_m___job_a50cbb0f136c48addf0badefc62cecc6d}{Builder} (params I\+Enumerator\mbox{[}$\,$\mbox{]} coroutines)
+\begin{DoxyCompactList}\small\item\em Builds the specified coroutines into \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_m___job_af33a79ea5b8e707fb79e594e580d4e17}{On\+Job\+Finished\+Running} (\hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Raises the job finished running event. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___job_a5b3aa9f1598fcf753be6fffad0f9a69a}{On\+Job\+Started} (\hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Raises the job started event. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___job_a6386d33b5ef65196a144598cb34fc12f}{On\+Job\+Complete} (\hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Raises the job complete event. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___job_a61f918b9776bf4437f3a0efa9cde64a2}{On\+Job\+Paused} (\hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Raises the job paused event. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___job_a6b6887d0dd433362ea571cdc4a419be1}{On\+Job\+Resumed} (\hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Raises the job resumed event. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___job_a39e81165ee12eb69e01e2052dd4add3e}{On\+Child\+Jobs\+Started} (\hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Raises the child jobs started event. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_m___job_a64f5a20ea7643b75584a1b63b8098011}{On\+Child\+Jobs\+Complete} (\hyperlink{class_c_m___job_event_args}{C\+M\+\_\+\+Job\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Raises the child jobs complete event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_c_m___job_a19b93ec8fb1f643db06e79ad0710732b}{id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the identifier. The identifier is a unique key used by \hyperlink{class_c_m___job_manager}{C\+M\+\_\+\+Job\+Manager} to reference individual jobs. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_m___job_a2226fbaee0c831d28fde43ffe0a58f70}{running}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether this \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} is running. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_m___job_a4d7d6001f3d1153d50f83490fe426925}{paused}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether this \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} is paused. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_m___job_aa15b9e9cead89bfbd449e0194dc30751}{job\+Killed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether this \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} job was killed or was allowed to complete. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_m___job_ab18400e9cdb983c298d92c6e28acc599}{repeating}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether this \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} is repeating. \end{DoxyCompactList}\item 
+int \hyperlink{class_c_m___job_a042add3b81a210d7a98505bd53765ab5}{num\+Of\+Times\+Executed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the number of times this job has been executed. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_c_m___job_a872a3e122dfc58a365f659918ba0fb82}{coroutine}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the coroutine of this job. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main coroutine job class. Encapsulates the behaviour for a single coroutine job. Provides access to status (i.\+e. running, paused, killed etc), 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_m___job_aa71a7f4fa664df6b7dd8f33f431f9935}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Add\+Child@{Add\+Child}}
+\index{Add\+Child@{Add\+Child}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Add\+Child(\+C\+M\+\_\+\+Job child\+Job)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Add\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job}}]{child\+Job}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_aa71a7f4fa664df6b7dd8f33f431f9935}
+
+
+Adds a child job. 
+
+\begin{DoxyReturn}{Returns}
+The child.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em child\+Job} & Child job.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a9852216469080219798b397645d85767}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Add\+Child@{Add\+Child}}
+\index{Add\+Child@{Add\+Child}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Add\+Child(\+I\+Enumerator child\+Job)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Add\+Child (
+\begin{DoxyParamCaption}
+\item[{I\+Enumerator}]{child\+Job}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a9852216469080219798b397645d85767}
+
+
+Create a new job using the provided Enumerator and adds as a child job. 
+
+\begin{DoxyReturn}{Returns}
+The child.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em child\+Job} & Child job.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a50cbb0f136c48addf0badefc62cecc6d}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Builder@{Builder}}
+\index{Builder@{Builder}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Builder(params I\+Enumerator[] coroutines)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf C\+M\+\_\+\+Job} \mbox{[}$\,$\mbox{]} C\+M\+\_\+\+Job.\+Builder (
+\begin{DoxyParamCaption}
+\item[{params I\+Enumerator\mbox{[}$\,$\mbox{]}}]{coroutines}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_m___job_a50cbb0f136c48addf0badefc62cecc6d}
+
+
+Builds the specified coroutines into \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} instances. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coroutines} & The built jobs.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a7821bb2da3f3c9b30e171595a48aba7d}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Clone@{Clone}}
+\index{Clone@{Clone}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Clone()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a7821bb2da3f3c9b30e171595a48aba7d}
+
+
+Clone this instance. 
+
+\hypertarget{class_c_m___job_a1b1cd4972a357665fb21d20f58018b1e}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Clone@{Clone}}
+\index{Clone@{Clone}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Clone(int num\+Of\+Copies)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} \mbox{[}$\,$\mbox{]} C\+M\+\_\+\+Job.\+Clone (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Of\+Copies}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a1b1cd4972a357665fb21d20f58018b1e}
+
+
+Clone this instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Of\+Copies} & Number of copies to create.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a436839505339e2eb42c84de560a0874a}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Kill@{Kill}}
+\index{Kill@{Kill}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Kill()}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+Kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a436839505339e2eb42c84de560a0874a}
+
+
+Kill this instance. Stops the running coroutine. 
+
+\hypertarget{class_c_m___job_ac6413a58435cac4840e1dad8b53bd306}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Kill@{Kill}}
+\index{Kill@{Kill}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Kill(float delay\+In\+Seconds)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+Kill (
+\begin{DoxyParamCaption}
+\item[{float}]{delay\+In\+Seconds}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_ac6413a58435cac4840e1dad8b53bd306}
+
+
+Kill this instance. Stops the running coroutine after delay\+In\+Seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay\+In\+Seconds} & Delay in seconds until instance killed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a1ffab1654cb694e80dd1af68418048bb}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Make@{Make}}
+\index{Make@{Make}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Make(\+I\+Enumerator coroutine)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Make (
+\begin{DoxyParamCaption}
+\item[{I\+Enumerator}]{coroutine}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_m___job_a1ffab1654cb694e80dd1af68418048bb}
+
+
+Returns an initialised \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} instance. Provides static access to class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coroutine} & Coroutine.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_ac2d0aa32b0e614d9a3133675c35a9866}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Make@{Make}}
+\index{Make@{Make}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Make(\+I\+Enumerator coroutine, string id)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Make (
+\begin{DoxyParamCaption}
+\item[{I\+Enumerator}]{coroutine, }
+\item[{string}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_m___job_ac2d0aa32b0e614d9a3133675c35a9866}
+
+
+Returns an initialised \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} instance with the specified id. Provides static access to class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coroutine} & Coroutine.\\
+\hline
+{\em id} & Identifier.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_aebb453c205c9817d621bea62f1716ae0}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Notify\+On\+Child\+Job\+Complete@{Notify\+On\+Child\+Job\+Complete}}
+\index{Notify\+On\+Child\+Job\+Complete@{Notify\+On\+Child\+Job\+Complete}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Notify\+On\+Child\+Job\+Complete(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Notify\+On\+Child\+Job\+Complete (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_aebb453c205c9817d621bea62f1716ae0}
+
+
+Subscribes to the the child\+Jobs\+Complete event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be invoked on event.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_aadeb872e3ab5b90139e0d728f869be6c}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Notify\+On\+Child\+Job\+Started@{Notify\+On\+Child\+Job\+Started}}
+\index{Notify\+On\+Child\+Job\+Started@{Notify\+On\+Child\+Job\+Started}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Notify\+On\+Child\+Job\+Started(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Notify\+On\+Child\+Job\+Started (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_aadeb872e3ab5b90139e0d728f869be6c}
+
+
+Subscribes to the the child\+Jobs\+Started event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be invoked on event.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_aad8e48e0d2fa17fde30ba76516dbf7bd}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Notify\+On\+Job\+Complete@{Notify\+On\+Job\+Complete}}
+\index{Notify\+On\+Job\+Complete@{Notify\+On\+Job\+Complete}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Notify\+On\+Job\+Complete(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Notify\+On\+Job\+Complete (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_aad8e48e0d2fa17fde30ba76516dbf7bd}
+
+
+Subscribes to the the job\+Complete event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be invoked on event.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a7b169aa2419e1b14bc5af2ef47bfbbe6}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Notify\+On\+Job\+Finished\+Running@{Notify\+On\+Job\+Finished\+Running}}
+\index{Notify\+On\+Job\+Finished\+Running@{Notify\+On\+Job\+Finished\+Running}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Notify\+On\+Job\+Finished\+Running(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Notify\+On\+Job\+Finished\+Running (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a7b169aa2419e1b14bc5af2ef47bfbbe6}
+
+
+Subscribes to the job\+Finished\+Running event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be invoked on event.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a656895b36f0619ae50563993c25cd8c0}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Notify\+On\+Job\+Paused@{Notify\+On\+Job\+Paused}}
+\index{Notify\+On\+Job\+Paused@{Notify\+On\+Job\+Paused}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Notify\+On\+Job\+Paused(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Notify\+On\+Job\+Paused (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a656895b36f0619ae50563993c25cd8c0}
+
+
+Subscribes to the job paused event. 
+
+\begin{DoxyReturn}{Returns}
+The on job paused.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a75f17a64e339db10f3b8fb75fb240a0b}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Notify\+On\+Job\+Resumed@{Notify\+On\+Job\+Resumed}}
+\index{Notify\+On\+Job\+Resumed@{Notify\+On\+Job\+Resumed}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Notify\+On\+Job\+Resumed(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Notify\+On\+Job\+Resumed (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a75f17a64e339db10f3b8fb75fb240a0b}
+
+
+Subscribes to the job resumed event. 
+
+\begin{DoxyReturn}{Returns}
+The on job paused.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a144f7f4f50fc9e78cb3cc89948b43781}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Notify\+On\+Job\+Started@{Notify\+On\+Job\+Started}}
+\index{Notify\+On\+Job\+Started@{Notify\+On\+Job\+Started}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Notify\+On\+Job\+Started(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Notify\+On\+Job\+Started (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a144f7f4f50fc9e78cb3cc89948b43781}
+
+
+Subscribes to the job\+Started event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be invoked on event.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a64f5a20ea7643b75584a1b63b8098011}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!On\+Child\+Jobs\+Complete@{On\+Child\+Jobs\+Complete}}
+\index{On\+Child\+Jobs\+Complete@{On\+Child\+Jobs\+Complete}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{On\+Child\+Jobs\+Complete(\+C\+M\+\_\+\+Job\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+On\+Child\+Jobs\+Complete (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_c_m___job_a64f5a20ea7643b75584a1b63b8098011}
+
+
+Raises the child jobs complete event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a39e81165ee12eb69e01e2052dd4add3e}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!On\+Child\+Jobs\+Started@{On\+Child\+Jobs\+Started}}
+\index{On\+Child\+Jobs\+Started@{On\+Child\+Jobs\+Started}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{On\+Child\+Jobs\+Started(\+C\+M\+\_\+\+Job\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+On\+Child\+Jobs\+Started (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_c_m___job_a39e81165ee12eb69e01e2052dd4add3e}
+
+
+Raises the child jobs started event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a6386d33b5ef65196a144598cb34fc12f}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!On\+Job\+Complete@{On\+Job\+Complete}}
+\index{On\+Job\+Complete@{On\+Job\+Complete}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{On\+Job\+Complete(\+C\+M\+\_\+\+Job\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+On\+Job\+Complete (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_c_m___job_a6386d33b5ef65196a144598cb34fc12f}
+
+
+Raises the job complete event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_af33a79ea5b8e707fb79e594e580d4e17}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!On\+Job\+Finished\+Running@{On\+Job\+Finished\+Running}}
+\index{On\+Job\+Finished\+Running@{On\+Job\+Finished\+Running}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{On\+Job\+Finished\+Running(\+C\+M\+\_\+\+Job\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+On\+Job\+Finished\+Running (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_c_m___job_af33a79ea5b8e707fb79e594e580d4e17}
+
+
+Raises the job finished running event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a61f918b9776bf4437f3a0efa9cde64a2}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!On\+Job\+Paused@{On\+Job\+Paused}}
+\index{On\+Job\+Paused@{On\+Job\+Paused}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{On\+Job\+Paused(\+C\+M\+\_\+\+Job\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+On\+Job\+Paused (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_c_m___job_a61f918b9776bf4437f3a0efa9cde64a2}
+
+
+Raises the job paused event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a6b6887d0dd433362ea571cdc4a419be1}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!On\+Job\+Resumed@{On\+Job\+Resumed}}
+\index{On\+Job\+Resumed@{On\+Job\+Resumed}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{On\+Job\+Resumed(\+C\+M\+\_\+\+Job\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+On\+Job\+Resumed (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_c_m___job_a6b6887d0dd433362ea571cdc4a419be1}
+
+
+Raises the job resumed event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a5b3aa9f1598fcf753be6fffad0f9a69a}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!On\+Job\+Started@{On\+Job\+Started}}
+\index{On\+Job\+Started@{On\+Job\+Started}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{On\+Job\+Started(\+C\+M\+\_\+\+Job\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+M\+\_\+\+Job.\+On\+Job\+Started (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_c_m___job_a5b3aa9f1598fcf753be6fffad0f9a69a}
+
+
+Raises the job started event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & E.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_aedbae0620e8da4cfc201f0dd3fc70c0e}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Pause@{Pause}}
+\index{Pause@{Pause}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Pause()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_aedbae0620e8da4cfc201f0dd3fc70c0e}
+
+
+Pause this instance. 
+
+\hypertarget{class_c_m___job_a3cad9a52d6b2cbd773310f2d16943180}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Pause@{Pause}}
+\index{Pause@{Pause}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Pause(float delay\+In\+Seconds)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Pause (
+\begin{DoxyParamCaption}
+\item[{float}]{delay\+In\+Seconds}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a3cad9a52d6b2cbd773310f2d16943180}
+
+
+Pause the specified instance after delay\+In\+Seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay\+In\+Secods} & Delay in secods until instance is paused.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_aaa110693cfb8ab6b8e35b7dafece2d32}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Remove\+Child\+Job@{Remove\+Child\+Job}}
+\index{Remove\+Child\+Job@{Remove\+Child\+Job}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Remove\+Child\+Job(\+C\+M\+\_\+\+Job child\+Job)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Remove\+Child\+Job (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+M\+\_\+\+Job}}]{child\+Job}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_aaa110693cfb8ab6b8e35b7dafece2d32}
+
+
+Removes a child job if present. 
+
+\begin{DoxyReturn}{Returns}
+The child job.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em child\+Job} & Child job.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_ac84b366bd233ee5970fd9f5841195d8b}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Remove\+Notify\+On\+Child\+Job\+Complete@{Remove\+Notify\+On\+Child\+Job\+Complete}}
+\index{Remove\+Notify\+On\+Child\+Job\+Complete@{Remove\+Notify\+On\+Child\+Job\+Complete}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Remove\+Notify\+On\+Child\+Job\+Complete(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Remove\+Notify\+On\+Child\+Job\+Complete (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_ac84b366bd233ee5970fd9f5841195d8b}
+
+
+Unsubscribes to the the child\+Jobs\+Complete event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be unsubscribed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_aa1841d0fe84126d85c11a31c7b87c1ab}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Remove\+Notify\+On\+Child\+Job\+Started@{Remove\+Notify\+On\+Child\+Job\+Started}}
+\index{Remove\+Notify\+On\+Child\+Job\+Started@{Remove\+Notify\+On\+Child\+Job\+Started}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Remove\+Notify\+On\+Child\+Job\+Started(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Remove\+Notify\+On\+Child\+Job\+Started (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_aa1841d0fe84126d85c11a31c7b87c1ab}
+
+
+Unsubscribes to the the child\+Jobs\+Started event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be unsubscribed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a66b44002e5fcff452842af8750826453}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Remove\+Notify\+On\+Job\+Complete@{Remove\+Notify\+On\+Job\+Complete}}
+\index{Remove\+Notify\+On\+Job\+Complete@{Remove\+Notify\+On\+Job\+Complete}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Remove\+Notify\+On\+Job\+Complete(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Remove\+Notify\+On\+Job\+Complete (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a66b44002e5fcff452842af8750826453}
+
+
+Unsubscribes to the the job\+Complete event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be unsubscribed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a0180557e1cfa03cf4a580f11711bb783}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Remove\+Notify\+On\+Job\+Finished\+Running@{Remove\+Notify\+On\+Job\+Finished\+Running}}
+\index{Remove\+Notify\+On\+Job\+Finished\+Running@{Remove\+Notify\+On\+Job\+Finished\+Running}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Remove\+Notify\+On\+Job\+Finished\+Running(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Remove\+Notify\+On\+Job\+Finished\+Running (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a0180557e1cfa03cf4a580f11711bb783}
+
+
+Unsubscribes to the job\+Finished\+Running event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be invoked on event.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a1d12a9e9f851bb722e00c5982ff1fd08}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Remove\+Notify\+On\+Job\+Paused@{Remove\+Notify\+On\+Job\+Paused}}
+\index{Remove\+Notify\+On\+Job\+Paused@{Remove\+Notify\+On\+Job\+Paused}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Remove\+Notify\+On\+Job\+Paused(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Remove\+Notify\+On\+Job\+Paused (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a1d12a9e9f851bb722e00c5982ff1fd08}
+
+
+Unsubscribes to the job paused event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be unsubscribed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_ab6821efdd6ee49603d1148b80483ef23}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Remove\+Notify\+On\+Job\+Resumed@{Remove\+Notify\+On\+Job\+Resumed}}
+\index{Remove\+Notify\+On\+Job\+Resumed@{Remove\+Notify\+On\+Job\+Resumed}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Remove\+Notify\+On\+Job\+Resumed(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Remove\+Notify\+On\+Job\+Resumed (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_ab6821efdd6ee49603d1148b80483ef23}
+
+
+Unsubscribes to the job resumed event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be unsubscribed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a136e32ada03eaab4c526b553d973f36f}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Remove\+Notify\+On\+Job\+Started@{Remove\+Notify\+On\+Job\+Started}}
+\index{Remove\+Notify\+On\+Job\+Started@{Remove\+Notify\+On\+Job\+Started}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Remove\+Notify\+On\+Job\+Started(\+Event\+Handler$<$ C\+M\+\_\+\+Job\+Event\+Args $>$ e)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Remove\+Notify\+On\+Job\+Started (
+\begin{DoxyParamCaption}
+\item[{Event\+Handler$<$ {\bf C\+M\+\_\+\+Job\+Event\+Args} $>$}]{e}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a136e32ada03eaab4c526b553d973f36f}
+
+
+Unsubscribes to the job\+Started event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The eventhandler to be unsubscribed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a5b083485bb5892b17e180ff646a68a78}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Repeat@{Repeat}}
+\index{Repeat@{Repeat}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Repeat()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Repeat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a5b083485bb5892b17e180ff646a68a78}
+
+
+Sets this instance to repeat. The job is repeated when it has finished processing. 
+
+\hypertarget{class_c_m___job_a25e1a04eb72396ed2bf2b142d074d311}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Repeat@{Repeat}}
+\index{Repeat@{Repeat}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Repeat(int num\+Of\+Times)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Repeat (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Of\+Times}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a25e1a04eb72396ed2bf2b142d074d311}
+
+
+Sets this instance to repeat. The job is repeated a set number of times. 
+
+\hypertarget{class_c_m___job_a17e7b235cb28ed51729f9235de1b576b}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Resume@{Resume}}
+\index{Resume@{Resume}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Resume()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a17e7b235cb28ed51729f9235de1b576b}
+
+
+Resume this instance. 
+
+\hypertarget{class_c_m___job_a5c68291f23790ca6be0941d4500ba3eb}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Resume@{Resume}}
+\index{Resume@{Resume}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Resume(float delay\+In\+Seconds)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Resume (
+\begin{DoxyParamCaption}
+\item[{float}]{delay\+In\+Seconds}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a5c68291f23790ca6be0941d4500ba3eb}
+
+
+Resume the specified instance after delay\+In\+Seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay\+In\+Secods} & Delay in secods until instance is resumed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a54fd4dbd315708b9acd2a09f7096a554}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Start@{Start}}
+\index{Start@{Start}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a54fd4dbd315708b9acd2a09f7096a554}
+
+
+Start this instance. Runs the coroutine immediately. 
+
+\hypertarget{class_c_m___job_a8c43918a2c837fe98cef1884da11836f}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Start@{Start}}
+\index{Start@{Start}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Start(float delay\+In\+Seconds)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Start (
+\begin{DoxyParamCaption}
+\item[{float}]{delay\+In\+Seconds}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a8c43918a2c837fe98cef1884da11836f}
+
+
+Start the specified instance after delay\+In\+Seconds. The coroutine is added to \hyperlink{class_c_m___dispatcher}{C\+M\+\_\+\+Dispatcher} job queue to be executed in the next timestep as a coroutine cannot be started in a seperate thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay\+In\+Secods} & Delay in secods until instance is processed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_m___job_a5ff8d362cc752f68ceed306837e36b8e}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!Stop\+Repeat@{Stop\+Repeat}}
+\index{Stop\+Repeat@{Stop\+Repeat}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{Stop\+Repeat(float delay\+In\+Seconds)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+M\+\_\+\+Job} C\+M\+\_\+\+Job.\+Stop\+Repeat (
+\begin{DoxyParamCaption}
+\item[{float}]{delay\+In\+Seconds}
+\end{DoxyParamCaption}
+)}\label{class_c_m___job_a5ff8d362cc752f68ceed306837e36b8e}
+
+
+Stops the repeat after a specified delay in seconds. 
+
+\begin{DoxyReturn}{Returns}
+The repeat.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em delay\+In\+Seconds} & Delay in seconds.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_c_m___job_a872a3e122dfc58a365f659918ba0fb82}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!coroutine@{coroutine}}
+\index{coroutine@{coroutine}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{coroutine}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator C\+M\+\_\+\+Job.\+coroutine\hspace{0.3cm}{\ttfamily [get]}}\label{class_c_m___job_a872a3e122dfc58a365f659918ba0fb82}
+
+
+Gets the coroutine of this job. 
+
+The coroutine.\hypertarget{class_c_m___job_a19b93ec8fb1f643db06e79ad0710732b}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!id@{id}}
+\index{id@{id}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}string C\+M\+\_\+\+Job.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_c_m___job_a19b93ec8fb1f643db06e79ad0710732b}
+
+
+Gets or sets the identifier. The identifier is a unique key used by \hyperlink{class_c_m___job_manager}{C\+M\+\_\+\+Job\+Manager} to reference individual jobs. 
+
+The identifier.\hypertarget{class_c_m___job_aa15b9e9cead89bfbd449e0194dc30751}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!job\+Killed@{job\+Killed}}
+\index{job\+Killed@{job\+Killed}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{job\+Killed}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+M\+\_\+\+Job.\+job\+Killed\hspace{0.3cm}{\ttfamily [get]}}\label{class_c_m___job_aa15b9e9cead89bfbd449e0194dc30751}
+
+
+Gets a value indicating whether this \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} job was killed or was allowed to complete. 
+
+{\ttfamily true} if job killed; otherwise, {\ttfamily false}.\hypertarget{class_c_m___job_a042add3b81a210d7a98505bd53765ab5}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!num\+Of\+Times\+Executed@{num\+Of\+Times\+Executed}}
+\index{num\+Of\+Times\+Executed@{num\+Of\+Times\+Executed}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{num\+Of\+Times\+Executed}]{\setlength{\rightskip}{0pt plus 5cm}int C\+M\+\_\+\+Job.\+num\+Of\+Times\+Executed\hspace{0.3cm}{\ttfamily [get]}}\label{class_c_m___job_a042add3b81a210d7a98505bd53765ab5}
+
+
+Gets the number of times this job has been executed. 
+
+The number of times executed.\hypertarget{class_c_m___job_a4d7d6001f3d1153d50f83490fe426925}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!paused@{paused}}
+\index{paused@{paused}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{paused}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+M\+\_\+\+Job.\+paused\hspace{0.3cm}{\ttfamily [get]}}\label{class_c_m___job_a4d7d6001f3d1153d50f83490fe426925}
+
+
+Gets a value indicating whether this \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} is paused. 
+
+{\ttfamily true} if paused; otherwise, {\ttfamily false}.\hypertarget{class_c_m___job_ab18400e9cdb983c298d92c6e28acc599}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!repeating@{repeating}}
+\index{repeating@{repeating}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{repeating}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+M\+\_\+\+Job.\+repeating\hspace{0.3cm}{\ttfamily [get]}}\label{class_c_m___job_ab18400e9cdb983c298d92c6e28acc599}
+
+
+Gets a value indicating whether this \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} is repeating. 
+
+{\ttfamily true} if repeating; otherwise, {\ttfamily false}.\hypertarget{class_c_m___job_a2226fbaee0c831d28fde43ffe0a58f70}{}\index{C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}!running@{running}}
+\index{running@{running}!C\+M\+\_\+\+Job@{C\+M\+\_\+\+Job}}
+\subsubsection[{running}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+M\+\_\+\+Job.\+running\hspace{0.3cm}{\ttfamily [get]}}\label{class_c_m___job_a2226fbaee0c831d28fde43ffe0a58f70}
+
+
+Gets a value indicating whether this \hyperlink{class_c_m___job}{C\+M\+\_\+\+Job} is running. 
+
+{\ttfamily true} if running; otherwise, {\ttfamily false}.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+M\+\_\+\+Job.\+cs\end{DoxyCompactItemize}
